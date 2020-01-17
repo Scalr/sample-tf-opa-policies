@@ -1,0 +1,18 @@
+{
+    "mock": {
+        "valid_input": {
+            "tfrun": {
+                "cost_estimate": {
+                    "proposed_monthly_cost": 1.0
+                }
+            }
+        },
+        "invalid_input": {
+            "tfrun": {
+                "cost_estimate": {
+                    "proposed_monthly_cost": 7.0
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,176 @@
+{
+    "mock":
+    {
+        "valid_tags":
+        {
+            "tfplan":
+            {
+                "resource_changes": [
+                    {
+                        "address": "aws_instance.instance1",
+                        "mode": "managed",
+                        "type": "aws_instance",
+                        "name": "instance1",
+                        "provider_name": "aws",
+                        "change": {
+                            "actions": [
+                                "create",
+                                "update"
+                            ]
+                        }
+                    },
+                    {
+                        "address": "google_compute_instance.instance2",
+                        "mode": "managed",
+                        "type": "google_compute_instance",
+                        "name": "instance2",
+                        "provider_name": "google",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "tfrun":
+            {
+                "workspace":
+                {
+                    "tags":
+                    {
+                        "aws": "",
+                        "google": ""
+                    }
+                }
+            }
+        },
+        "missing_tag":
+        {
+            "tfplan":
+            {
+                "resource_changes": [
+                    {
+                        "address": "aws_instance.instance1",
+                        "mode": "managed",
+                        "type": "aws_instance",
+                        "name": "instance1",
+                        "provider_name": "aws",
+                        "change": {
+                            "actions": [
+                                "create",
+                                "update"
+                            ]
+                        }
+                    },
+                    {
+                        "address": "google_compute_instance.instance2",
+                        "mode": "managed",
+                        "type": "google_compute_instance",
+                        "name": "instance2",
+                        "provider_name": "google",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "tfrun":
+            {
+                "workspace":
+                {
+                    "tags":
+                    {
+                        "google": ""
+                    }
+                }
+            }
+        },
+        "missing_all":
+        {
+            "tfplan":
+            {
+                "resource_changes": [
+                    {
+                        "address": "aws_instance.instance1",
+                        "mode": "managed",
+                        "type": "aws_instance",
+                        "name": "instance1",
+                        "provider_name": "aws",
+                        "change": {
+                            "actions": [
+                                "create",
+                                "update"
+                            ]
+                        }
+                    },
+                    {
+                        "address": "google_compute_instance.instance2",
+                        "mode": "managed",
+                        "type": "google_compute_instance",
+                        "name": "instance2",
+                        "provider_name": "google",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "tfrun":
+            {
+                "workspace":
+                {
+                    "tags":
+                    {
+                    }
+                }
+            }
+        },
+        "delete_action":
+        {
+            "tfplan":
+            {
+                "resource_changes": [
+                    {
+                        "address": "aws_instance.instance1",
+                        "mode": "managed",
+                        "type": "aws_instance",
+                        "name": "instance1",
+                        "provider_name": "aws",
+                        "change": {
+                            "actions": [
+                                "delete"
+                            ]
+                        }
+                    },
+                    {
+                        "address": "google_compute_instance.instance2",
+                        "mode": "managed",
+                        "type": "google_compute_instance",
+                        "name": "instance2",
+                        "provider_name": "google",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "tfrun":
+            {
+                "workspace":
+                {
+                    "tags":
+                    {
+                        "google": ""
+                    }
+                }
+            }
+        }
+    }
+}

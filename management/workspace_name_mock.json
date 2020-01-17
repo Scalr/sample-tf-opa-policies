@@ -1,0 +1,18 @@
+{
+    "mock": {
+        "valid_input": {
+            "tfrun": {
+                "workspace": {
+                    "name": "ws-1-dev"
+                }
+            }
+        },
+        "invalid_input": {
+            "tfrun": {
+                "workspace": {
+                    "name": "ws-1-prod"
+                }
+            }
+        }
+    }
+}
