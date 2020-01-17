@@ -1,0 +1,267 @@
+{
+    "mock":
+    {
+        "valid_versions":
+        {
+            "tfplan": {
+                "configuration": {
+                    "root_module": {
+                        "module_calls": {
+                            "rds1": {
+                                "source": "terraform-aws-modules/rds/aws",
+                                "module": {
+                                    "module_calls": {
+                                        "db_instance": {
+                                            "source": "terraform-aws-modules/rds/aws",
+                                            "version_constraint": "2.5.0"
+                                        },
+                                        "db_another_group": {
+                                            "source": "terraform-aws-modules/another-module",
+                                            "version_constraint": "1.0"
+                                        },
+                                        "db_option_group": {
+                                            "source": "./modules/db_option_group"
+                                        }
+                                    }
+                                },
+                                "version_constraint": "2.5.0"
+                            },
+                            "rds2": {
+                                "source": "terraform-aws-modules/rds/aws",
+                                "module": {
+                                    "module_calls": {
+                                        "db_instance": {
+                                            "source": "terraform-aws-modules/rds/aws",
+                                            "module": {
+                                                "module_calls": {
+                                                    "db_another_group": {
+                                                        "source": "terraform-aws-modules/another-module",
+                                                        "version_constraint": "1.0"
+                                                    }
+                                                }
+                                            },
+                                            "version_constraint": "2.5.0"
+                                        },
+                                        "db_option_group": {
+                                            "source": "./modules/db_option_group"
+                                        }
+                                    }
+                                },
+                                "version_constraint": "2.5.0"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "invalid_version":
+        {
+            "tfplan": {
+                "configuration": {
+                    "root_module": {
+                        "module_calls": {
+                            "rds1": {
+                                "source": "terraform-aws-modules/rds/aws",
+                                "module": {
+                                    "module_calls": {
+                                        "db_instance": {
+                                            "source": "terraform-aws-modules/rds/aws",
+                                            "version_constraint": "2.5.0"
+                                        },
+                                        "db_another_group": {
+                                            "source": "terraform-aws-modules/another-module",
+                                            "version_constraint": "1.0"
+                                        },
+                                        "db_option_group": {
+                                            "source": "./modules/db_option_group"
+                                        }
+                                    }
+                                },
+                                "version_constraint": "2.5.0"
+                            },
+                            "rds2": {
+                                "source": "terraform-aws-modules/rds/aws",
+                                "module": {
+                                    "module_calls": {
+                                        "db_instance": {
+                                            "source": "terraform-aws-modules/rds/aws",
+                                            "module": {
+                                                "module_calls": {
+                                                    "db_another_group": {
+                                                        "source": "terraform-aws-modules/another-module",
+                                                        "version_constraint": "1.0"
+                                                    }
+                                                }
+                                            },
+                                            "version_constraint": "2.5.0"
+                                        },
+                                        "db_option_group": {
+                                            "source": "./modules/db_option_group"
+                                        }
+                                    }
+                                },
+                                "version_constraint": "2.0"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "invalid_version_nested":
+        {
+            "tfplan": {
+                "configuration": {
+                    "root_module": {
+                        "module_calls": {
+                            "rds1": {
+                                "source": "terraform-aws-modules/rds/aws",
+                                "module": {
+                                    "module_calls": {
+                                        "db_instance": {
+                                            "source": "terraform-aws-modules/rds/aws",
+                                            "version_constraint": "2.0"
+                                        },
+                                        "db_another_group": {
+                                            "source": "terraform-aws-modules/another-module",
+                                            "version_constraint": "1.0"
+                                        },
+                                        "db_option_group": {
+                                            "source": "./modules/db_option_group"
+                                        }
+                                    }
+                                },
+                                "version_constraint": "2.5.0"
+                            },
+                            "rds2": {
+                                "source": "terraform-aws-modules/rds/aws",
+                                "module": {
+                                    "module_calls": {
+                                        "db_instance": {
+                                            "source": "terraform-aws-modules/rds/aws",
+                                            "module": {
+                                                "module_calls": {
+                                                    "db_another_group": {
+                                                        "source": "terraform-aws-modules/another-module",
+                                                        "version_constraint": "1.0.3"
+                                                    }
+                                                }
+                                            },
+                                            "version_constraint": "2.5.0"
+                                        },
+                                        "db_option_group": {
+                                            "source": "./modules/db_option_group"
+                                        }
+                                    }
+                                },
+                                "version_constraint": "2.5.0"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "undefined_version":
+        {
+            "tfplan": {
+                "configuration": {
+                    "root_module": {
+                        "module_calls": {
+                            "rds1": {
+                                "source": "terraform-aws-modules/rds/aws",
+                                "module": {
+                                    "module_calls": {
+                                        "db_instance": {
+                                            "source": "terraform-aws-modules/rds/aws",
+                                            "version_constraint": "2.5.0"
+                                        },
+                                        "db_another_group": {
+                                            "source": "terraform-aws-modules/another-module",
+                                            "version_constraint": "1.0"
+                                        },
+                                        "db_option_group": {
+                                            "source": "./modules/db_option_group"
+                                        }
+                                    }
+                                },
+                                "version_constraint": "2.5.0"
+                            },
+                            "rds2": {
+                                "source": "terraform-aws-modules/rds/aws",
+                                "module": {
+                                    "module_calls": {
+                                        "db_instance": {
+                                            "source": "terraform-aws-modules/rds/aws",
+                                            "module": {
+                                                "module_calls": {
+                                                    "db_another_group": {
+                                                        "source": "terraform-aws-modules/another-module",
+                                                        "version_constraint": "1.0"
+                                                    }
+                                                }
+                                            },
+                                            "version_constraint": "2.5.0"
+                                        },
+                                        "db_option_group": {
+                                            "source": "./modules/db_option_group"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "invalid_all_versions":
+        {
+            "tfplan": {
+                "configuration": {
+                    "root_module": {
+                        "module_calls": {
+                            "rds1": {
+                                "source": "terraform-aws-modules/rds/aws",
+                                "module": {
+                                    "module_calls": {
+                                        "db_instance": {
+                                            "source": "terraform-aws-modules/rds/aws",
+                                            "version_constraint": "0.1"
+                                        },
+                                        "db_another_group": {
+                                            "source": "terraform-aws-modules/another-module"
+                                        },
+                                        "db_option_group": {
+                                            "source": "./modules/db_option_group"
+                                        }
+                                    }
+                                },
+                                "version_constraint": "2.2.1"
+                            },
+                            "rds2": {
+                                "source": "terraform-aws-modules/rds/aws",
+                                "module": {
+                                    "module_calls": {
+                                        "db_instance": {
+                                            "source": "terraform-aws-modules/rds/aws",
+                                            "module": {
+                                                "module_calls": {
+                                                    "db_another_group": {
+                                                        "source": "terraform-aws-modules/another-module",
+                                                        "version_constraint": "0.8"
+                                                    }
+                                                }
+                                            },
+                                            "version_constraint": "2.5.1"
+                                        },
+                                        "db_option_group": {
+                                            "source": "./modules/db_option_group"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

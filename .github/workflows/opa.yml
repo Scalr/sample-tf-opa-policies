@@ -1,0 +1,22 @@
+name: OPA
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2.0.0
+    - name: OPA Test
+      uses: petroprotsakh/opa-test-action@v2.1
+      with:
+        options: --show-failure-line
+        tests: |
+          cost
+          external_data
+          management/instance_types.rego;management/instance_types_test.rego;management/instance_types_mock.json
+          management/resource_tags.rego;management/resource_tags_test.rego;management/resource_tags_mock.json
+          management/workspace_name.rego;management/workspace_name_test.rego;management/workspace_name_mock.json
+          management/workspace_tags.rego;management/workspace_tags_test.rego;management/workspace_tags_mock.json
+          modules
+          placement
+          user

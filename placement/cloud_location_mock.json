@@ -1,0 +1,350 @@
+{
+    "mock":
+    {
+        "allowed":
+        {
+            "tfplan":
+            {
+                "variables": {
+                    "region": {
+                        "value": "us-east-1"
+                    }
+                },
+                "resource_changes": [
+                    {
+                        "address": "aws_instance.instance1",
+                        "mode": "managed",
+                        "type": "aws_instance",
+                        "name": "instance1",
+                        "provider_name": "aws",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ]
+                        }
+                    },
+                    {
+                        "address": "azurerm_virtual_machine.instance2",
+                        "mode": "managed",
+                        "type": "azurerm_virtual_machine",
+                        "name": "instance2",
+                        "provider_name": "azurerm",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ],
+                            "after": {
+                                "location": "eastus"
+                            }
+                        }
+                    },
+                    {
+                        "address": "google_compute_instance.instance3",
+                        "mode": "managed",
+                        "type": "google_compute_instance",
+                        "name": "instance3",
+                        "provider_name": "google",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ],
+                            "after": {
+                                "zone": "us-central1-a"
+                            }
+                        }
+                    }
+                ],
+                "configuration": {
+                    "provider_config": {
+                        "aws": {
+                            "name": "aws",
+                            "expressions": {
+                                "region": {
+                                    "references": [
+                                        "var.region"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "denied_aws":
+        {
+            "tfplan":
+            {
+                "variables": {
+                    "region": {
+                        "value": "eu-west-2"
+                    }
+                },
+                "resource_changes": [
+                    {
+                        "address": "aws_instance.instance1",
+                        "mode": "managed",
+                        "type": "aws_instance",
+                        "name": "instance1",
+                        "provider_name": "aws",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ]
+                        }
+                    },
+                    {
+                        "address": "azurerm_virtual_machine.instance2",
+                        "mode": "managed",
+                        "type": "azurerm_virtual_machine",
+                        "name": "instance2",
+                        "provider_name": "azurerm",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ],
+                            "after": {
+                                "location": "eastus"
+                            }
+                        }
+                    },
+                    {
+                        "address": "google_compute_instance.instance3",
+                        "mode": "managed",
+                        "type": "google_compute_instance",
+                        "name": "instance3",
+                        "provider_name": "google",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ],
+                            "after": {
+                                "zone": "us-central1-a"
+                            }
+                        }
+                    }
+                ],
+                "configuration": {
+                    "provider_config": {
+                        "aws": {
+                            "name": "aws",
+                            "expressions": {
+                                "region": {
+                                    "references": [
+                                        "var.region"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "denied_azure":
+        {
+            "tfplan":
+            {
+                "variables": {
+                    "region": {
+                        "value": "us-east-1"
+                    }
+                },
+                "resource_changes": [
+                    {
+                        "address": "aws_instance.instance1",
+                        "mode": "managed",
+                        "type": "aws_instance",
+                        "name": "instance1",
+                        "provider_name": "aws",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ]
+                        }
+                    },
+                    {
+                        "address": "azurerm_virtual_machine.instance2",
+                        "mode": "managed",
+                        "type": "azurerm_virtual_machine",
+                        "name": "instance2",
+                        "provider_name": "azurerm",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ],
+                            "after": {
+                                "location": "westus"
+                            }
+                        }
+                    },
+                    {
+                        "address": "google_compute_instance.instance3",
+                        "mode": "managed",
+                        "type": "google_compute_instance",
+                        "name": "instance3",
+                        "provider_name": "google",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ],
+                            "after": {
+                                "zone": "us-central1-a"
+                            }
+                        }
+                    }
+                ],
+                "configuration": {
+                    "provider_config": {
+                        "aws": {
+                            "name": "aws",
+                            "expressions": {
+                                "region": {
+                                    "references": [
+                                        "var.region"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "denied_google":
+        {
+            "tfplan":
+            {
+                "variables": {
+                    "region": {
+                        "value": "us-east-1"
+                    }
+                },
+                "resource_changes": [
+                    {
+                        "address": "aws_instance.instance1",
+                        "mode": "managed",
+                        "type": "aws_instance",
+                        "name": "instance1",
+                        "provider_name": "aws",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ]
+                        }
+                    },
+                    {
+                        "address": "azurerm_virtual_machine.instance2",
+                        "mode": "managed",
+                        "type": "azurerm_virtual_machine",
+                        "name": "instance2",
+                        "provider_name": "azurerm",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ],
+                            "after": {
+                                "location": "eastus"
+                            }
+                        }
+                    },
+                    {
+                        "address": "google_compute_instance.instance3",
+                        "mode": "managed",
+                        "type": "google_compute_instance",
+                        "name": "instance3",
+                        "provider_name": "google",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ],
+                            "after": {
+                                "zone": "asia-east1-a"
+                            }
+                        }
+                    }
+                ],
+                "configuration": {
+                    "provider_config": {
+                        "aws": {
+                            "name": "aws",
+                            "expressions": {
+                                "region": {
+                                    "references": [
+                                        "var.region"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "denied_all":
+        {
+            "tfplan":
+            {
+                "variables": {
+                    "region": {
+                        "value": "eu-west-2"
+                    }
+                },
+                "resource_changes": [
+                    {
+                        "address": "aws_instance.instance1",
+                        "mode": "managed",
+                        "type": "aws_instance",
+                        "name": "instance1",
+                        "provider_name": "aws",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ]
+                        }
+                    },
+                    {
+                        "address": "azurerm_virtual_machine.instance2",
+                        "mode": "managed",
+                        "type": "azurerm_virtual_machine",
+                        "name": "instance2",
+                        "provider_name": "azurerm",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ],
+                            "after": {
+                                "location": "westus"
+                            }
+                        }
+                    },
+                    {
+                        "address": "google_compute_instance.instance3",
+                        "mode": "managed",
+                        "type": "google_compute_instance",
+                        "name": "instance3",
+                        "provider_name": "google",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ],
+                            "after": {
+                                "zone": "asia-east1-a"
+                            }
+                        }
+                    }
+                ],
+                "configuration": {
+                    "provider_config": {
+                        "aws": {
+                            "name": "aws",
+                            "expressions": {
+                                "region": {
+                                    "references": [
+                                        "var.region"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

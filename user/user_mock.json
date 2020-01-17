@@ -1,0 +1,113 @@
+{
+    "mock":
+    {
+        "valid_cli_user":
+        {
+            "tfrun":
+            {
+                "source": "tfe-cli",
+                "created_by":
+                {
+                    "name": "j.smith@foo.bar",
+                    "full_name": "John Smith"
+                }
+            }
+        },
+        "invalid_cli_user":
+        {
+            "tfrun":
+            {
+                "source": "tfe-cli",
+                "created_by":
+                {
+                    "name": "b.brown@foo.bar",
+                    "full_name": "Bob Brown"
+                }
+            }
+        },
+        "valid_vcs_user":
+        {
+            "tfplan":
+            {
+                "resource_changes": [
+                    {
+                        "address": "aws_instance.instance1",
+                        "mode": "managed",
+                        "type": "aws_instance",
+                        "name": "instance1",
+                        "provider_name": "aws",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "tfrun":
+            {
+                "source": "tfe-vcs",
+                "created_by":
+                {
+                    "email": "j.smith-aws-ops@foo.bar"
+                }
+            }
+        },
+        "invalid_vcs_user":
+        {
+            "tfplan":
+            {
+                "resource_changes": [
+                    {
+                        "address": "aws_instance.instance1",
+                        "mode": "managed",
+                        "type": "aws_instance",
+                        "name": "instance1",
+                        "provider_name": "aws",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "tfrun":
+            {
+                "source": "tfe-vcs",
+                "created_by":
+                {
+                    "email": "b.brown@foo.bar"
+                }
+            }
+        },
+        "vcs_user_not_aws":
+        {
+            "tfplan":
+            {
+                "resource_changes": [
+                    {
+                        "address": "google_compute_instance.instance1",
+                        "mode": "managed",
+                        "type": "google_compute_instance",
+                        "name": "instance1",
+                        "provider_name": "google",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "tfrun":
+            {
+                "source": "tfe-vcs",
+                "created_by":
+                {
+                    "email": "b.brown@foo.bar"
+                }
+            }
+        }
+    }
+}
