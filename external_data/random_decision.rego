@@ -21,7 +21,7 @@ deny[reason] {
     number < 5
 
     reason := sprintf(
-        "Unlucky you: got %d, but 5 or more is required",
+        "Unlucky you: got %d, but 5 or more is required____",
         [number]
     )
 }
