@@ -1,0 +1,94 @@
+{
+    "mock":
+    {
+        "valid":
+        {
+            "tfplan": {
+                "resource_changes": [
+                    {
+                        "address": "module.rds.module.db_instance.aws_db_instance.this[0]",
+                        "module_address": "module.rds.module.db_instance",
+                        "type": "aws_db_instance",
+                        "name": "this",
+                        "provider_name": "aws",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ]
+                        }
+                    }
+                ],
+                "configuration": {
+                    "root_module": {
+                        "module_calls": {
+                            "rds": {
+                                "source": "terraform-aws-modules/rds/aws"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "invalid":
+        {
+            "tfplan": {
+                "resource_changes": [
+                    {
+                        "address": "module.custom.module.db_instance.aws_db_instance.this[0]",
+                        "module_address": "module.custom.module.db_instance",
+                        "type": "aws_db_instance",
+                        "provider_name": "aws",
+                        "change": {
+                            "actions": [
+                                "update"
+                            ]
+                        }
+                    }
+                ],
+                "configuration": {
+                    "root_module": {
+                        "module_calls": {
+                            "custom": {
+                                "source": "my_modules/custom/rds"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "missing":
+        {
+            "tfplan": {
+                "resource_changes": [
+                    {
+                        "address": "aws_db_instance.default",
+                        "type": "aws_db_instance",
+                        "provider_name": "aws",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "valid_no_restriction":
+        {
+            "tfplan": {
+                "resource_changes": [
+                    {
+                        "address": "aws_instance.default",
+                        "type": "aws_instance",
+                        "provider_name": "aws",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
