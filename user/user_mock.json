@@ -8,8 +8,8 @@
                 "source": "tfe-cli",
                 "created_by":
                 {
-                    "name": "j.smith@foo.bar",
-                    "full_name": "John Smith"
+                    "username": "j.smith",
+                    "name": "John Smith"
                 }
             }
         },
@@ -20,8 +20,8 @@
                 "source": "tfe-cli",
                 "created_by":
                 {
-                    "name": "b.brown@foo.bar",
-                    "full_name": "Bob Brown"
+                    "username": "b.brown",
+                    "name": "Bob Brown"
                 }
             }
         },
@@ -47,9 +47,15 @@
             "tfrun":
             {
                 "source": "tfe-vcs",
-                "created_by":
+                "vcs":
                 {
-                    "email": "j.smith-aws-ops@foo.bar"
+                    "commit":
+                    {
+                        "author":
+                        {
+                            "email": "j.smith-aws-ops@foo.bar"
+                        }
+                    }
                 }
             }
         },
@@ -75,9 +81,15 @@
             "tfrun":
             {
                 "source": "tfe-vcs",
-                "created_by":
+                "vcs":
                 {
-                    "email": "b.brown@foo.bar"
+                    "commit":
+                    {
+                        "author":
+                        {
+                            "email": "b.brown@foo.bar"
+                        }
+                    }
                 }
             }
         },
@@ -103,9 +115,15 @@
             "tfrun":
             {
                 "source": "tfe-vcs",
-                "created_by":
+                "vcs":
                 {
-                    "email": "b.brown@foo.bar"
+                    "commit":
+                    {
+                        "author":
+                        {
+                            "email": "b.brown@foo.bar"
+                        }
+                    }
                 }
             }
         }
