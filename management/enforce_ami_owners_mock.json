@@ -1,0 +1,305 @@
+{
+    "mock":
+    {
+        "valid":
+        {
+            "tfplan": {
+                "variables": {
+                    "some_owner": {
+                        "value": [
+                            "012345678901"
+                        ]
+                    }
+                },
+                "configuration": {
+                    "root_module": {
+                        "resources": [
+                            {
+                                "address": "aws_instance.default",
+                                "mode": "managed",
+                                "type": "aws_instance",
+                                "name": "default"
+                            },
+                            {
+                                "address": "data.aws_ami.ami1",
+                                "mode": "data",
+                                "type": "aws_ami",
+                                "name": "ami1",
+                                "provider_config_key": "aws",
+                                "expressions": {
+                                    "owners": {
+                                        "constant_value": [
+                                            "self"
+                                        ]
+                                    }
+                                }
+                            },
+                            {
+                                "address": "data.aws_ami.ami2",
+                                "mode": "data",
+                                "type": "aws_ami",
+                                "name": "ami2",
+                                "provider_config_key": "aws",
+                                "expressions": {
+                                    "owners": {
+                                        "references": [
+                                            "var.some_owner"
+                                        ]
+                                    }
+                                }
+                            },
+                            {
+                                "address": "data.aws_ami.ami3",
+                                "mode": "data",
+                                "type": "aws_ami",
+                                "name": "ami3",
+                                "provider_config_key": "aws",
+                                "expressions": {
+                                    "owners": {
+                                        "constant_value": [
+                                            "self",
+                                            "012345678901"
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "invalid":
+        {
+            "tfplan": {
+                "variables": {
+                    "some_owner": {
+                        "value": [
+                            "self",
+                            "012345678901",
+                            "987654321098"
+                        ]
+                    }
+                },
+                "configuration": {
+                    "root_module": {
+                        "resources": [
+                            {
+                                "address": "aws_instance.default",
+                                "mode": "managed",
+                                "type": "aws_instance",
+                                "name": "default"
+                            },
+                            {
+                                "address": "data.aws_ami.ami1",
+                                "mode": "data",
+                                "type": "aws_ami",
+                                "name": "ami1",
+                                "provider_config_key": "aws",
+                                "expressions": {
+                                    "owners": {
+                                        "constant_value": [
+                                            "self"
+                                        ]
+                                    }
+                                }
+                            },
+                            {
+                                "address": "data.aws_ami.ami2",
+                                "mode": "data",
+                                "type": "aws_ami",
+                                "name": "ami2",
+                                "provider_config_key": "aws",
+                                "expressions": {
+                                    "owners": {
+                                        "constant_value": [
+                                            "012345678901"
+                                        ]
+                                    }
+                                }
+                            },
+                            {
+                                "address": "data.aws_ami.ami3",
+                                "mode": "data",
+                                "type": "aws_ami",
+                                "name": "ami3",
+                                "provider_config_key": "aws",
+                                "expressions": {
+                                    "owners": {
+                                        "references": [
+                                            "var.some_owner"
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "invalid_all":
+        {
+            "tfplan": {
+                "variables": {
+                    "some_owner": {
+                        "value": [
+                            "self",
+                            "amazon"
+                        ]
+                    }
+                },
+                "configuration": {
+                    "root_module": {
+                        "resources": [
+                            {
+                                "address": "aws_instance.default",
+                                "mode": "managed",
+                                "type": "aws_instance",
+                                "name": "default"
+                            },
+                            {
+                                "address": "data.aws_ami.ami1",
+                                "mode": "data",
+                                "type": "aws_ami",
+                                "name": "ami1",
+                                "provider_config_key": "aws",
+                                "expressions": {
+                                    "owners": {
+                                        "references": [
+                                            "var.some_owner"
+                                        ]
+                                    }
+                                }
+                            },
+                            {
+                                "address": "data.aws_ami.ami2",
+                                "mode": "data",
+                                "type": "aws_ami",
+                                "name": "ami2",
+                                "provider_config_key": "aws",
+                                "expressions": {
+                                    "owners": {
+                                        "constant_value": [
+                                            "111000111555"
+                                        ]
+                                    }
+                                }
+                            },
+                            {
+                                "address": "data.aws_ami.ami3",
+                                "mode": "data",
+                                "type": "aws_ami",
+                                "name": "ami3",
+                                "provider_config_key": "aws",
+                                "expressions": {
+                                    "owners": {
+                                        "constant_value": [
+                                            "self",
+                                            "012345678901",
+                                            "987654321098"
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "invalid_nested":
+        {
+            "tfplan": {
+                "variables": {
+                    "some_owner": {
+                        "value": [
+                            "000011110000"
+                        ]
+                    }
+                },
+                "configuration": {
+                    "root_module": {
+                        "resources": [
+                            {
+                                "address": "aws_instance.default",
+                                "mode": "managed",
+                                "type": "aws_instance",
+                                "name": "default"
+                            },
+                            {
+                                "address": "data.aws_ami.ami1",
+                                "mode": "data",
+                                "type": "aws_ami",
+                                "name": "ami1",
+                                "provider_config_key": "aws",
+                                "expressions": {
+                                    "owners": {
+                                        "constant_value": [
+                                            "self"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "module_calls": {
+                            "some_module1": {
+                                "source": "terraform-aws-modules/some_module1",
+                                "module": {
+                                    "module_calls": {
+                                        "some_module2": {
+                                            "source": "terraform-aws-modules/some_module2",
+                                            "module": {
+                                                "resources": [
+                                                    {
+                                                        "address": "data.aws_ami.ami2",
+                                                        "mode": "data",
+                                                        "type": "aws_ami",
+                                                        "name": "ami2",
+                                                        "provider_config_key": "aws",
+                                                        "expressions": {
+                                                            "owners": {
+                                                                "constant_value": [
+                                                                    "self"
+                                                                ]
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "address": "data.aws_ami.ami3",
+                                                        "mode": "data",
+                                                        "type": "aws_ami",
+                                                        "name": "ami3",
+                                                        "provider_config_key": "aws",
+                                                        "expressions": {
+                                                            "owners": {
+                                                                "constant_value": [
+                                                                    "191919464600"
+                                                                ]
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "address": "data.aws_ami.ami3",
+                                                        "mode": "data",
+                                                        "type": "aws_ami",
+                                                        "name": "ami3",
+                                                        "provider_config_key": "aws",
+                                                        "expressions": {
+                                                            "owners": {
+                                                                "references": [
+                                                                    "var.some_owner"
+                                                                ]
+                                                            }
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
