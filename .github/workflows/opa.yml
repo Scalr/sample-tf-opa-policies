@@ -16,6 +16,7 @@ jobs:
           management/enforce_ami_owners.rego;management/enforce_ami_owners_test.rego;management/enforce_ami_owners_mock.json
           management/instance_types.rego;management/instance_types_test.rego;management/instance_types_mock.json
           management/resource_tags.rego;management/resource_tags_test.rego;management/resource_tags_mock.json
+          management/whitelist_ami.rego;management/whitelist_ami_test.rego;management/whitelist_ami_mock.json
           management/workspace_name.rego;management/workspace_name_test.rego;management/workspace_name_mock.json
           management/workspace_tags.rego;management/workspace_tags_test.rego;management/workspace_tags_mock.json
           modules/pin_module_version.rego;modules/pin_module_version_test.rego;modules/pin_module_version_mock.json;

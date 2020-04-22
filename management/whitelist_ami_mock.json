@@ -1,0 +1,375 @@
+{
+    "mock":
+    {
+        "valid":
+        {
+            "tfplan":
+            {
+                "variables": {
+                    "ami_id": {
+                        "value": "ami-07d0cf3af28718ef8"
+                    }
+                },
+                "resource_changes": [
+                    {
+                        "address": "aws_instance.ami_from_datasource",
+                        "mode": "managed",
+                        "type": "aws_instance",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ],
+                            "after": {
+                                "ami": "ami-07d0cf3af28718ef8"
+                            }
+                        }
+                    },
+                    {
+                        "address": "aws_instance.ami_from_var",
+                        "mode": "managed",
+                        "type": "aws_instance",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ],
+                            "after": {
+                                "ami": "ami-07d0cf3af28718ef8"
+                            }
+                        }
+                    },
+                    {
+                        "address": "aws_instance.direct_ami",
+                        "mode": "managed",
+                        "type": "aws_instance",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ],
+                            "after": {
+                                "ami": "ami-07d0cf3af28718ef8"
+                            }
+                        }
+                    },
+                    {
+                        "address": "module.ec2-instance.aws_instance.this[0]",
+                        "module_address": "module.ec2-instance",
+                        "mode": "managed",
+                        "type": "aws_instance",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ],
+                            "after": {
+                                "ami": "ami-07d0cf3af28718ef8"
+                            }
+                        }
+                    }
+                ],
+                "configuration": {
+                    "root_module": {
+                        "resources": [
+                            {
+                                "address": "aws_instance.ami_from_datasource",
+                                "mode": "managed",
+                                "type": "aws_instance",
+                                "expressions": {
+                                    "ami": {
+                                        "references": [
+                                            "data.aws_ami.ubuntu"
+                                        ]
+                                    }
+                                }
+                            },
+                            {
+                                "address": "aws_instance.ami_from_var",
+                                "mode": "managed",
+                                "type": "aws_instance",
+                                "expressions": {
+                                    "ami": {
+                                        "references": [
+                                            "var.ami_id"
+                                        ]
+                                    }
+                                }
+                            },
+                            {
+                                "address": "aws_instance.direct_ami",
+                                "mode": "managed",
+                                "type": "aws_instance",
+                                "expressions": {
+                                    "ami": {
+                                        "constant_value": "ami-07d0cf3af28718ef8"
+                                    }
+                                }
+                            },
+                            {
+                                "address": "data.aws_ami.ubuntu",
+                                "mode": "data",
+                                "type": "aws_ami",
+                                "name": "ubuntu"
+                            }
+                        ],
+                        "module_calls": {
+                            "ec2-instance": {
+                                "source": "terraform-aws-modules/ec2-instance/aws",
+                                "expressions": {
+                                    "ami": {
+                                        "constant_value": "ami-07d0cf3af28718ef8"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "invalid_direct":
+        {
+            "tfplan":
+            {
+                "variables": {
+                    "ami_id": {
+                        "value": "ami-085925f297f89fce1"
+                    }
+                },
+                "resource_changes": [
+                    {
+                        "address": "aws_instance.ami_from_datasource",
+                        "mode": "managed",
+                        "type": "aws_instance",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ],
+                            "after": {
+                                "ami": "ami-07d0cf3af28718ef8"
+                            }
+                        }
+                    },
+                    {
+                        "address": "aws_instance.ami_from_var",
+                        "mode": "managed",
+                        "type": "aws_instance",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ],
+                            "after": {
+                                "ami": "ami-085925f297f89fce1"
+                            }
+                        }
+                    },
+                    {
+                        "address": "aws_instance.direct_ami",
+                        "mode": "managed",
+                        "type": "aws_instance",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ],
+                            "after": {
+                                "ami": "ami-085925f297f89fce1"
+                            }
+                        }
+                    },
+                    {
+                        "address": "module.ec2-instance.aws_instance.this[0]",
+                        "module_address": "module.ec2-instance",
+                        "mode": "managed",
+                        "type": "aws_instance",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ],
+                            "after": {
+                                "ami": "ami-07d0cf3af28718ef8"
+                            }
+                        }
+                    }
+                ],
+                "configuration": {
+                    "root_module": {
+                        "resources": [
+                            {
+                                "address": "aws_instance.ami_from_datasource",
+                                "mode": "managed",
+                                "type": "aws_instance",
+                                "expressions": {
+                                    "ami": {
+                                        "references": [
+                                            "data.aws_ami.ubuntu"
+                                        ]
+                                    }
+                                }
+                            },
+                            {
+                                "address": "aws_instance.ami_from_var",
+                                "mode": "managed",
+                                "type": "aws_instance",
+                                "expressions": {
+                                    "ami": {
+                                        "references": [
+                                            "var.ami_id"
+                                        ]
+                                    }
+                                }
+                            },
+                            {
+                                "address": "aws_instance.direct_ami",
+                                "mode": "managed",
+                                "type": "aws_instance",
+                                "expressions": {
+                                    "ami": {
+                                        "constant_value": "ami-085925f297f89fce1"
+                                    }
+                                }
+                            },
+                            {
+                                "address": "data.aws_ami.ubuntu",
+                                "mode": "data",
+                                "type": "aws_ami",
+                                "name": "ubuntu"
+                            }
+                        ],
+                        "module_calls": {
+                            "ec2-instance": {
+                                "source": "terraform-aws-modules/ec2-instance/aws",
+                                "expressions": {
+                                    "ami": {
+                                        "references": [
+                                            "data.aws_ami.ubuntu"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "invalid_datasource":
+        {
+            "tfplan":
+            {
+                "variables": {
+                    "ami_id": {
+                        "value": "ami-07d0cf3af28718ef8"
+                    }
+                },
+                "resource_changes": [
+                    {
+                        "address": "aws_instance.ami_from_datasource",
+                        "mode": "managed",
+                        "type": "aws_instance",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ],
+                            "after": {
+                                "ami": "ami-085925f297f89fce1"
+                            }
+                        }
+                    },
+                    {
+                        "address": "aws_instance.ami_from_var",
+                        "mode": "managed",
+                        "type": "aws_instance",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ],
+                            "after": {
+                                "ami": "ami-07d0cf3af28718ef8"
+                            }
+                        }
+                    },
+                    {
+                        "address": "aws_instance.direct_ami",
+                        "mode": "managed",
+                        "type": "aws_instance",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ],
+                            "after": {
+                                "ami": "ami-07d0cf3af28718ef8"
+                            }
+                        }
+                    },
+                    {
+                        "address": "module.ec2-instance.aws_instance.this[0]",
+                        "module_address": "module.ec2-instance",
+                        "mode": "managed",
+                        "type": "aws_instance",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ],
+                            "after": {
+                                "ami": "ami-085925f297f89fce1"
+                            }
+                        }
+                    }
+                ],
+                "configuration": {
+                    "root_module": {
+                        "resources": [
+                            {
+                                "address": "aws_instance.ami_from_datasource",
+                                "mode": "managed",
+                                "type": "aws_instance",
+                                "expressions": {
+                                    "ami": {
+                                        "references": [
+                                            "data.aws_ami.ubuntu"
+                                        ]
+                                    }
+                                }
+                            },
+                            {
+                                "address": "aws_instance.ami_from_var",
+                                "mode": "managed",
+                                "type": "aws_instance",
+                                "expressions": {
+                                    "ami": {
+                                        "references": [
+                                            "var.ami_id"
+                                        ]
+                                    }
+                                }
+                            },
+                            {
+                                "address": "aws_instance.direct_ami",
+                                "mode": "managed",
+                                "type": "aws_instance",
+                                "expressions": {
+                                    "ami": {
+                                        "constant_value": "ami-07d0cf3af28718ef8"
+                                    }
+                                }
+                            },
+                            {
+                                "address": "data.aws_ami.ubuntu",
+                                "mode": "data",
+                                "type": "aws_ami",
+                                "name": "ubuntu"
+                            }
+                        ],
+                        "module_calls": {
+                            "ec2-instance": {
+                                "source": "terraform-aws-modules/ec2-instance/aws",
+                                "expressions": {
+                                    "ami": {
+                                        "references": [
+                                            "data.aws_ami.ubuntu"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
