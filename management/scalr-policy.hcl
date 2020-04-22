@@ -16,6 +16,11 @@ policy "resource_tags" {
   enforcement_level = "hard-mandatory"
 }
 
+policy "whitelist_ami" {
+  enabled           = true
+  enforcement_level = "hard-mandatory"
+}
+
 policy "workspace_name" {
   enabled           = true
   enforcement_level = "soft-mandatory"
