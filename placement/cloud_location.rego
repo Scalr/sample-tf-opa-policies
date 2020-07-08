@@ -10,7 +10,7 @@ allowed_locations = {
 }
 
 
-contains(arr, elem) {
+array_contains(arr, elem) {
   arr[_] = elem
 }
 
@@ -40,7 +40,7 @@ get_location(resource, plan) = aws_region {
 deny[reason] {
     resource := tfplan.resource_changes[_]
     location := get_location(resource, tfplan)
-    not contains(allowed_locations[resource.provider_name], location)
+    not array_contains(allowed_locations[resource.provider_name], location)
 
     reason := sprintf(
         "%s: location %q is not allowed",

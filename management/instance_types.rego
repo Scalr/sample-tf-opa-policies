@@ -16,7 +16,7 @@ instance_type_key = {
     "google": "machine_type"
 }
 
-contains(arr, elem) {
+array_contains(arr, elem) {
   arr[_] = elem
 }
 
@@ -27,7 +27,7 @@ get_instance_type(resource) = instance_type {
 deny[reason] {
     resource := tfplan.resource_changes[_]
     instance_type := get_instance_type(resource)
-    not contains(allowed_types[resource.provider_name], instance_type)
+    not array_contains(allowed_types[resource.provider_name], instance_type)
 
     reason := sprintf(
         "%s: instance type %q is not allowed",

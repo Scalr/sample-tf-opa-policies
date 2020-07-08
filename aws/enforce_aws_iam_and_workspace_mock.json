@@ -1,0 +1,246 @@
+{
+    "mock": {
+        "valid": {
+            "tfrun": {
+                "workspace": {
+                    "name": "dev-ws-1"
+                }
+            },
+            "tfplan": {
+                "terraform_version": "0.12.28",
+                "variables": {
+                    "arn": {
+                        "value": "arn:aws:iam::4422:role/release_admin"
+                    }
+                },
+                "configuration": {
+                    "provider_config": {
+                        "aws": {
+                            "name": "aws",
+                            "expressions": {
+                                "region": {
+                                    "constant_value": "us-east-1"
+                                }
+                            }
+                        },
+                        "aws.west": {
+                            "name": "aws",
+                            "alias": "west",
+                            "expressions": {
+                                "assume_role": [
+                                    {
+                                        "role_arn": {
+                                            "constant_value": "arn:aws:iam::4423:role/dev"
+                                        }
+                                    }
+                                ],
+                                "region": {
+                                    "constant_value": "us-west-1"
+                                }
+                            }
+                        },
+                        "aws.west2": {
+                            "name": "aws",
+                            "alias": "west2",
+                            "expressions": {
+                                "access_key": {
+                                    "references": [
+                                        "var.access_key"
+                                    ]
+                                },
+                                "assume_role": [
+                                    {
+                                        "role_arn": {
+                                            "references": [
+                                                "var.arn"
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "region": {
+                                    "constant_value": "us-west-2"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "invalid_ami": {
+            "tfrun": {
+                "workspace": {
+                    "name": "prod-ws-3"
+                }
+            },
+            "tfplan": {
+                "terraform_version": "0.12.28",
+                "variables": {
+                    "arn": {
+                        "value": "arn:aws:iam::4424:role/inv"
+                    }
+                },
+                "configuration": {
+                    "provider_config": {
+                        "aws": {
+                            "name": "aws",
+                            "expressions": {
+                                "region": {
+                                    "constant_value": "us-east-1"
+                                }
+                            }
+                        },
+                        "aws.west": {
+                            "name": "aws",
+                            "alias": "west",
+                            "expressions": {
+                                "assume_role": [
+                                    {
+                                        "role_arn": {
+                                            "constant_value": "arn:aws:iam::4425:role/inv"
+                                        }
+                                    }
+                                ],
+                                "region": {
+                                    "constant_value": "us-west-1"
+                                }
+                            }
+                        },
+                        "aws.west2": {
+                            "name": "aws",
+                            "alias": "west2",
+                            "expressions": {
+                                "access_key": {
+                                    "references": [
+                                        "var.access_key"
+                                    ]
+                                },
+                                "assume_role": [
+                                    {
+                                        "role_arn": {
+                                            "references": [
+                                                "var.arn"
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "region": {
+                                    "constant_value": "us-west-2"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "invalid_ws": {
+            "tfrun": {
+                "workspace": {
+                    "name": "prod-ws-3"
+                }
+            },
+            "tfplan": {
+                "terraform_version": "0.12.28",
+                "variables": {
+                    "arn": {
+                        "value": "arn:aws:iam::4422:role/release_admin"
+                    }
+                },
+                "configuration": {
+                    "provider_config": {
+                        "aws": {
+                            "name": "aws",
+                            "expressions": {
+                                "region": {
+                                    "constant_value": "us-east-1"
+                                }
+                            }
+                        },
+                        "aws.west": {
+                            "name": "aws",
+                            "alias": "west",
+                            "expressions": {
+                                "assume_role": [
+                                    {
+                                        "role_arn": {
+                                            "constant_value": "arn:aws:iam::4423:role/dev"
+                                        }
+                                    }
+                                ],
+                                "region": {
+                                    "constant_value": "us-west-1"
+                                }
+                            }
+                        },
+                        "aws.west2": {
+                            "name": "aws",
+                            "alias": "west2",
+                            "expressions": {
+                                "access_key": {
+                                    "references": [
+                                        "var.access_key"
+                                    ]
+                                },
+                                "assume_role": [
+                                    {
+                                        "role_arn": {
+                                            "references": [
+                                                "var.arn"
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "region": {
+                                    "constant_value": "us-west-2"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "no_aliases": {
+            "tfrun": {
+                "workspace": {
+                    "name": "prod-ws-3"
+                }
+            },
+            "tfplan": {
+                "terraform_version": "0.12.28"
+            },
+            "configuration": {
+                "provider_config": {
+                    "aws": {
+                        "name": "aws",
+                        "expressions": {
+                            "region": {
+                                "constant_value": "us-east-1"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "non_aws": {
+            "tfrun": {
+                "workspace": {
+                    "name": "prod-ws-3"
+                }
+            },
+            "tfplan": {
+                "terraform_version": "0.12.28"
+            },
+            "configuration": {
+                "provider_config": {
+                    "aws": {
+                        "name": "azure",
+                        "expressions": {
+                            "region": {
+                                "constant_value": "us-east-1"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

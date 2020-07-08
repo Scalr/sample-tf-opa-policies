@@ -16,7 +16,7 @@ allowed_owners = [
 ]
 
 
-contains(arr, elem) {
+array_contains(arr, elem) {
   arr[_] = elem
 }
 
@@ -35,7 +35,7 @@ deny[reason] {
     "aws_ami" == value.type
     owners := eval_expression(tfplan, value.expressions.owners)
     owner = owners[_]
-    not contains(allowed_owners, owner)
+    not array_contains(allowed_owners, owner)
     reason := sprintf(
         "%s: owner %q is not allowed. Expected owners are: %v",
         [value.address, owner, allowed_owners]

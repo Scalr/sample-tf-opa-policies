@@ -17,7 +17,7 @@ allowed_amis = [
   "ami-0a9b2a20d7dc001e0"
 ]
 
-contains(arr, elem) {
+array_contains(arr, elem) {
   arr[_] = elem
 }
 
@@ -40,9 +40,9 @@ get_address(value) = address {
 deny[reason] {
     resource := tfplan.resource_changes[_]
     action := resource.change.actions[count(resource.change.actions) - 1]
-    contains(["create", "update"], action)
+    array_contains(["create", "update"], action)
     ami := resource.change.after.ami
-    not contains(allowed_amis, ami)
+    not array_contains(allowed_amis, ami)
     reason := sprintf(
         "%s: AMI %q is not allowed. Expected values are: %v",
         [resource.address, ami, allowed_amis]
@@ -54,7 +54,7 @@ deny[reason] {
 deny[reason] {
     walk(tfplan.configuration.root_module, [path, value])
     ami := eval_expression(tfplan, value.expressions.ami)
-    not contains(allowed_amis, ami)
+    not array_contains(allowed_amis, ami)
     reason := sprintf(
 `%s: AMI %q is not allowed.
 AMI id should be pulled from aws_ami data source
