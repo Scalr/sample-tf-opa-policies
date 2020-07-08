@@ -1,7 +1,7 @@
-package terraform 
+package terraform
 import input.tfplan as tfplan
 import input.tfrun as tfrun
- 
+
 
 allowed_roles_map := {
     "arn:aws:iam::4423:role/dev": [
@@ -33,20 +33,10 @@ array_contains(arr, value) = true {
     arr[_] == value
 }
 
-# aws_provider_aliases[alias] = provider {
-#     provider := provider_config[key] 
-#     provider.name == "aws"  
-#     module_address := object.get(provider, "module_address", "default")  
-#     module_path = replace(module_address, ".", ".module.")  
-#     prefixed = concat(".", ["module", module_path]) 
-#     alias = replace(replace(key, module_address, prefixed), ":", ".")
-# }
-
-
 # check only aws providers with aliases
 aws_provider_aliases[alias] = provider {
     provider := tfplan.configuration.provider_config[alias]
-    provider.alias 
+    provider.alias
     provider.name == "aws"
 }
 
