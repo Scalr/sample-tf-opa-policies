@@ -33,10 +33,9 @@ array_contains(arr, value) = true {
     arr[_] == value
 }
 
-# check only aws providers with aliases
+
 aws_provider_aliases[alias] = provider {
     provider := tfplan.configuration.provider_config[alias]
-    provider.alias
     provider.name == "aws"
 }
 
@@ -64,7 +63,7 @@ deny[reason] {
     count([ws_pattern | ws_pattern := workspaces[_]; contains(workspace_name, ws_pattern)]) == 0
 
     reason := sprintf(
-        "%s: Worksapce %q is not allowed to use role %q",
+        "%s: Workspace %q is not allowed to use role %q",
         [alias, workspace_name, role_arn]
     )
 }
