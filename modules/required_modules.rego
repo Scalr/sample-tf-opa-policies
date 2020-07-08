@@ -9,14 +9,14 @@ resource_modules = {
     "aws_db_instance": "terraform-aws-modules/rds/aws"
 }
 
-contains(arr, elem) {
+array_contains(arr, elem) {
   arr[_] = elem
 }
 
 deny[reason] {
     resource := tfplan.resource_changes[_]
     action := resource.change.actions[count(resource.change.actions) - 1]
-    contains(["create", "update"], action)
+    array_contains(["create", "update"], action)
     module_source = resource_modules[resource.type]
     not resource.module_address
     reason := sprintf(
@@ -28,7 +28,7 @@ deny[reason] {
 deny[reason] {
     resource := tfplan.resource_changes[_]
     action := resource.change.actions[count(resource.change.actions) - 1]
-    contains(["create", "update"], action)
+    array_contains(["create", "update"], action)
     module_source = resource_modules[resource.type]
     parts = split(resource.module_address, ".")
     module_name := parts[1]
