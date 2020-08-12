@@ -20,3 +20,8 @@ test_invalid_submodule {
     result = deny with input as data.mock.invalid_submodule
     count(result) == 2
 }
+
+test_invalid_nested_module {
+    result = deny with input as data.mock.invalid_nested_module
+    count(result) == 3
+}
