@@ -30,3 +30,8 @@ policy "workspace_tags" {
   enabled           = true
   enforcement_level = "soft-mandatory"
 }
+
+policy "denied_provisioners" {
+  enabled           = true
+  enforcement_level = "hard-mandatory"
+}

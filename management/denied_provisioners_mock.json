@@ -1,0 +1,173 @@
+{
+    "mock":
+    {
+        "valid":
+        {
+            "tfplan": {
+                "configuration": {
+                    "root_module": {
+                        "resources": [
+                            {
+                                "address": "aws_instance.first",
+                                "provisioners": [
+                                    {
+                                        "type": "chef"
+                                    }
+                                ]
+                            },
+                            {
+                                "address": "aws_instance.second",
+                                "provisioners": [
+                                    {
+                                        "type": "remote-exec"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "invalid_one":
+        {
+            "tfplan": {
+                "configuration": {
+                    "root_module": {
+                        "resources": [
+                            {
+                                "address": "aws_instance.first"
+                            },
+                            {
+                                "address": "aws_instance.second",
+                                "provisioners": [
+                                    {
+                                        "type": "local-exec"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "invalid_all":
+        {
+            "tfplan": {
+                "configuration": {
+                    "root_module": {
+                        "resources": [
+                            {
+                                "address": "aws_instance.first",
+                                "provisioners": [
+                                    {
+                                        "type": "local-exec"
+                                    }
+                                ]
+                            },
+                            {
+                                "address": "aws_instance.second",
+                                "provisioners": [
+                                    {
+                                        "type": "local-exec"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "invalid_submodule":
+        {
+            "tfplan": {
+                "configuration": {
+                    "root_module": {
+                        "resources": [
+                            {
+                                "address": "aws_instance.first"
+                            },
+                            {
+                                "address": "aws_instance.second",
+                                "provisioners": [
+                                    {
+                                        "type": "local-exec"
+                                    }
+                                ]
+                            }
+                        ],
+                        "module_calls": {
+                            "ec2-instance": {
+                                "module": {
+                                    "resources": [
+                                        {
+                                            "address": "aws_instance.this",
+                                            "provisioners": [
+                                                {
+                                                    "type": "local-exec"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "invalid_nested_module":
+        {
+            "tfplan": {
+                "configuration": {
+                    "root_module": {
+                        "resources": [
+                            {
+                                "address": "aws_instance.first"
+                            },
+                            {
+                                "address": "aws_instance.second",
+                                "provisioners": [
+                                    {
+                                        "type": "local-exec"
+                                    }
+                                ]
+                            }
+                        ],
+                        "module_calls": {
+                            "ec2-instance": {
+                                "module": {
+                                    "module_calls": {
+                                        "another-ec2-instance": {
+                                            "module": {
+                                                "resources": [
+                                                    {
+                                                        "address": "aws_instance.this",
+                                                        "provisioners": [
+                                                            {
+                                                                "type": "local-exec"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "resources": [
+                                        {
+                                            "address": "aws_instance.this",
+                                            "provisioners": [
+                                                {
+                                                    "type": "local-exec"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
