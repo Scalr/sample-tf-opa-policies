@@ -15,6 +15,7 @@ jobs:
           external_data
           aws/enforce_aws_resource.rego;aws/enforce_aws_resource_test.rego;aws/enforce_aws_resource_mock.json
           aws/enforce_aws_iam_and_workspace.rego;aws/enforce_aws_iam_and_workspace_test.rego;aws/enforce_aws_iam_and_workspace_mock.json
+          aws/enforce_s3_buckets_encryption.rego;aws/enforce_s3_buckets_encryption_test.rego;aws/enforce_s3_buckets_encryption_mock.json
           management/denied_provisioners.rego;management/denied_provisioners_test.rego;management/denied_provisioners_mock.json
           management/enforce_ami_owners.rego;management/enforce_ami_owners_test.rego;management/enforce_ami_owners_mock.json
           management/instance_types.rego;management/instance_types_test.rego;management/instance_types_mock.json

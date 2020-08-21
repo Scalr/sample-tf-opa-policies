@@ -34,7 +34,7 @@ deny[reason] {
     )
 }
 
-# Role to enforce specific SSE algorithms
+# Rule to enforce specific SSE algorithms
 deny[reason] {
     r := s3_buckets[_]
     sse_configuration := r.change.after.server_side_encryption_configuration[_]
