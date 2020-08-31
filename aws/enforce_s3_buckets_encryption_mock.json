@@ -1,0 +1,469 @@
+{
+    "mock": {
+        "valid_s3_bucket_input": {
+            "format_version": "0.1",
+            "terraform_version": "0.12.25",
+            "resource_changes": [
+                {
+                    "address": "aws_s3_bucket.a",
+                    "mode": "managed",
+                    "type": "aws_s3_bucket",
+                    "name": "a",
+                    "provider_name": "aws",
+                    "change": {
+                        "actions": [
+                            "create"
+                        ],
+                        "before": null,
+                        "after": {
+                            "acl": "private",
+                            "bucket": "my-tf-test-bucket",
+                            "bucket_prefix": null,
+                            "cors_rule": [],
+                            "force_destroy": false,
+                            "grant": [],
+                            "lifecycle_rule": [],
+                            "logging": [],
+                            "object_lock_configuration": [],
+                            "policy": null,
+                            "replication_configuration": [],
+                            "server_side_encryption_configuration": [
+                                {
+                                    "rule": [
+                                        {
+                                            "apply_server_side_encryption_by_default": [
+                                                {
+                                                    "kms_master_key_id": null,
+                                                    "sse_algorithm": "aws:kms"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "tags": {
+                                "Environment": "Dev",
+                                "Name": "My bucket"
+                            },
+                            "website": []
+                        },
+                        "after_unknown": {
+                            "acceleration_status": true,
+                            "arn": true,
+                            "bucket_domain_name": true,
+                            "bucket_regional_domain_name": true,
+                            "cors_rule": [],
+                            "grant": [],
+                            "hosted_zone_id": true,
+                            "id": true,
+                            "lifecycle_rule": [],
+                            "logging": [],
+                            "object_lock_configuration": [],
+                            "region": true,
+                            "replication_configuration": [],
+                            "request_payer": true,
+                            "server_side_encryption_configuration": [
+                                {
+                                    "rule": [
+                                        {
+                                            "apply_server_side_encryption_by_default": [
+                                                {}
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "tags": {},
+                            "versioning": true,
+                            "website": [],
+                            "website_domain": true,
+                            "website_endpoint": true
+                        }
+                    }
+                },
+                {
+                    "address": "module.child.aws_s3_bucket.b",
+                    "module_address": "module.child",
+                    "mode": "managed",
+                    "type": "aws_s3_bucket",
+                    "name": "b",
+                    "provider_name": "aws",
+                    "change": {
+                        "actions": [
+                            "create"
+                        ],
+                        "before": null,
+                        "after": {
+                            "acl": "private",
+                            "bucket": "my-tf-test-bucket-2",
+                            "bucket_prefix": null,
+                            "cors_rule": [],
+                            "force_destroy": false,
+                            "grant": [],
+                            "lifecycle_rule": [],
+                            "logging": [],
+                            "object_lock_configuration": [],
+                            "policy": null,
+                            "replication_configuration": [],
+                            "server_side_encryption_configuration": [
+                                {
+                                    "rule": [
+                                        {
+                                            "apply_server_side_encryption_by_default": [
+                                                {
+                                                    "kms_master_key_id": null,
+                                                    "sse_algorithm": "AES256"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "tags": {
+                                "Environment": "Dev 2",
+                                "Name": "My 2 bucket"
+                            },
+                            "website": []
+                        },
+                        "after_unknown": {
+                            "acceleration_status": true,
+                            "arn": true,
+                            "bucket_domain_name": true,
+                            "bucket_regional_domain_name": true,
+                            "cors_rule": [],
+                            "grant": [],
+                            "hosted_zone_id": true,
+                            "id": true,
+                            "lifecycle_rule": [],
+                            "logging": [],
+                            "object_lock_configuration": [],
+                            "region": true,
+                            "replication_configuration": [],
+                            "request_payer": true,
+                            "server_side_encryption_configuration": [
+                                {
+                                    "rule": [
+                                        {
+                                            "apply_server_side_encryption_by_default": [
+                                                {}
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "tags": {},
+                            "versioning": true,
+                            "website": [],
+                            "website_domain": true,
+                            "website_endpoint": true
+                        }
+                    }
+                }
+            ]
+        },
+        "invalid_s3_bucket_acls_input": {
+            "tfplan": {
+                "format_version": "0.1",
+                "terraform_version": "0.12.25",
+                "resource_changes": [
+                    {
+                        "address": "aws_s3_bucket.a",
+                        "mode": "managed",
+                        "type": "aws_s3_bucket",
+                        "name": "a",
+                        "provider_name": "aws",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ],
+                            "before": null,
+                            "after": {
+                                "acl": "public-read",
+                                "bucket": "my-tf-test-bucket",
+                                "bucket_prefix": null,
+                                "cors_rule": [],
+                                "force_destroy": false,
+                                "grant": [],
+                                "lifecycle_rule": [],
+                                "logging": [],
+                                "object_lock_configuration": [],
+                                "policy": null,
+                                "replication_configuration": [],
+                                "server_side_encryption_configuration": [
+                                    {
+                                        "rule": [
+                                            {
+                                                "apply_server_side_encryption_by_default": [
+                                                    {
+                                                        "kms_master_key_id": null,
+                                                        "sse_algorithm": "aws:kms"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "tags": {
+                                    "Environment": "Dev",
+                                    "Name": "My bucket"
+                                },
+                                "website": []
+                            },
+                            "after_unknown": {
+                                "acceleration_status": true,
+                                "arn": true,
+                                "bucket_domain_name": true,
+                                "bucket_regional_domain_name": true,
+                                "cors_rule": [],
+                                "grant": [],
+                                "hosted_zone_id": true,
+                                "id": true,
+                                "lifecycle_rule": [],
+                                "logging": [],
+                                "object_lock_configuration": [],
+                                "region": true,
+                                "replication_configuration": [],
+                                "request_payer": true,
+                                "server_side_encryption_configuration": [
+                                    {
+                                        "rule": [
+                                            {
+                                                "apply_server_side_encryption_by_default": [
+                                                    {}
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "tags": {},
+                                "versioning": true,
+                                "website": [],
+                                "website_domain": true,
+                                "website_endpoint": true
+                            }
+                        }
+                    },
+                    {
+                        "address": "module.child.aws_s3_bucket.b",
+                        "module_address": "module.child",
+                        "mode": "managed",
+                        "type": "aws_s3_bucket",
+                        "name": "b",
+                        "provider_name": "aws",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ],
+                            "before": null,
+                            "after": {
+                                "acl": "public-read",
+                                "bucket": "my-tf-test-bucket-2",
+                                "bucket_prefix": null,
+                                "cors_rule": [],
+                                "force_destroy": false,
+                                "grant": [],
+                                "lifecycle_rule": [],
+                                "logging": [],
+                                "object_lock_configuration": [],
+                                "policy": null,
+                                "replication_configuration": [],
+                                "server_side_encryption_configuration": [
+                                    {
+                                        "rule": [
+                                            {
+                                                "apply_server_side_encryption_by_default": [
+                                                    {
+                                                        "kms_master_key_id": null,
+                                                        "sse_algorithm": "aws:kms"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "tags": {
+                                    "Environment": "Dev 2",
+                                    "Name": "My 2 bucket"
+                                },
+                                "website": []
+                            },
+                            "after_unknown": {
+                                "acceleration_status": true,
+                                "arn": true,
+                                "bucket_domain_name": true,
+                                "bucket_regional_domain_name": true,
+                                "cors_rule": [],
+                                "grant": [],
+                                "hosted_zone_id": true,
+                                "id": true,
+                                "lifecycle_rule": [],
+                                "logging": [],
+                                "object_lock_configuration": [],
+                                "region": true,
+                                "replication_configuration": [],
+                                "request_payer": true,
+                                "server_side_encryption_configuration": [
+                                    {
+                                        "rule": [
+                                            {
+                                                "apply_server_side_encryption_by_default": [
+                                                    {}
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "tags": {},
+                                "versioning": true,
+                                "website": [],
+                                "website_domain": true,
+                                "website_endpoint": true
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "invalid_s3_bucket_encryption_input": {
+            "tfplan": {
+                "format_version": "0.1",
+                "terraform_version": "0.12.25",
+                "resource_changes": [
+                    {
+                        "address": "aws_s3_bucket.a",
+                        "mode": "managed",
+                        "type": "aws_s3_bucket",
+                        "name": "a",
+                        "provider_name": "aws",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ],
+                            "before": null,
+                            "after": {
+                                "acl": "private",
+                                "bucket": "my-tf-test-bucket",
+                                "bucket_prefix": null,
+                                "cors_rule": [],
+                                "force_destroy": false,
+                                "grant": [],
+                                "lifecycle_rule": [],
+                                "logging": [],
+                                "object_lock_configuration": [],
+                                "policy": null,
+                                "replication_configuration": [],
+                                "server_side_encryption_configuration": [
+                                    {
+                                        "rule": [
+                                            {
+                                                "apply_server_side_encryption_by_default": [
+                                                    {
+                                                        "kms_master_key_id": null,
+                                                        "sse_algorithm": "unknown"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "tags": {
+                                    "Environment": "Dev",
+                                    "Name": "My bucket"
+                                },
+                                "website": []
+                            },
+                            "after_unknown": {
+                                "acceleration_status": true,
+                                "arn": true,
+                                "bucket_domain_name": true,
+                                "bucket_regional_domain_name": true,
+                                "cors_rule": [],
+                                "grant": [],
+                                "hosted_zone_id": true,
+                                "id": true,
+                                "lifecycle_rule": [],
+                                "logging": [],
+                                "object_lock_configuration": [],
+                                "region": true,
+                                "replication_configuration": [],
+                                "request_payer": true,
+                                "server_side_encryption_configuration": [
+                                    {
+                                        "rule": [
+                                            {
+                                                "apply_server_side_encryption_by_default": [
+                                                    {}
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "tags": {},
+                                "versioning": true,
+                                "website": [],
+                                "website_domain": true,
+                                "website_endpoint": true
+                            }
+                        }
+                    },
+                    {
+                        "address": "module.child.aws_s3_bucket.b",
+                        "module_address": "module.child",
+                        "mode": "managed",
+                        "type": "aws_s3_bucket",
+                        "name": "b",
+                        "provider_name": "aws",
+                        "change": {
+                            "actions": [
+                                "create"
+                            ],
+                            "before": null,
+                            "after": {
+                                "acl": "private",
+                                "bucket": "my-tf-test-bucket-2",
+                                "bucket_prefix": null,
+                                "cors_rule": [],
+                                "force_destroy": false,
+                                "grant": [],
+                                "lifecycle_rule": [],
+                                "logging": [],
+                                "object_lock_configuration": [],
+                                "policy": null,
+                                "replication_configuration": [],
+                                "server_side_encryption_configuration": [],
+                                "tags": {
+                                    "Environment": "Dev 2",
+                                    "Name": "My 2 bucket"
+                                },
+                                "website": []
+                            },
+                            "after_unknown": {
+                                "acceleration_status": true,
+                                "arn": true,
+                                "bucket_domain_name": true,
+                                "bucket_regional_domain_name": true,
+                                "cors_rule": [],
+                                "grant": [],
+                                "hosted_zone_id": true,
+                                "id": true,
+                                "lifecycle_rule": [],
+                                "logging": [],
+                                "object_lock_configuration": [],
+                                "region": true,
+                                "replication_configuration": [],
+                                "request_payer": true,
+                                "server_side_encryption_configuration": [],
+                                "tags": {},
+                                "versioning": true,
+                                "website": [],
+                                "website_domain": true,
+                                "website_endpoint": true
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
+
