@@ -9,8 +9,8 @@
               "key": {
                 "sensitive": false,
                 "value": {
-                  "arn": "arn:aws:kms:us-east-1:670025224396:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
-                  "aws_account_id": "670025224396",
+                  "arn": "arn:aws:kms:us-east-1:xxxxxxxxxxxxxx:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
+                  "aws_account_id": "xxxxxxxxxxxxxx",
                   "creation_date": "2020-08-26T10:33:52Z",
                   "customer_master_key_spec": "SYMMETRIC_DEFAULT",
                   "deletion_date": null,
@@ -55,7 +55,7 @@
                           {
                             "apply_server_side_encryption_by_default": [
                               {
-                                "kms_master_key_id": "arn:aws:kms:us-east-1:670025224396:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708ss",
+                                "kms_master_key_id": "arn:aws:kms:us-east-1:xxxxxxxxxxxxxx:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708ss",
                                 "sse_algorithm": "aws:kms"
                               }
                             ]
@@ -94,7 +94,7 @@
                               {
                                 "access_control_translation": [],
                                 "account_id": "",
-                                "replica_kms_key_id": "arn:aws:kms:us-east-1:670025224396:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
+                                "replica_kms_key_id": "arn:aws:kms:us-east-1:xxxxxxxxxxxxxx:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
                                 "storage_class": "STANDARD"
                               }
                             ],
@@ -122,7 +122,7 @@
                           {
                             "apply_server_side_encryption_by_default": [
                               {
-                                "kms_master_key_id": "arn:aws:kms:us-east-1:670025224396:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
+                                "kms_master_key_id": "arn:aws:kms:us-east-1:xxxxxxxxxxxxxx:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
                                 "sse_algorithm": "aws:kms"
                               }
                             ]
@@ -188,7 +188,7 @@
                         {
                           "apply_server_side_encryption_by_default": [
                             {
-                              "kms_master_key_id": "arn:aws:kms:us-east-1:670025224396:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708ss",
+                              "kms_master_key_id": "arn:aws:kms:us-east-1:xxxxxxxxxxxxxx:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708ss",
                               "sse_algorithm": "aws:kms"
                             }
                           ]
@@ -263,7 +263,7 @@
                             {
                               "access_control_translation": [],
                               "account_id": "",
-                              "replica_kms_key_id": "arn:aws:kms:us-east-1:670025224396:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
+                              "replica_kms_key_id": "arn:aws:kms:us-east-1:xxxxxxxxxxxxxx:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
                               "storage_class": "STANDARD"
                             }
                           ],
@@ -291,7 +291,7 @@
                         {
                           "apply_server_side_encryption_by_default": [
                             {
-                              "kms_master_key_id": "arn:aws:kms:us-east-1:670025224396:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
+                              "kms_master_key_id": "arn:aws:kms:us-east-1:xxxxxxxxxxxxxx:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
                               "sse_algorithm": "aws:kms"
                             }
                           ]
@@ -394,8 +394,8 @@
               ],
               "before": null,
               "after": {
-                "arn": "arn:aws:kms:us-east-1:670025224396:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
-                "aws_account_id": "670025224396",
+                "arn": "arn:aws:kms:us-east-1:xxxxxxxxxxxxxx:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
+                "aws_account_id": "xxxxxxxxxxxxxx",
                 "creation_date": "2020-08-26T10:33:52Z",
                 "customer_master_key_spec": "SYMMETRIC_DEFAULT",
                 "deletion_date": null,
@@ -422,8 +422,8 @@
                 "key": {
                   "sensitive": false,
                   "value": {
-                    "arn": "arn:aws:kms:us-east-1:670025224396:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
-                    "aws_account_id": "670025224396",
+                    "arn": "arn:aws:kms:us-east-1:xxxxxxxxxxxxxx:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
+                    "aws_account_id": "xxxxxxxxxxxxxx",
                     "creation_date": "2020-08-26T10:33:52Z",
                     "customer_master_key_spec": "SYMMETRIC_DEFAULT",
                     "deletion_date": null,
@@ -451,8 +451,8 @@
                     "provider_name": "aws",
                     "schema_version": 0,
                     "values": {
-                      "arn": "arn:aws:kms:us-east-1:670025224396:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
-                      "aws_account_id": "670025224396",
+                      "arn": "arn:aws:kms:us-east-1:xxxxxxxxxxxxxx:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
+                      "aws_account_id": "xxxxxxxxxxxxxx",
                       "creation_date": "2020-08-26T10:33:52Z",
                       "customer_master_key_spec": "SYMMETRIC_DEFAULT",
                       "deletion_date": null,
@@ -477,8 +477,8 @@
                     "provider_name": "aws",
                     "schema_version": 0,
                     "values": {
-                      "arn": "arn:aws:kms:us-east-1:670025224396:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
-                      "aws_account_id": "670025224396",
+                      "arn": "arn:aws:kms:us-east-1:xxxxxxxxxxxxxx:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
+                      "aws_account_id": "xxxxxxxxxxxxxx",
                       "creation_date": "2020-08-26T10:33:52Z",
                       "customer_master_key_spec": "SYMMETRIC_DEFAULT",
                       "deletion_date": null,
@@ -538,7 +538,7 @@
                             "apply_server_side_encryption_by_default": [
                               {
                                 "kms_master_key_id": {
-                                  "constant_value": "arn:aws:kms:us-east-1:670025224396:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708ss"
+                                  "constant_value": "arn:aws:kms:us-east-1:xxxxxxxxxxxxxx:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708ss"
                                 },
                                 "sse_algorithm": {
                                   "constant_value": "aws:kms"
@@ -577,7 +577,7 @@
                                   ]
                                 },
                                 "replica_kms_key_id": {
-                                  "constant_value": "arn:aws:kms:us-east-1:670025224396:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd"
+                                  "constant_value": "arn:aws:kms:us-east-1:xxxxxxxxxxxxxx:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd"
                                 },
                                 "storage_class": {
                                   "constant_value": "STANDARD"
@@ -615,7 +615,7 @@
                             "apply_server_side_encryption_by_default": [
                               {
                                 "kms_master_key_id": {
-                                  "constant_value": "arn:aws:kms:us-east-1:670025224396:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd"
+                                  "constant_value": "arn:aws:kms:us-east-1:xxxxxxxxxxxxxx:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd"
                                 },
                                 "sse_algorithm": {
                                   "constant_value": "aws:kms"
@@ -710,7 +710,7 @@
           "terraform_version": "0.12.28",
           "variables": {
             "arn": {
-              "value": "arn:aws:kms:us-east-1:670025224396:key/ca4fb1d0-d899-4ef4-b825-0b7d02c70var"
+              "value": "arn:aws:kms:us-east-1:xxxxxxxxxxxxxx:key/ca4fb1d0-d899-4ef4-b825-0b7d02c70var"
             }
           },
           "planned_values": {
@@ -757,7 +757,7 @@
                           {
                             "apply_server_side_encryption_by_default": [
                               {
-                                "kms_master_key_id": "arn:aws:kms:us-east-1:670025224396:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
+                                "kms_master_key_id": "arn:aws:kms:us-east-1:xxxxxxxxxxxxxx:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
                                 "sse_algorithm": "aws:kms"
                               }
                             ]
@@ -830,7 +830,7 @@
                         {
                           "apply_server_side_encryption_by_default": [
                             {
-                              "kms_master_key_id": "arn:aws:kms:us-east-1:670025224396:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
+                              "kms_master_key_id": "arn:aws:kms:us-east-1:xxxxxxxxxxxxxx:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
                               "sse_algorithm": "aws:kms"
                             }
                           ]
@@ -889,8 +889,8 @@
                     "provider_name": "aws",
                     "schema_version": 0,
                     "values": {
-                      "arn": "arn:aws:kms:us-east-1:670025224396:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
-                      "aws_account_id": "670025224396",
+                      "arn": "arn:aws:kms:us-east-1:xxxxxxxxxxxxxx:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
+                      "aws_account_id": "xxxxxxxxxxxxxx",
                       "creation_date": "2020-08-26T10:33:52Z",
                       "customer_master_key_spec": "SYMMETRIC_DEFAULT",
                       "deletion_date": null,
@@ -915,8 +915,8 @@
                     "provider_name": "aws",
                     "schema_version": 0,
                     "values": {
-                      "arn": "arn:aws:kms:us-east-1:670025224396:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
-                      "aws_account_id": "670025224396",
+                      "arn": "arn:aws:kms:us-east-1:xxxxxxxxxxxxxx:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
+                      "aws_account_id": "xxxxxxxxxxxxxx",
                       "creation_date": "2020-08-26T10:33:52Z",
                       "customer_master_key_spec": "SYMMETRIC_DEFAULT",
                       "deletion_date": null,
@@ -1020,7 +1020,7 @@
               ],
               "variables": {
                 "arn": {
-                  "default": "arn:aws:kms:us-east-1:670025224396:key/ca4fb1d0-d899-4ef4-b825-0b7d02c70var"
+                  "default": "arn:aws:kms:us-east-1:xxxxxxxxxxxxxx:key/ca4fb1d0-d899-4ef4-b825-0b7d02c70var"
                 }
               }
             }
@@ -1064,7 +1064,7 @@
           "terraform_version": "0.12.28",
           "variables": {
             "arn": {
-              "value": "arn:aws:kms:us-east-1:670025224396:key/ca4fb1d0-d899-4ef4-b825-0b7d02c70var"
+              "value": "arn:aws:kms:us-east-1:xxxxxxxxxxxxxx:key/ca4fb1d0-d899-4ef4-b825-0b7d02c70var"
             }
           },
           "planned_values": {
@@ -1072,8 +1072,8 @@
               "key": {
                 "sensitive": false,
                 "value": {
-                  "arn": "arn:aws:kms:us-east-1:670025224396:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
-                  "aws_account_id": "670025224396",
+                  "arn": "arn:aws:kms:us-east-1:xxxxxxxxxxxxxx:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
+                  "aws_account_id": "xxxxxxxxxxxxxx",
                   "creation_date": "2020-08-26T10:33:52Z",
                   "customer_master_key_spec": "SYMMETRIC_DEFAULT",
                   "deletion_date": null,
@@ -1111,7 +1111,7 @@
                   "values": {
                     "availability_zone": "us-east-1a",
                     "encrypted": true,
-                    "kms_key_id": "arn:aws:kms:us-east-1:670025224396:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708ss",
+                    "kms_key_id": "arn:aws:kms:us-east-1:xxxxxxxxxxxxxx:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708ss",
                     "multi_attach_enabled": null,
                     "outpost_arn": null,
                     "size": 40,
@@ -1128,7 +1128,7 @@
                   "values": {
                     "availability_zone": "us-east-1a",
                     "encrypted": true,
-                    "kms_key_id": "arn:aws:kms:us-east-1:670025224396:key/ca4fb1d0-d899-4ef4-b825-0b7d02c70var",
+                    "kms_key_id": "arn:aws:kms:us-east-1:xxxxxxxxxxxxxx:key/ca4fb1d0-d899-4ef4-b825-0b7d02c70var",
                     "multi_attach_enabled": null,
                     "outpost_arn": null,
                     "size": 40,
@@ -1208,7 +1208,7 @@
                 "after": {
                   "availability_zone": "us-east-1a",
                   "encrypted": true,
-                  "kms_key_id": "arn:aws:kms:us-east-1:670025224396:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708ss",
+                  "kms_key_id": "arn:aws:kms:us-east-1:xxxxxxxxxxxxxx:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708ss",
                   "multi_attach_enabled": null,
                   "outpost_arn": null,
                   "size": 40,
@@ -1237,7 +1237,7 @@
                 "after": {
                   "availability_zone": "us-east-1a",
                   "encrypted": true,
-                  "kms_key_id": "arn:aws:kms:us-east-1:670025224396:key/ca4fb1d0-d899-4ef4-b825-0b7d02c70var",
+                  "kms_key_id": "arn:aws:kms:us-east-1:xxxxxxxxxxxxxx:key/ca4fb1d0-d899-4ef4-b825-0b7d02c70var",
                   "multi_attach_enabled": null,
                   "outpost_arn": null,
                   "size": 40,
@@ -1318,8 +1318,8 @@
               ],
               "before": null,
               "after": {
-                "arn": "arn:aws:kms:us-east-1:670025224396:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
-                "aws_account_id": "670025224396",
+                "arn": "arn:aws:kms:us-east-1:xxxxxxxxxxxxxx:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
+                "aws_account_id": "xxxxxxxxxxxxxx",
                 "creation_date": "2020-08-26T10:33:52Z",
                 "customer_master_key_spec": "SYMMETRIC_DEFAULT",
                 "deletion_date": null,
@@ -1346,8 +1346,8 @@
                 "key": {
                   "sensitive": false,
                   "value": {
-                    "arn": "arn:aws:kms:us-east-1:670025224396:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
-                    "aws_account_id": "670025224396",
+                    "arn": "arn:aws:kms:us-east-1:xxxxxxxxxxxxxx:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
+                    "aws_account_id": "xxxxxxxxxxxxxx",
                     "creation_date": "2020-08-26T10:33:52Z",
                     "customer_master_key_spec": "SYMMETRIC_DEFAULT",
                     "deletion_date": null,
@@ -1375,8 +1375,8 @@
                     "provider_name": "aws",
                     "schema_version": 0,
                     "values": {
-                      "arn": "arn:aws:kms:us-east-1:670025224396:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
-                      "aws_account_id": "670025224396",
+                      "arn": "arn:aws:kms:us-east-1:xxxxxxxxxxxxxx:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
+                      "aws_account_id": "xxxxxxxxxxxxxx",
                       "creation_date": "2020-08-26T10:33:52Z",
                       "customer_master_key_spec": "SYMMETRIC_DEFAULT",
                       "deletion_date": null,
@@ -1401,8 +1401,8 @@
                     "provider_name": "aws",
                     "schema_version": 0,
                     "values": {
-                      "arn": "arn:aws:kms:us-east-1:670025224396:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
-                      "aws_account_id": "670025224396",
+                      "arn": "arn:aws:kms:us-east-1:xxxxxxxxxxxxxx:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
+                      "aws_account_id": "xxxxxxxxxxxxxx",
                       "creation_date": "2020-08-26T10:33:52Z",
                       "customer_master_key_spec": "SYMMETRIC_DEFAULT",
                       "deletion_date": null,
@@ -1474,7 +1474,7 @@
                       "constant_value": true
                     },
                     "kms_key_id": {
-                      "constant_value": "arn:aws:kms:us-east-1:670025224396:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708ss"
+                      "constant_value": "arn:aws:kms:us-east-1:xxxxxxxxxxxxxx:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708ss"
                     },
                     "size": {
                       "constant_value": 40
@@ -1556,7 +1556,7 @@
               ],
               "variables": {
                 "arn": {
-                  "default": "arn:aws:kms:us-east-1:670025224396:key/ca4fb1d0-d899-4ef4-b825-0b7d02c70var"
+                  "default": "arn:aws:kms:us-east-1:xxxxxxxxxxxxxx:key/ca4fb1d0-d899-4ef4-b825-0b7d02c70var"
                 }
               }
             }
@@ -1600,7 +1600,7 @@
           "terraform_version": "0.12.28",
           "variables": {
             "arn": {
-              "value": "arn:aws:kms:us-east-1:670025224396:key/ca4fb1d0-d899-4ef4-b825-0b7d02c70var"
+              "value": "arn:aws:kms:us-east-1:xxxxxxxxxxxxxx:key/ca4fb1d0-d899-4ef4-b825-0b7d02c70var"
             }
           },
           "planned_values": {
@@ -1616,7 +1616,7 @@
                   "values": {
                     "availability_zone": "us-east-1a",
                     "encrypted": true,
-                    "kms_key_id": "arn:aws:kms:us-east-1:670025224396:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
+                    "kms_key_id": "arn:aws:kms:us-east-1:xxxxxxxxxxxxxx:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
                     "multi_attach_enabled": null,
                     "outpost_arn": null,
                     "size": 40,
@@ -1657,7 +1657,7 @@
                 "after": {
                   "availability_zone": "us-east-1a",
                   "encrypted": true,
-                  "kms_key_id": "arn:aws:kms:us-east-1:670025224396:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
+                  "kms_key_id": "arn:aws:kms:us-east-1:xxxxxxxxxxxxxx:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
                   "multi_attach_enabled": null,
                   "outpost_arn": null,
                   "size": 40,
@@ -1715,8 +1715,8 @@
                     "provider_name": "aws",
                     "schema_version": 0,
                     "values": {
-                      "arn": "arn:aws:kms:us-east-1:670025224396:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
-                      "aws_account_id": "670025224396",
+                      "arn": "arn:aws:kms:us-east-1:xxxxxxxxxxxxxx:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
+                      "aws_account_id": "xxxxxxxxxxxxxx",
                       "creation_date": "2020-08-26T10:33:52Z",
                       "customer_master_key_spec": "SYMMETRIC_DEFAULT",
                       "deletion_date": null,
@@ -1741,8 +1741,8 @@
                     "provider_name": "aws",
                     "schema_version": 0,
                     "values": {
-                      "arn": "arn:aws:kms:us-east-1:670025224396:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
-                      "aws_account_id": "670025224396",
+                      "arn": "arn:aws:kms:us-east-1:xxxxxxxxxxxxxx:key/ca4fb1d0-d899-4ef4-b825-0b7d02c708bd",
+                      "aws_account_id": "xxxxxxxxxxxxxx",
                       "creation_date": "2020-08-26T10:33:52Z",
                       "customer_master_key_spec": "SYMMETRIC_DEFAULT",
                       "deletion_date": null,
@@ -1837,7 +1837,7 @@
               ],
               "variables": {
                 "arn": {
-                  "default": "arn:aws:kms:us-east-1:670025224396:key/ca4fb1d0-d899-4ef4-b825-0b7d02c70var"
+                  "default": "arn:aws:kms:us-east-1:xxxxxxxxxxxxxx:key/ca4fb1d0-d899-4ef4-b825-0b7d02c70var"
                 }
               }
             }
