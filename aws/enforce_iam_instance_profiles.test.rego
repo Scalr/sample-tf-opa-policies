@@ -2,7 +2,7 @@ package terraform
 
 test_iam_invalid {
     result = deny with input as data.mock.iam_invalid
-    count(result) == 0
+    count(result) > 0
 }
 
 test_iam_valid {
