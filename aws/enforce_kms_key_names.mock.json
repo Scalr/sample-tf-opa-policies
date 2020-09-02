@@ -650,7 +650,7 @@
                   "provider_config_key": "aws",
                   "expressions": {
                     "key_id": {
-                      "constant_value": "alias/pg-kms-key"
+                      "constant_value": "alias/pg-kms-key-x"
                     }
                   },
                   "schema_version": 0
@@ -663,7 +663,7 @@
                   "provider_config_key": "aws",
                   "expressions": {
                     "key_id": {
-                      "constant_value": "alias/pg-kms-key"
+                      "constant_value": "alias/pg-kms-key-x"
                     }
                   },
                   "schema_version": 0

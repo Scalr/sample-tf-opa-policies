@@ -24,7 +24,7 @@ import input.tfplan as tfplan
 import input.tfrun as tfrun
 
 allowed_kms_keys = [
-  "pg-kms-keyx"
+  "pg-kms-key"
 ]
 
 contains(arr, elem) {
