@@ -34,17 +34,3 @@ deny[reason] {
       [r.address, sid]
     )
 }
-
-# Check subnet in subnet_mappings of aws_lb are in allowed list 
-deny[reason] {
-    r = tfplan.resource_changes[_]
-    r.mode == "managed"
-    r.type == "aws_lb"
-    sid := r.change.after.subnet_mapping[_].subnet_id
-    not array_contains(allowed_subnets, sid)
-
-    reason := sprintf(
-      "%-40s :: subnet_id '%s' is public and not allowed!",
-      [r.address, sid]
-    )
-}
