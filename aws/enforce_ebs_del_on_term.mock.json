@@ -1,0 +1,777 @@
+{
+    "mock": {
+      "invalid": {
+        "tfplan": {
+          "format_version": "0.1",
+          "terraform_version": "0.12.28",
+          "planned_values": {
+            "root_module": {
+              "resources": [
+                {
+                  "address": "aws_instance.web",
+                  "mode": "managed",
+                  "type": "aws_instance",
+                  "name": "web",
+                  "provider_name": "aws",
+                  "schema_version": 1,
+                  "values": {
+                    "ami": "ami-03f6f0014076ab3c5",
+                    "credit_specification": [],
+                    "disable_api_termination": null,
+                    "ebs_block_device": [
+                      {
+                        "delete_on_termination": false,
+                        "device_name": "/dev/sda2"
+                      },
+                      {
+                        "delete_on_termination": true,
+                        "device_name": "/dev/sda3"
+                      }
+                    ],
+                    "ebs_optimized": null,
+                    "get_password_data": false,
+                    "hibernation": null,
+                    "iam_instance_profile": null,
+                    "instance_initiated_shutdown_behavior": null,
+                    "instance_type": "t3.micro",
+                    "monitoring": null,
+                    "root_block_device": [
+                      {
+                        "delete_on_termination": false
+                      }
+                    ],
+                    "source_dest_check": true,
+                    "tags": null,
+                    "timeouts": null,
+                    "user_data": null,
+                    "user_data_base64": null
+                  }
+                }
+              ]
+            }
+          },
+          "resource_changes": [
+            {
+              "address": "aws_instance.web",
+              "mode": "managed",
+              "type": "aws_instance",
+              "name": "web",
+              "provider_name": "aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "ami": "ami-03f6f0014076ab3c5",
+                  "credit_specification": [],
+                  "disable_api_termination": null,
+                  "ebs_block_device": [
+                    {
+                      "delete_on_termination": false,
+                      "device_name": "/dev/sda2"
+                    },
+                    {
+                      "delete_on_termination": true,
+                      "device_name": "/dev/sda3"
+                    }
+                  ],
+                  "ebs_optimized": null,
+                  "get_password_data": false,
+                  "hibernation": null,
+                  "iam_instance_profile": null,
+                  "instance_initiated_shutdown_behavior": null,
+                  "instance_type": "t3.micro",
+                  "monitoring": null,
+                  "root_block_device": [
+                    {
+                      "delete_on_termination": false
+                    }
+                  ],
+                  "source_dest_check": true,
+                  "tags": null,
+                  "timeouts": null,
+                  "user_data": null,
+                  "user_data_base64": null
+                },
+                "after_unknown": {
+                  "arn": true,
+                  "associate_public_ip_address": true,
+                  "availability_zone": true,
+                  "cpu_core_count": true,
+                  "cpu_threads_per_core": true,
+                  "credit_specification": [],
+                  "ebs_block_device": [
+                    {
+                      "encrypted": true,
+                      "iops": true,
+                      "kms_key_id": true,
+                      "snapshot_id": true,
+                      "volume_id": true,
+                      "volume_size": true,
+                      "volume_type": true
+                    },
+                    {
+                      "encrypted": true,
+                      "iops": true,
+                      "kms_key_id": true,
+                      "snapshot_id": true,
+                      "volume_id": true,
+                      "volume_size": true,
+                      "volume_type": true
+                    }
+                  ],
+                  "ephemeral_block_device": true,
+                  "host_id": true,
+                  "id": true,
+                  "instance_state": true,
+                  "ipv6_address_count": true,
+                  "ipv6_addresses": true,
+                  "key_name": true,
+                  "metadata_options": true,
+                  "network_interface": true,
+                  "outpost_arn": true,
+                  "password_data": true,
+                  "placement_group": true,
+                  "primary_network_interface_id": true,
+                  "private_dns": true,
+                  "private_ip": true,
+                  "public_dns": true,
+                  "public_ip": true,
+                  "root_block_device": [
+                    {
+                      "device_name": true,
+                      "encrypted": true,
+                      "iops": true,
+                      "kms_key_id": true,
+                      "volume_id": true,
+                      "volume_size": true,
+                      "volume_type": true
+                    }
+                  ],
+                  "secondary_private_ips": true,
+                  "security_groups": true,
+                  "subnet_id": true,
+                  "tenancy": true,
+                  "volume_tags": true,
+                  "vpc_security_group_ids": true
+                }
+              }
+            }
+          ],
+          "prior_state": {
+            "format_version": "0.1",
+            "terraform_version": "0.12.28",
+            "values": {
+              "root_module": {
+                "resources": [
+                  {
+                    "address": "data.aws_ami.ubuntu",
+                    "mode": "data",
+                    "type": "aws_ami",
+                    "name": "ubuntu",
+                    "provider_name": "aws",
+                    "schema_version": 0,
+                    "values": {
+                      "architecture": "x86_64",
+                      "arn": "arn:aws:ec2:us-east-1::image/ami-03f6f0014076ab3c5",
+                      "block_device_mappings": [
+                        {
+                          "device_name": "/dev/sda1",
+                          "ebs": {
+                            "delete_on_termination": "true",
+                            "encrypted": "false",
+                            "iops": "0",
+                            "snapshot_id": "snap-02d61473d2745f9b7",
+                            "volume_size": "8",
+                            "volume_type": "gp2"
+                          },
+                          "no_device": "",
+                          "virtual_name": ""
+                        },
+                        {
+                          "device_name": "/dev/sdb",
+                          "ebs": {},
+                          "no_device": "",
+                          "virtual_name": "ephemeral0"
+                        },
+                        {
+                          "device_name": "/dev/sdc",
+                          "ebs": {},
+                          "no_device": "",
+                          "virtual_name": "ephemeral1"
+                        }
+                      ],
+                      "creation_date": "2020-09-04T22:45:42.000Z",
+                      "description": "Canonical, Ubuntu, 20.04 LTS, amd64 focal image build on 2020-09-03",
+                      "executable_users": null,
+                      "filter": [
+                        {
+                          "name": "name",
+                          "values": [
+                            "ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"
+                          ]
+                        },
+                        {
+                          "name": "virtualization-type",
+                          "values": [
+                            "hvm"
+                          ]
+                        }
+                      ],
+                      "hypervisor": "xen",
+                      "id": "ami-03f6f0014076ab3c5",
+                      "image_id": "ami-03f6f0014076ab3c5",
+                      "image_location": "099720109477/ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-20200903",
+                      "image_owner_alias": null,
+                      "image_type": "machine",
+                      "kernel_id": null,
+                      "most_recent": true,
+                      "name": "ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-20200903",
+                      "name_regex": null,
+                      "owner_id": "099720109477",
+                      "owners": [
+                        "099720109477"
+                      ],
+                      "platform": null,
+                      "product_codes": [],
+                      "public": true,
+                      "ramdisk_id": null,
+                      "root_device_name": "/dev/sda1",
+                      "root_device_type": "ebs",
+                      "root_snapshot_id": "snap-02d61473d2745f9b7",
+                      "sriov_net_support": "simple",
+                      "state": "available",
+                      "state_reason": {
+                        "code": "UNSET",
+                        "message": "UNSET"
+                      },
+                      "tags": {},
+                      "virtualization_type": "hvm"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "configuration": {
+            "provider_config": {
+              "aws": {
+                "name": "aws",
+                "expressions": {
+                  "region": {
+                    "constant_value": "us-east-1"
+                  }
+                }
+              }
+            },
+            "root_module": {
+              "resources": [
+                {
+                  "address": "aws_instance.web",
+                  "mode": "managed",
+                  "type": "aws_instance",
+                  "name": "web",
+                  "provider_config_key": "aws",
+                  "expressions": {
+                    "ami": {
+                      "references": [
+                        "data.aws_ami.ubuntu"
+                      ]
+                    },
+                    "ebs_block_device": [
+                      {
+                        "delete_on_termination": {
+                          "constant_value": false
+                        },
+                        "device_name": {
+                          "constant_value": "/dev/sda2"
+                        }
+                      },
+                      {
+                        "delete_on_termination": {
+                          "constant_value": true
+                        },
+                        "device_name": {
+                          "constant_value": "/dev/sda3"
+                        }
+                      }
+                    ],
+                    "instance_type": {
+                      "constant_value": "t3.micro"
+                    },
+                    "root_block_device": [
+                      {
+                        "delete_on_termination": {
+                          "constant_value": false
+                        }
+                      }
+                    ]
+                  },
+                  "schema_version": 1
+                },
+                {
+                  "address": "data.aws_ami.ubuntu",
+                  "mode": "data",
+                  "type": "aws_ami",
+                  "name": "ubuntu",
+                  "provider_config_key": "aws",
+                  "expressions": {
+                    "filter": [
+                      {
+                        "name": {
+                          "constant_value": "name"
+                        },
+                        "values": {
+                          "constant_value": [
+                            "ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"
+                          ]
+                        }
+                      },
+                      {
+                        "name": {
+                          "constant_value": "virtualization-type"
+                        },
+                        "values": {
+                          "constant_value": [
+                            "hvm"
+                          ]
+                        }
+                      }
+                    ],
+                    "most_recent": {
+                      "constant_value": true
+                    },
+                    "owners": {
+                      "constant_value": [
+                        "099720109477"
+                      ]
+                    }
+                  },
+                  "schema_version": 0
+                }
+              ]
+            }
+          }
+        },
+        "tfrun": {
+          "workspace": {
+            "name": "opa-dev",
+            "description": null,
+            "auto_apply": false,
+            "working_directory": null,
+            "tags": {}
+          },
+          "environment": {
+            "id": "env-t2daq8tprsifel8",
+            "name": "pg-opa-dev"
+          },
+          "vcs": null,
+          "cost_estimate": {
+            "prior_monthly_cost": 0,
+            "proposed_monthly_cost": 8.39,
+            "delta_monthly_cost": 8.39
+          },
+          "credentials": {
+            "ec2": "cred-stsfnc76g3pknk8"
+          },
+          "source": "cli",
+          "message": "Queued manually using Terraform",
+          "is_destroy": false,
+          "is_dry": true,
+          "created_by": {
+            "name": "",
+            "email": "peter@scalr.com",
+            "username": "peter@scalr.com"
+          }
+        }
+      },
+      "valid": {
+        "tfplan": {
+          "format_version": "0.1",
+          "terraform_version": "0.12.28",
+          "planned_values": {
+            "root_module": {
+              "resources": [
+                {
+                  "address": "aws_instance.web",
+                  "mode": "managed",
+                  "type": "aws_instance",
+                  "name": "web",
+                  "provider_name": "aws",
+                  "schema_version": 1,
+                  "values": {
+                    "ami": "ami-03f6f0014076ab3c5",
+                    "credit_specification": [],
+                    "disable_api_termination": null,
+                    "ebs_block_device": [
+                      {
+                        "delete_on_termination": true,
+                        "device_name": "/dev/sda2"
+                      },
+                      {
+                        "delete_on_termination": true,
+                        "device_name": "/dev/sda3"
+                      }
+                    ],
+                    "ebs_optimized": null,
+                    "get_password_data": false,
+                    "hibernation": null,
+                    "iam_instance_profile": null,
+                    "instance_initiated_shutdown_behavior": null,
+                    "instance_type": "t3.micro",
+                    "monitoring": null,
+                    "root_block_device": [
+                      {
+                        "delete_on_termination": true
+                      }
+                    ],
+                    "source_dest_check": true,
+                    "tags": null,
+                    "timeouts": null,
+                    "user_data": null,
+                    "user_data_base64": null
+                  }
+                }
+              ]
+            }
+          },
+          "resource_changes": [
+            {
+              "address": "aws_instance.web",
+              "mode": "managed",
+              "type": "aws_instance",
+              "name": "web",
+              "provider_name": "aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "ami": "ami-03f6f0014076ab3c5",
+                  "credit_specification": [],
+                  "disable_api_termination": null,
+                  "ebs_block_device": [
+                    {
+                      "delete_on_termination": true,
+                      "device_name": "/dev/sda2"
+                    },
+                    {
+                      "delete_on_termination": true,
+                      "device_name": "/dev/sda3"
+                    }
+                  ],
+                  "ebs_optimized": null,
+                  "get_password_data": false,
+                  "hibernation": null,
+                  "iam_instance_profile": null,
+                  "instance_initiated_shutdown_behavior": null,
+                  "instance_type": "t3.micro",
+                  "monitoring": null,
+                  "root_block_device": [
+                    {
+                      "delete_on_termination": true
+                    }
+                  ],
+                  "source_dest_check": true,
+                  "tags": null,
+                  "timeouts": null,
+                  "user_data": null,
+                  "user_data_base64": null
+                },
+                "after_unknown": {
+                  "arn": true,
+                  "associate_public_ip_address": true,
+                  "availability_zone": true,
+                  "cpu_core_count": true,
+                  "cpu_threads_per_core": true,
+                  "credit_specification": [],
+                  "ebs_block_device": [
+                    {
+                      "encrypted": true,
+                      "iops": true,
+                      "kms_key_id": true,
+                      "snapshot_id": true,
+                      "volume_id": true,
+                      "volume_size": true,
+                      "volume_type": true
+                    },
+                    {
+                      "encrypted": true,
+                      "iops": true,
+                      "kms_key_id": true,
+                      "snapshot_id": true,
+                      "volume_id": true,
+                      "volume_size": true,
+                      "volume_type": true
+                    }
+                  ],
+                  "ephemeral_block_device": true,
+                  "host_id": true,
+                  "id": true,
+                  "instance_state": true,
+                  "ipv6_address_count": true,
+                  "ipv6_addresses": true,
+                  "key_name": true,
+                  "metadata_options": true,
+                  "network_interface": true,
+                  "outpost_arn": true,
+                  "password_data": true,
+                  "placement_group": true,
+                  "primary_network_interface_id": true,
+                  "private_dns": true,
+                  "private_ip": true,
+                  "public_dns": true,
+                  "public_ip": true,
+                  "root_block_device": [
+                    {
+                      "device_name": true,
+                      "encrypted": true,
+                      "iops": true,
+                      "kms_key_id": true,
+                      "volume_id": true,
+                      "volume_size": true,
+                      "volume_type": true
+                    }
+                  ],
+                  "secondary_private_ips": true,
+                  "security_groups": true,
+                  "subnet_id": true,
+                  "tenancy": true,
+                  "volume_tags": true,
+                  "vpc_security_group_ids": true
+                }
+              }
+            }
+          ],
+          "prior_state": {
+            "format_version": "0.1",
+            "terraform_version": "0.12.28",
+            "values": {
+              "root_module": {
+                "resources": [
+                  {
+                    "address": "data.aws_ami.ubuntu",
+                    "mode": "data",
+                    "type": "aws_ami",
+                    "name": "ubuntu",
+                    "provider_name": "aws",
+                    "schema_version": 0,
+                    "values": {
+                      "architecture": "x86_64",
+                      "arn": "arn:aws:ec2:us-east-1::image/ami-03f6f0014076ab3c5",
+                      "block_device_mappings": [
+                        {
+                          "device_name": "/dev/sda1",
+                          "ebs": {
+                            "delete_on_termination": "true",
+                            "encrypted": "false",
+                            "iops": "0",
+                            "snapshot_id": "snap-02d61473d2745f9b7",
+                            "volume_size": "8",
+                            "volume_type": "gp2"
+                          },
+                          "no_device": "",
+                          "virtual_name": ""
+                        },
+                        {
+                          "device_name": "/dev/sdb",
+                          "ebs": {},
+                          "no_device": "",
+                          "virtual_name": "ephemeral0"
+                        },
+                        {
+                          "device_name": "/dev/sdc",
+                          "ebs": {},
+                          "no_device": "",
+                          "virtual_name": "ephemeral1"
+                        }
+                      ],
+                      "creation_date": "2020-09-04T22:45:42.000Z",
+                      "description": "Canonical, Ubuntu, 20.04 LTS, amd64 focal image build on 2020-09-03",
+                      "executable_users": null,
+                      "filter": [
+                        {
+                          "name": "name",
+                          "values": [
+                            "ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"
+                          ]
+                        },
+                        {
+                          "name": "virtualization-type",
+                          "values": [
+                            "hvm"
+                          ]
+                        }
+                      ],
+                      "hypervisor": "xen",
+                      "id": "ami-03f6f0014076ab3c5",
+                      "image_id": "ami-03f6f0014076ab3c5",
+                      "image_location": "099720109477/ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-20200903",
+                      "image_owner_alias": null,
+                      "image_type": "machine",
+                      "kernel_id": null,
+                      "most_recent": true,
+                      "name": "ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-20200903",
+                      "name_regex": null,
+                      "owner_id": "099720109477",
+                      "owners": [
+                        "099720109477"
+                      ],
+                      "platform": null,
+                      "product_codes": [],
+                      "public": true,
+                      "ramdisk_id": null,
+                      "root_device_name": "/dev/sda1",
+                      "root_device_type": "ebs",
+                      "root_snapshot_id": "snap-02d61473d2745f9b7",
+                      "sriov_net_support": "simple",
+                      "state": "available",
+                      "state_reason": {
+                        "code": "UNSET",
+                        "message": "UNSET"
+                      },
+                      "tags": {},
+                      "virtualization_type": "hvm"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "configuration": {
+            "provider_config": {
+              "aws": {
+                "name": "aws",
+                "expressions": {
+                  "region": {
+                    "constant_value": "us-east-1"
+                  }
+                }
+              }
+            },
+            "root_module": {
+              "resources": [
+                {
+                  "address": "aws_instance.web",
+                  "mode": "managed",
+                  "type": "aws_instance",
+                  "name": "web",
+                  "provider_config_key": "aws",
+                  "expressions": {
+                    "ami": {
+                      "references": [
+                        "data.aws_ami.ubuntu"
+                      ]
+                    },
+                    "ebs_block_device": [
+                      {
+                        "delete_on_termination": {
+                          "constant_value": true
+                        },
+                        "device_name": {
+                          "constant_value": "/dev/sda2"
+                        }
+                      },
+                      {
+                        "delete_on_termination": {
+                          "constant_value": true
+                        },
+                        "device_name": {
+                          "constant_value": "/dev/sda3"
+                        }
+                      }
+                    ],
+                    "instance_type": {
+                      "constant_value": "t3.micro"
+                    },
+                    "root_block_device": [
+                      {
+                        "delete_on_termination": {
+                          "constant_value": true
+                        }
+                      }
+                    ]
+                  },
+                  "schema_version": 1
+                },
+                {
+                  "address": "data.aws_ami.ubuntu",
+                  "mode": "data",
+                  "type": "aws_ami",
+                  "name": "ubuntu",
+                  "provider_config_key": "aws",
+                  "expressions": {
+                    "filter": [
+                      {
+                        "name": {
+                          "constant_value": "name"
+                        },
+                        "values": {
+                          "constant_value": [
+                            "ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"
+                          ]
+                        }
+                      },
+                      {
+                        "name": {
+                          "constant_value": "virtualization-type"
+                        },
+                        "values": {
+                          "constant_value": [
+                            "hvm"
+                          ]
+                        }
+                      }
+                    ],
+                    "most_recent": {
+                      "constant_value": true
+                    },
+                    "owners": {
+                      "constant_value": [
+                        "099720109477"
+                      ]
+                    }
+                  },
+                  "schema_version": 0
+                }
+              ]
+            }
+          }
+        },
+        "tfrun": {
+          "workspace": {
+            "name": "opa-dev",
+            "description": null,
+            "auto_apply": false,
+            "working_directory": null,
+            "tags": {}
+          },
+          "environment": {
+            "id": "env-t2daq8tprsifel8",
+            "name": "pg-opa-dev"
+          },
+          "vcs": null,
+          "cost_estimate": {
+            "prior_monthly_cost": 0,
+            "proposed_monthly_cost": 8.39,
+            "delta_monthly_cost": 8.39
+          },
+          "credentials": {
+            "ec2": "cred-stsfnc76g3pknk8"
+          },
+          "source": "cli",
+          "message": "Queued manually using Terraform",
+          "is_destroy": false,
+          "is_dry": true,
+          "created_by": {
+            "name": "",
+            "email": "peter@scalr.com",
+            "username": "peter@scalr.com"
+          }
+        }
+      }
+    }
+  }
+  
