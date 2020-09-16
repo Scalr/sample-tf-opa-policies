@@ -86,7 +86,7 @@ Be sure to include the following.
 
 ### Pull Requests
 
-Better still have a go at fixing bugs or implementing new policy examples yourself and submit a Pull Request.
+Better still have a go at fixing bug or implementing new policy examples yourself and submit a Pull Request.
 
 If you submit a new policy you must include the following files.
 
@@ -94,22 +94,14 @@ If you submit a new policy you must include the following files.
 * `*.mock.json` containing test data mocks. You should inlcude data for both valid and invalid evaluation of each rule in the policy,.
 * `*.test.rego` defining the tests to be run and expected results when the PR checks are performed.
 
-To submit a PR do the following.
+To submit a PR follow the standard process.
 
-1. Clone the repo locally.
-```
-# SSH
-$ git clone git@github.com:Scalr/sample-tf-opa-policies.git
+1. Fork the repo
+2. Clone locally and creaete a new branch
+3. Commit and push
+4. Submit PR request
 
-# HTTPS
-$ git clone https://github.com/Scalr/sample-tf-opa-policies.git
-```
-2. Create a branch.
-```
-$ git checkout -b policy-name
-```
-
-Now write the policy or fix the bug. Confirm it works using `opa eval` as shown above and validate the mock based tests work using `opa test`.
+Before submitting the PR for the new policy or bug fix you should confirm it works using `opa eval` as shown above and validate the mock based tests work using `opa test`.
 
 Example test
 
@@ -121,16 +113,6 @@ data.terraform.test_missing: PASS (483.272µs)
 --------------------------------------------------------------------------------
 PASS: 3/3
 ```
-
-3. Commit and push to GitHub.
-```
-    $ git add .
-    $ git commit -m "Description"
-    $ git push origin policy-name
-```
-
-4. Submit a pull request in GitHub.
-
 
 ## License
 
