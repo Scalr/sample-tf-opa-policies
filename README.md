@@ -96,8 +96,7 @@ If you submit a new policy you must include the following files.
 
 To submit a PR do the following.
 
-1. Fork https://github.com/Scalr/sample-tf-opa-policies repo on GitHub.
-2. Clone your fork locally.
+1. Clone the repo locally.
 ```
 # SSH
 $ git clone git@github.com:Scalr/sample-tf-opa-policies.git
@@ -105,7 +104,7 @@ $ git clone git@github.com:Scalr/sample-tf-opa-policies.git
 # HTTPS
 $ git clone https://github.com/Scalr/sample-tf-opa-policies.git
 ```
-3. Create a branch.
+2. Create a branch.
 ```
 $ git checkout -b policy-name
 ```
@@ -123,14 +122,14 @@ data.terraform.test_missing: PASS (483.272µs)
 PASS: 3/3
 ```
 
-4. Commit and push to GitHub.
+3. Commit and push to GitHub.
 ```
     $ git add .
     $ git commit -m "Description"
     $ git push origin policy-name
 ```
 
-5. Submit a pull request in GitHub.
+4. Submit a pull request in GitHub.
 
 
 ## License
