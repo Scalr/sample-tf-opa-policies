@@ -19,6 +19,9 @@ jobs:
           aws/enforce_kms_key_names.rego;aws/enforce_kms_key_names.test.rego;aws/enforce_kms_key_names.mock.json
           aws/enforce_iam_instance_profiles.rego;aws/enforce_iam_instance_profiles.test.rego;aws/enforce_iam_instance_profiles.mock.json
           aws/enforce_ebs_del_on_term.rego;aws/enforce_ebs_del_on_term.test.rego;aws/enforce_ebs_del_on_term.mock.json
+          aws/enforce_instance_subnet.rego;aws/enforce_instance_subnet.test.rego;aws/enforce_instance_subnet.mock.json
+          aws/enforce_lb_subnets.rego;aws/enforce_lb_subnets.test.rego;aws/enforce_lb_subnets.mock.json
+          aws/enforce_rds_subnets.rego;aws/enforce_rds_subnets.test.rego;aws/enforce_rds_subnets.mock.json
           management/denied_provisioners.rego;management/denied_provisioners_test.rego;management/denied_provisioners_mock.json
           management/enforce_ami_owners.rego;management/enforce_ami_owners_test.rego;management/enforce_ami_owners_mock.json
           management/instance_types.rego;management/instance_types_test.rego;management/instance_types_mock.json
