@@ -43,9 +43,12 @@ Many policies contain arrays of values that are checked against resources. The a
 | [aws/enforce_aws_resource.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_aws_resource.rego) | Check resource types against an allowed list.                            |
 | [aws/enforce_ebs_del_on_term.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_ebs_del_on_term.rego) | Check `delete_on_termination = true` is set for EBS volumes.             |
 | [aws/enforce_iam_instance_profiles.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_iam_instance_profiles.rego) | Check IAM instance profiles is in allowed list.                          |
+| [aws/enforce_instance_subnets.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_instance_subnets.rego) | Check instances are using allowed subnets |
 | [aws/enforce_kms_key_names.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_kms_key_names.rego) | Check KMS keys (by name) against allowed list.                           |
+| [aws/enforce_lb_subnets.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_lb_subnets.rego) | Check Loadbalancers are using allowed subnets |
 | [aws/enforce_s3_buckets_encryption.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_s3_buckets_encryption.rego) | Check encryption is set for S3 buckets.                                  |
 | [aws/enforce_sec_group.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_sec_group.rego) | Check security groups have been sepcified and are in allowed list.       |
+| [aws/enforce_rds_subnets.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_rds_subnets.rego) | Check RDS clsuters are using allowed subnets |
 | [cost/limit_monthly_cost.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/cost/limit_monthly_cost.rego) | Check estimated cost against an upper limit.                             |
 | [external_data/random_decision.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/external_data/random_decision.rego) | Example of using external data (HTTP GET) in a policy.                   |
 | [management/denied_provisioners.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/management/denied_provisioners.rego) | Checks provisioner types against an allowed list.                        |
