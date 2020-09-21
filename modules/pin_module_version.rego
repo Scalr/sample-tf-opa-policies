@@ -1,3 +1,5 @@
+# Enforce specific versions for modules
+
 package terraform
 
 import input.tfplan as tfplan

@@ -1,4 +1,4 @@
-# Validate that the ima_instance_profile is in the allowed list
+# Validate that the iam_instance_profile is in the allowed list
 #
 
 package terraform
