@@ -1,0 +1,418 @@
+{
+  "mock": {
+    "all_valid": {
+      "tfplan": {
+        "format_version": "0.1",
+        "terraform_version": "0.12.28",
+        "planned_values": {
+          "root_module": {
+            "resources": [
+              {
+                "address": "aws_db_subnet_group.default",
+                "mode": "managed",
+                "type": "aws_db_subnet_group",
+                "name": "default",
+                "provider_name": "aws",
+                "schema_version": 0,
+                "values": {
+                  "description": "Managed by Terraform",
+                  "name": "main",
+                  "subnet_ids": [
+                    "subnet-019c416174b079502",
+                    "subnet-04dbded374ed11690"
+                  ],
+                  "tags": {
+                    "Name": "My DB subnet group"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "resource_changes": [
+          {
+            "address": "aws_db_subnet_group.default",
+            "mode": "managed",
+            "type": "aws_db_subnet_group",
+            "name": "default",
+            "provider_name": "aws",
+            "change": {
+              "actions": [
+                "create"
+              ],
+              "before": null,
+              "after": {
+                "description": "Managed by Terraform",
+                "name": "main",
+                "subnet_ids": [
+                  "subnet-019c416174b079502",
+                  "subnet-04dbded374ed11690"
+                ],
+                "tags": {
+                  "Name": "My DB subnet group"
+                }
+              },
+              "after_unknown": {
+                "arn": true,
+                "id": true,
+                "name_prefix": true,
+                "subnet_ids": [
+                  false,
+                  false
+                ],
+                "tags": {}
+              }
+            }
+          }
+        ],
+        "configuration": {
+          "provider_config": {
+            "aws": {
+              "name": "aws",
+              "expressions": {
+                "region": {
+                  "constant_value": "us-east-1"
+                }
+              }
+            }
+          },
+          "root_module": {
+            "resources": [
+              {
+                "address": "aws_db_subnet_group.default",
+                "mode": "managed",
+                "type": "aws_db_subnet_group",
+                "name": "default",
+                "provider_config_key": "aws",
+                "expressions": {
+                  "name": {
+                    "constant_value": "main"
+                  },
+                  "subnet_ids": {
+                    "constant_value": [
+                      "subnet-019c416174b079502",
+                      "subnet-04dbded374ed11690"
+                    ]
+                  },
+                  "tags": {
+                    "constant_value": {
+                      "Name": "My DB subnet group"
+                    }
+                  }
+                },
+                "schema_version": 0
+              }
+            ]
+          }
+        }
+      },
+      "tfrun": {
+        "workspace": {
+          "name": "opa-dev",
+          "description": null,
+          "auto_apply": false,
+          "working_directory": null,
+          "tags": {}
+        },
+        "environment": {
+          "id": "env-t2daq8tprsifel8",
+          "name": "pg-opa-dev"
+        },
+        "vcs": null,
+        "cost_estimate": {
+          "prior_monthly_cost": 0,
+          "proposed_monthly_cost": 0,
+          "delta_monthly_cost": 0
+        },
+        "credentials": {
+          "ec2": "cred-stsfnc76g3pknk8"
+        },
+        "source": "cli",
+        "message": "Queued manually using Terraform",
+        "is_destroy": false,
+        "is_dry": true,
+        "created_by": {
+          "name": "",
+          "email": "xxxxx@scalr.com",
+          "username": "xxxxx@scalr.com"
+        }
+      }
+    },
+    "all_invalid": {
+      "tfplan": {
+        "format_version": "0.1",
+        "terraform_version": "0.12.28",
+        "planned_values": {
+          "root_module": {
+            "resources": [
+              {
+                "address": "aws_db_subnet_group.default",
+                "mode": "managed",
+                "type": "aws_db_subnet_group",
+                "name": "default",
+                "provider_name": "aws",
+                "schema_version": 0,
+                "values": {
+                  "description": "Managed by Terraform",
+                  "name": "main",
+                  "subnet_ids": [
+                    "subnet-019c416174b079513",
+                    "subnet-04dbded374ed11677"
+                  ],
+                  "tags": {
+                    "Name": "My DB subnet group"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "resource_changes": [
+          {
+            "address": "aws_db_subnet_group.default",
+            "mode": "managed",
+            "type": "aws_db_subnet_group",
+            "name": "default",
+            "provider_name": "aws",
+            "change": {
+              "actions": [
+                "create"
+              ],
+              "before": null,
+              "after": {
+                "description": "Managed by Terraform",
+                "name": "main",
+                "subnet_ids": [
+                  "subnet-019c416174b079513",
+                  "subnet-04dbded374ed11677"
+                ],
+                "tags": {
+                  "Name": "My DB subnet group"
+                }
+              },
+              "after_unknown": {
+                "arn": true,
+                "id": true,
+                "name_prefix": true,
+                "subnet_ids": [
+                  false,
+                  false
+                ],
+                "tags": {}
+              }
+            }
+          }
+        ],
+        "configuration": {
+          "provider_config": {
+            "aws": {
+              "name": "aws",
+              "expressions": {
+                "region": {
+                  "constant_value": "us-east-1"
+                }
+              }
+            }
+          },
+          "root_module": {
+            "resources": [
+              {
+                "address": "aws_db_subnet_group.default",
+                "mode": "managed",
+                "type": "aws_db_subnet_group",
+                "name": "default",
+                "provider_config_key": "aws",
+                "expressions": {
+                  "name": {
+                    "constant_value": "main"
+                  },
+                  "subnet_ids": {
+                    "constant_value": [
+                      "subnet-019c416174b079513",
+                      "subnet-04dbded374ed11677"
+                    ]
+                  },
+                  "tags": {
+                    "constant_value": {
+                      "Name": "My DB subnet group"
+                    }
+                  }
+                },
+                "schema_version": 0
+              }
+            ]
+          }
+        }
+      },
+      "tfrun": {
+        "workspace": {
+          "name": "opa-dev",
+          "description": null,
+          "auto_apply": false,
+          "working_directory": null,
+          "tags": {}
+        },
+        "environment": {
+          "id": "env-t2daq8tprsifel8",
+          "name": "pg-opa-dev"
+        },
+        "vcs": null,
+        "cost_estimate": {
+          "prior_monthly_cost": 0,
+          "proposed_monthly_cost": 0,
+          "delta_monthly_cost": 0
+        },
+        "credentials": {
+          "ec2": "cred-stsfnc76g3pknk8"
+        },
+        "source": "cli",
+        "message": "Queued manually using Terraform",
+        "is_destroy": false,
+        "is_dry": true,
+        "created_by": {
+          "name": "",
+          "email": "xxxxx@scalr.com",
+          "username": "xxxxx@scalr.com"
+        }
+      }
+    },
+    "some_invalid": {
+      "tfplan": {
+        "format_version": "0.1",
+        "terraform_version": "0.12.28",
+        "planned_values": {
+          "root_module": {
+            "resources": [
+              {
+                "address": "aws_db_subnet_group.default",
+                "mode": "managed",
+                "type": "aws_db_subnet_group",
+                "name": "default",
+                "provider_name": "aws",
+                "schema_version": 0,
+                "values": {
+                  "description": "Managed by Terraform",
+                  "name": "main",
+                  "subnet_ids": [
+                    "subnet-019c416174b079502",
+                    "subnet-04dbded374ed11677"
+                  ],
+                  "tags": {
+                    "Name": "My DB subnet group"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "resource_changes": [
+          {
+            "address": "aws_db_subnet_group.default",
+            "mode": "managed",
+            "type": "aws_db_subnet_group",
+            "name": "default",
+            "provider_name": "aws",
+            "change": {
+              "actions": [
+                "create"
+              ],
+              "before": null,
+              "after": {
+                "description": "Managed by Terraform",
+                "name": "main",
+                "subnet_ids": [
+                  "subnet-019c416174b079502",
+                  "subnet-04dbded374ed11677"
+                ],
+                "tags": {
+                  "Name": "My DB subnet group"
+                }
+              },
+              "after_unknown": {
+                "arn": true,
+                "id": true,
+                "name_prefix": true,
+                "subnet_ids": [
+                  false,
+                  false
+                ],
+                "tags": {}
+              }
+            }
+          }
+        ],
+        "configuration": {
+          "provider_config": {
+            "aws": {
+              "name": "aws",
+              "expressions": {
+                "region": {
+                  "constant_value": "us-east-1"
+                }
+              }
+            }
+          },
+          "root_module": {
+            "resources": [
+              {
+                "address": "aws_db_subnet_group.default",
+                "mode": "managed",
+                "type": "aws_db_subnet_group",
+                "name": "default",
+                "provider_config_key": "aws",
+                "expressions": {
+                  "name": {
+                    "constant_value": "main"
+                  },
+                  "subnet_ids": {
+                    "constant_value": [
+                      "subnet-019c416174b079502",
+                      "subnet-04dbded374ed11677"
+                    ]
+                  },
+                  "tags": {
+                    "constant_value": {
+                      "Name": "My DB subnet group"
+                    }
+                  }
+                },
+                "schema_version": 0
+              }
+            ]
+          }
+        }
+      },
+      "tfrun": {
+        "workspace": {
+          "name": "opa-dev",
+          "description": null,
+          "auto_apply": false,
+          "working_directory": null,
+          "tags": {}
+        },
+        "environment": {
+          "id": "env-t2daq8tprsifel8",
+          "name": "pg-opa-dev"
+        },
+        "vcs": null,
+        "cost_estimate": {
+          "prior_monthly_cost": 0,
+          "proposed_monthly_cost": 0,
+          "delta_monthly_cost": 0
+        },
+        "credentials": {
+          "ec2": "cred-stsfnc76g3pknk8"
+        },
+        "source": "cli",
+        "message": "Queued manually using Terraform",
+        "is_destroy": false,
+        "is_dry": true,
+        "created_by": {
+          "name": "",
+          "email": "xxxxx@scalr.com",
+          "username": "xxxxx@scalr.com"
+        }
+      }
+    }
+  }
+}
