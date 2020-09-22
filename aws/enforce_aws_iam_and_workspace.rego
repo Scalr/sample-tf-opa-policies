@@ -1,3 +1,5 @@
+# Restricts IAM roles for provider and workspace
+
 package terraform
 import input.tfplan as tfplan
 import input.tfrun as tfrun
@@ -33,20 +35,22 @@ array_contains(arr, value) = true {
     arr[_] == value
 }
 
-
+# Extracts provider configs for AWS from the input
 aws_provider_aliases[alias] = provider {
     provider := tfplan.configuration.provider_config[alias]
     provider.name == "aws"
 }
 
+# Creates a map of providers to role arn from AWS list created above
 providers_roles_arn[alias] = role_arn {
     provider := aws_provider_aliases[alias]
     role_arn := eval_expression(tfplan, provider.expressions.assume_role[0].role_arn)
 }
 
-
+# Check the role in the provider against the allowed list for each provider in the input
 deny[reason] {
     role_arn := providers_roles_arn[alias]
+    # Creates an array of allowed_roles from keys of the map
     allowed_roles := [key | allowed_roles_map[key]]
     not array_contains(allowed_roles, role_arn)
     reason := sprintf(
@@ -55,6 +59,8 @@ deny[reason] {
     )
 }
 
+# Uses the map to match workspaces to roles. Only workspaces containing elements of the map for a given
+# role will be allowed.
 deny[reason] {
     role_arn := providers_roles_arn[alias]
     workspaces := allowed_roles_map[key]

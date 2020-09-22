@@ -1,3 +1,5 @@
+# Enforces a set of required tag keys. Values are bot checked
+
 package terraform
 
 import input.tfplan as tfplan
@@ -10,6 +12,7 @@ array_contains(arr, elem) {
   arr[_] = elem
 }
 
+# Extract the tags catering for Google where they are called "labels"
 get_tags(resource) = labels {
     "google" == resource.provider_name
     labels := resource.change.after.labels
@@ -24,6 +27,7 @@ deny[reason] {
     action := resource.change.actions[count(resource.change.actions) - 1]
     array_contains(["create", "update"], action)
     tags := get_tags(resource)
+    # creates an array of the existing tag keys
     existing_tags := [ key | tags[key] ]
     required_tag := required_tags[_]
     not array_contains(existing_tags, required_tag)

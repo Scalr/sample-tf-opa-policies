@@ -1,3 +1,11 @@
+# Implements an allowed list of resource types.
+#
+# NOTE: This policy would also prevent the use of all providers except AWS.
+#       To allow other clouds with no restrictions on resource types add the following line to the rule
+#       before "not array_contains..."
+#
+#       startswith(resources.type,"aws_")
+
 package terraform
 
 import input.tfplan as tfplan

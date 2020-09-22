@@ -1,3 +1,5 @@
+# Enforce that specificied resource types are only created by specific modules and not in the root module.
+
 package terraform
 
 import input.tfplan as tfplan

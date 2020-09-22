@@ -12,12 +12,12 @@ array_contains(arr, elem) {
 }
 
 deny["User is not allowed to perform runs from Terraform CLI"] {
-    "tfe-cli" == tfrun.source
+    "cli" == tfrun.source
     not array_contains(allowed_cli_users, tfrun.created_by.username)
 }
 
 deny["Only commits from authorized authors are allowed to trigger AWS infrastructure update"] {
-    "tfe-vcs" == tfrun.source
+    "vcs" == tfrun.source
     resource := tfplan.resource_changes[_]
     "aws" == resource.provider_name
     not endswith(tfrun.vcs.commit.author.email, "-aws-ops@foo.bar")

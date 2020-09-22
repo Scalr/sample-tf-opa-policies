@@ -1,3 +1,5 @@
+# Enforce a list of allowed locations / availability zones for each provider
+
 package terraform
 
 import input.tfplan as tfplan
