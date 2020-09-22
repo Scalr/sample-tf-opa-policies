@@ -62,7 +62,7 @@ Many policies contain arrays of values that are checked against resources. The a
 | [modules/required_modules.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/modules/required_modules.rego) | Checks resources are only be created via specific modules.               |
 | [placement/cloud_location.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/placement/cloud_location.rego) | Checks resources are deployed to specific regions in each cloud.         |
 | [providers/blacklist_provider.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/providers/blacklist_provider.rego) | Implements a provider blacklist.                                         |
-| [user/user.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/user/user.rego) | Restricts which users can trigger terrafrom runs. Works for CLI and VCS. |
+| [user/user.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/user/user.rego) | Restricts which users can trigger terraform runs. Works for CLI and VCS. |
 
 ## Contributions
 
