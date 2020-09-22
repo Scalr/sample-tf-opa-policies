@@ -34,7 +34,7 @@ $ opa eval --format pretty --data policy.rego -i plan.json data.terraform.deny
 
 ## Policies
 
-Summary decscriptions of each policy. Detailed descriptions of each rule can be found as comments in the policy file.
+Summary descriptions of each policy. Detailed descriptions of each rule can be found as comments in the policy file.
 Many policies contain arrays of values that are checked against resources. The arrays and reason messages are of course customisable.
 
 | Policy                                 | Description                                                              |
