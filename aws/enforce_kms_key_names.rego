@@ -24,7 +24,8 @@ import input.tfplan as tfplan
 import input.tfrun as tfrun
 
 allowed_kms_keys = [
-  "pg-kms-key"
+  "pg-kms-key",
+  "alias-1"
 ]
 
 contains(arr, elem) {
@@ -48,6 +49,21 @@ eval_expression(plan, expr) = constant_value {
     reference := expr.references[_]
 }
 
+eval_key_name(plan, res) = constant_value {
+    constant_value := res.expressions.key_id.constant_value
+} else = var_value {
+    ref = res.expressions.key_id.references[0]
+    startswith(ref, "var.")
+    var_name := replace(ref, "var.", "")
+    var_value := plan.variables[var_name].value
+} else = reference {
+    ref := res.expressions.key_id.references[_]
+    startswith(ref, "data.")
+    ps := plan.prior_state.values.root_module.resources[_]
+    ps.address == res.address
+    reference := ps.values.key_id
+}
+
 #--------------------
 
 # Tests that the key_id used in the data source is in the allowed list.
@@ -56,10 +72,10 @@ deny[reason] {
   r := tfplan.configuration.root_module.resources[_]
   r.mode == "data"
   r.type == "aws_kms_key"
-  key_alias := eval_expression(tfplan, r.expressions.key_id)
+  key_alias := eval_key_name(tfplan, r)
   key_name := trim_prefix(key_alias, "alias/")
   not contains(allowed_kms_keys, key_name)
-  reason := sprintf("%-40s :: KMS key name '%s' not in permitted list",[concat(".",[r.type,r.name]), key_alias])
+  reason := sprintf("%-40s :: KMS key name '%s' not in permitted list",[concat(".",[r.type,r.name]), key_name])
 }
  
 #---------------
