@@ -42,7 +42,7 @@ Many policies contain arrays of values that are checked against resources. The a
 | [aws/enforce_aws_iam_and_workspace.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_aws_iam_and_workspace.rego) | Checks valid IAM roles for provider and workspace.                        |
 | [aws/enforce_aws_resource.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_aws_resource.rego) | Check resource types against an allowed list.                            |
 | [aws/enforce_ebs_del_on_term.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_ebs_del_on_term.rego) | Check `delete_on_termination = true` is set for EBS volumes.             |
-| [aws/enforce_iam_instance_profiles.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_iam_instance_profiles.rego) | Check IAM instance profiles is in allowed list.                          |
+| [aws/enforce_iam_instance_profiles.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_iam_instance_profiles.rego) | Check IAM instance profile is in allowed list.                          |
 | [aws/enforce_instance_subnets.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_instance_subnets.rego) | Check instances are using allowed subnets |
 | [aws/enforce_kms_key_names.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_kms_key_names.rego) | Check KMS keys (by name) against allowed list.                           |
 | [aws/enforce_lb_subnets.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_lb_subnets.rego) | Check Loadbalancers are using allowed subnets |
@@ -120,4 +120,3 @@ PASS: 3/3
 ## License
 
 The examples are licensed under the [MIT License](https://github.com/Scalr/sample-tf-opa-policies/blob/master/LICENSE).
-
