@@ -94,7 +94,7 @@ Better still have a go at fixing bug or implementing new policy examples yoursel
 If you submit a new policy you must include the following files.
 
 * The `*.rego` file with the policy code.
-* `*.mock.json` containing test data mocks. You should inlcude data for both valid and invalid evaluation of each rule in the policy,.
+* `*.mock.json` containing test data mocks. You should include data for both valid and invalid evaluation of each rule in the policy.
 * `*.test.rego` defining the tests to be run and expected results when the PR checks are performed.
 
 To submit a PR follow the standard process.
