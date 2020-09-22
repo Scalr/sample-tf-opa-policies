@@ -1,3 +1,5 @@
+# Prevent specified provisioners from being used.
+
 package terraform
 
 import input.tfplan as tfplan
@@ -17,6 +19,7 @@ module_name(path) = name {
     root := "root-module"
 }
 
+# Walk the configuration looking in root module and any called module for provisioners and cehck against allowed list.
 deny[reason] {
     walk(tfplan.configuration.root_module, [path, value])
     resource = value.resources[_]

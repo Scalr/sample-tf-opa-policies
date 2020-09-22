@@ -11,6 +11,7 @@ array_contains(arr, elem) {
   arr[_] = elem
 }
 
+# Checks that a list of sec groups has been included in the config
 deny[reason] {
   r := tfplan.resource_changes[_]
   r.change.after_unknown.vpc_security_group_ids == true
@@ -21,6 +22,7 @@ deny[reason] {
             )
 }
 
+# If a list of sec groups has been given, check that the required on is in the list.
 deny[reason] {
   r := tfplan.resource_changes[_]
   vsg := r.change.after.vpc_security_group_ids

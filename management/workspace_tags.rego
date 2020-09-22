@@ -1,3 +1,5 @@
+# Enforces that workspaces are tagged with the names of the providers.
+
 package terraform
 
 import input.tfplan as tfplan

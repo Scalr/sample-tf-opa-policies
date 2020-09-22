@@ -1,3 +1,5 @@
+# Prevent specified providers from being used
+
 package terraform
 
 import input.tfplan as tfplan
