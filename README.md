@@ -47,7 +47,7 @@ Many policies contain arrays of values that are checked against resources. The a
 | [aws/enforce_kms_key_names.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_kms_key_names.rego) | Check KMS keys (by name) against allowed list.                           |
 | [aws/enforce_lb_subnets.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_lb_subnets.rego) | Check Loadbalancers are using allowed subnets |
 | [aws/enforce_s3_buckets_encryption.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_s3_buckets_encryption.rego) | Check encryption is set for S3 buckets.                                  |
-| [aws/enforce_sec_group.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_sec_group.rego) | Check security groups have been sepcified and are in allowed list.       |
+| [aws/enforce_sec_group.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_sec_group.rego) | Check security groups have been specified and are in allowed list.       |
 | [aws/enforce_rds_subnets.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_rds_subnets.rego) | Check RDS clsuters are using allowed subnets |
 | [cost/limit_monthly_cost.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/cost/limit_monthly_cost.rego) | Check estimated cost against an upper limit.                             |
 | [external_data/random_decision.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/external_data/random_decision.rego) | Example of using external data (HTTP GET) in a policy.                   |
