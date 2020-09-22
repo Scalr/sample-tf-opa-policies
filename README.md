@@ -39,7 +39,7 @@ Many policies contain arrays of values that are checked against resources. The a
 
 | Policy                                 | Description                                                              |
 | -------------------------------------- | ------------------------------------------------------------------------ |  
-| [aws/enforce_aws_iam_and_workspace.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_aws_iam_and_workspace.rego) | Checks valid IAM roles for provder and workspace.                        |
+| [aws/enforce_aws_iam_and_workspace.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_aws_iam_and_workspace.rego) | Checks valid IAM roles for provider and workspace.                        |
 | [aws/enforce_aws_resource.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_aws_resource.rego) | Check resource types against an allowed list.                            |
 | [aws/enforce_ebs_del_on_term.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_ebs_del_on_term.rego) | Check `delete_on_termination = true` is set for EBS volumes.             |
 | [aws/enforce_iam_instance_profiles.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_iam_instance_profiles.rego) | Check IAM instance profiles is in allowed list.                          |
@@ -120,5 +120,4 @@ PASS: 3/3
 ## License
 
 The examples are licensed under the [MIT License](https://github.com/Scalr/sample-tf-opa-policies/blob/master/LICENSE).
-
 
