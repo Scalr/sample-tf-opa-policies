@@ -8,17 +8,17 @@ A sample collection of OPA policies to test against Terraform run in Scalr.
 
 ## Resources
 
-* Blog series for getting started with OPA for Terraform in Scalr : https://scalr.com//blog/opa-series-part-1-open-policy-agent-and-terraform/
-* Documentation for using OPA with Scalr : https://docs.scalr.com/en/latest/opa.html
-* OPA documentation : https://www.openpolicyagent.org/docs/latest/
+* Blog series for getting started with OPA for Terraform in Scalr: https://scalr.com/blog/opa-series-part-1-open-policy-agent-and-terraform/
+* Documentation for using OPA with Scalr: https://docs.scalr.com/en/latest/opa.html
+* OPA documentation: https://www.openpolicyagent.org/docs/latest/
 
 ## Policy Files
 
 Each sample policy comprises 3 files.
 
-- `*.rego` : The OPA policy
-- `*.mock.json` : Input data for testing the policy with `opa test`
-- `*.test.rego` : Definition of the tests that `opa test` should run and expected results
+- `*.rego`: The OPA policy
+- `*.mock.json`: Input data for testing the policy with `opa test`
+- `*.test.rego`: Definition of the tests that `opa test` should run and expected results
 
 Each folder also includes an example `scalr-policy.hcl` file. These files are used by Scalr to implement enforcement levels for each policy (`hard-mandatory`, `soft-mandatory`, `advisory`). See [Enabling and Enforcing Policy](https://docs.scalr.com/en/latest/opa.html#enabling-and-enforcing-policy) for more details.
 
@@ -102,7 +102,7 @@ To submit a PR follow the standard process.
 1. Fork the repo
 2. Clone locally and create a new branch
 3. Commit and push
-4. Submit PR request
+4. Submit pull request
 
 Before submitting the PR for the new policy or bug fix you should confirm it works using `opa eval` as shown above and validate the mock based tests work using `opa test`.
 
