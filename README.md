@@ -100,7 +100,7 @@ If you submit a new policy you must include the following files.
 To submit a PR follow the standard process.
 
 1. Fork the repo
-2. Clone locally and creaete a new branch
+2. Clone locally and create a new branch
 3. Commit and push
 4. Submit PR request
 
