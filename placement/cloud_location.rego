@@ -16,6 +16,11 @@ array_contains(arr, elem) {
   arr[_] = elem
 }
 
+get_basename(path) = basename{
+    arr := split(path, "/")
+    basename:= arr[count(arr)-1]
+}
+
 eval_expression(plan, expr) = constant_value {
     constant_value := expr.constant_value
 } else = reference {
@@ -26,23 +31,28 @@ eval_expression(plan, expr) = constant_value {
 }
 
 get_location(resource, plan) = aws_region {
-    "aws" == resource.provider_name
+    # registry.terraform.io/hashicorp/aws -> aws
+    provider_name := get_basename(resource.provider_name)
+    "aws" == provider_name
     provider := plan.configuration.provider_config[_]
     "aws" = provider.name
     region_expr := provider.expressions.region
     aws_region := eval_expression(plan, region_expr)
 } else = azure_location {
-    "azurerm" == resource.provider_name
+    provider_name := get_basename(resource.provider_name)
+    "azurerm" == provider_name
     azure_location := resource.change.after.location
 } else = google_zone {
-    "google" == resource.provider_name
+    provider_name := get_basename(resource.provider_name)
+    "google" == provider_name
     google_zone := resource.change.after.zone
 }
 
 deny[reason] {
     resource := tfplan.resource_changes[_]
     location := get_location(resource, tfplan)
-    not array_contains(allowed_locations[resource.provider_name], location)
+    provider_name := get_basename(resource.provider_name)
+    not array_contains(allowed_locations[provider_name], location)
 
     reason := sprintf(
         "%s: location %q is not allowed",

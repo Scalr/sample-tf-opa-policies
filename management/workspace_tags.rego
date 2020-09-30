@@ -10,13 +10,19 @@ array_contains(arr, elem) {
   arr[_] = elem
 }
 
+get_basename(path) = basename{
+    arr := split(path, "/")
+    basename:= arr[count(arr)-1]
+}
+
 deny[reason] {
     resource := tfplan.resource_changes[_]
     action := resource.change.actions[count(resource.change.actions) - 1]
     array_contains(["create", "update"], action)
 
     ws_tags := [ key | tfrun.workspace.tags[key] ]
-    cloud_tag := resource.provider_name
+    # registry.terraform.io/hashicorp/aws -> aws
+    cloud_tag := get_basename(resource.provider_name)
     not array_contains(ws_tags, cloud_tag)
 
     reason := sprintf("Workspace must be marked with %q tag to create resources in %s cloud",
