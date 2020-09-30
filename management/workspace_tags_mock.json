@@ -11,7 +11,7 @@
                         "mode": "managed",
                         "type": "aws_instance",
                         "name": "instance1",
-                        "provider_name": "aws",
+                        "provider_name": "registry.terraform.io/hashicorp/aws",
                         "change": {
                             "actions": [
                                 "create",
@@ -24,7 +24,7 @@
                         "mode": "managed",
                         "type": "google_compute_instance",
                         "name": "instance2",
-                        "provider_name": "google",
+                        "provider_name": "registry.terraform.io/hashicorp/google",
                         "change": {
                             "actions": [
                                 "create"
@@ -55,7 +55,7 @@
                         "mode": "managed",
                         "type": "aws_instance",
                         "name": "instance1",
-                        "provider_name": "aws",
+                        "provider_name": "registry.terraform.io/hashicorp/aws",
                         "change": {
                             "actions": [
                                 "create",
@@ -68,7 +68,7 @@
                         "mode": "managed",
                         "type": "google_compute_instance",
                         "name": "instance2",
-                        "provider_name": "google",
+                        "provider_name": "registry.terraform.io/hashicorp/google",
                         "change": {
                             "actions": [
                                 "create"
@@ -98,7 +98,7 @@
                         "mode": "managed",
                         "type": "aws_instance",
                         "name": "instance1",
-                        "provider_name": "aws",
+                        "provider_name": "registry.terraform.io/hashicorp/aws",
                         "change": {
                             "actions": [
                                 "create",
@@ -111,7 +111,7 @@
                         "mode": "managed",
                         "type": "google_compute_instance",
                         "name": "instance2",
-                        "provider_name": "google",
+                        "provider_name": "registry.terraform.io/hashicorp/google",
                         "change": {
                             "actions": [
                                 "create"
@@ -140,7 +140,7 @@
                         "mode": "managed",
                         "type": "aws_instance",
                         "name": "instance1",
-                        "provider_name": "aws",
+                        "provider_name": "registry.terraform.io/hashicorp/aws",
                         "change": {
                             "actions": [
                                 "delete"
@@ -152,7 +152,7 @@
                         "mode": "managed",
                         "type": "google_compute_instance",
                         "name": "instance2",
-                        "provider_name": "google",
+                        "provider_name": "registry.terraform.io/hashicorp/google",
                         "change": {
                             "actions": [
                                 "create"

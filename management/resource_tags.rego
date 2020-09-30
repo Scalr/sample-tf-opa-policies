@@ -21,7 +21,7 @@ get_basename(path) = basename{
 get_tags(resource) = labels {
     # registry.terraform.io/hashicorp/google -> google
     provider_name := get_basename(resource.provider_name)
-    "google" == resource.provider_name
+    "google" == provider_name
     labels := resource.change.after.labels
 } else = tags {
     tags := resource.change.after.tags
