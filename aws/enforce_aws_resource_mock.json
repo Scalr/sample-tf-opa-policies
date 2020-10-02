@@ -8,7 +8,7 @@
                         "mode": "managed",
                         "type": "aws_instance",
                         "name": "web",
-                        "provider_name": "aws",
+                        "provider_name": "registry.terraform.io/hashicorp/aws",
                         "change": {
                             "actions": [
                                 "create"
@@ -109,7 +109,7 @@
                         "mode": "managed",
                         "type": "aws_athena_database",
                         "name": "hoge",
-                        "provider_name": "aws",
+                        "provider_name": "registry.terraform.io/hashicorp/aws",
                         "change": {
                             "actions": [
                                 "create"
@@ -132,7 +132,7 @@
                         "mode": "managed",
                         "type": "aws_s3_bucket",
                         "name": "hoge",
-                        "provider_name": "aws",
+                        "provider_name": "registry.terraform.io/hashicorp/aws",
                         "change": {
                             "actions": [
                                 "create"

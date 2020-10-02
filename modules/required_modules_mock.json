@@ -10,7 +10,7 @@
                         "module_address": "module.rds.module.db_instance",
                         "type": "aws_db_instance",
                         "name": "this",
-                        "provider_name": "aws",
+                        "provider_name": "registry.terraform.io/hashicorp/aws",
                         "change": {
                             "actions": [
                                 "create"
@@ -37,7 +37,7 @@
                         "address": "module.custom.module.db_instance.aws_db_instance.this[0]",
                         "module_address": "module.custom.module.db_instance",
                         "type": "aws_db_instance",
-                        "provider_name": "aws",
+                        "provider_name": "registry.terraform.io/hashicorp/aws",
                         "change": {
                             "actions": [
                                 "update"
@@ -63,7 +63,7 @@
                     {
                         "address": "aws_db_instance.default",
                         "type": "aws_db_instance",
-                        "provider_name": "aws",
+                        "provider_name": "registry.terraform.io/hashicorp/aws",
                         "change": {
                             "actions": [
                                 "create"
@@ -80,7 +80,7 @@
                     {
                         "address": "aws_instance.default",
                         "type": "aws_instance",
-                        "provider_name": "aws",
+                        "provider_name": "registry.terraform.io/hashicorp/aws",
                         "change": {
                             "actions": [
                                 "create"

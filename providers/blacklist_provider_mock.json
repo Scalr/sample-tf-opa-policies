@@ -8,7 +8,7 @@
                 "mode": "managed",
                 "type": "aws_instance",
                 "name": "scalr",
-                "provider_name": "aws",
+                "provider_name": "registry.terraform.io/hashicorp/aws",
                 "change": {
                     "actions": [
                         "create"
@@ -125,7 +125,7 @@
                 "mode": "managed",
                 "type": "azurerm_resource_group",
                 "name": "resource_group",
-                "provider_name": "azurerm",
+                "provider_name": "registry.terraform.io/hashicorp/azurerm",
                 "change": {
                     "actions": [
                         "create"

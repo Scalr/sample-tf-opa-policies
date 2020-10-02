@@ -12,7 +12,7 @@
                 "mode": "managed",
                 "type": "aws_instance",
                 "name": "example",
-                "provider_name": "aws",
+                "provider_name": "registry.terraform.io/hashicorp/aws",
                 "schema_version": 1,
                 "values": {
                   "ami": "ami-05cf2c352da0bfb2e",
@@ -43,7 +43,7 @@
             "mode": "managed",
             "type": "aws_instance",
             "name": "example",
-            "provider_name": "aws",
+            "provider_name": "registry.terraform.io/hashicorp/aws",
             "change": {
               "actions": [
                 "delete",
@@ -190,7 +190,7 @@
                   "mode": "managed",
                   "type": "aws_instance",
                   "name": "example",
-                  "provider_name": "aws",
+                  "provider_name": "registry.terraform.io/hashicorp/aws",
                   "schema_version": 1,
                   "values": {
                     "ami": "ami-05cf2c352da0bfb2e",
@@ -355,7 +355,7 @@
                 "mode": "managed",
                 "type": "aws_instance",
                 "name": "example",
-                "provider_name": "aws",
+                "provider_name": "registry.terraform.io/hashicorp/aws",
                 "schema_version": 1,
                 "values": {
                   "ami": "ami-05cf2c352da0bfb2e",
@@ -387,7 +387,7 @@
             "mode": "managed",
             "type": "aws_instance",
             "name": "example",
-            "provider_name": "aws",
+            "provider_name": "registry.terraform.io/hashicorp/aws",
             "change": {
               "actions": [
                 "delete",
@@ -534,7 +534,7 @@
                   "mode": "managed",
                   "type": "aws_instance",
                   "name": "example",
-                  "provider_name": "aws",
+                  "provider_name": "registry.terraform.io/hashicorp/aws",
                   "schema_version": 1,
                   "values": {
                     "ami": "ami-05cf2c352da0bfb2e",
@@ -702,7 +702,7 @@
                 "mode": "managed",
                 "type": "aws_instance",
                 "name": "example",
-                "provider_name": "aws",
+                "provider_name": "registry.terraform.io/hashicorp/aws",
                 "schema_version": 1,
                 "values": {
                   "ami": "ami-05cf2c352da0bfb2e",
@@ -734,7 +734,7 @@
             "mode": "managed",
             "type": "aws_instance",
             "name": "example",
-            "provider_name": "aws",
+            "provider_name": "registry.terraform.io/hashicorp/aws",
             "change": {
               "actions": [
                 "delete",
@@ -881,7 +881,7 @@
                   "mode": "managed",
                   "type": "aws_instance",
                   "name": "example",
-                  "provider_name": "aws",
+                  "provider_name": "registry.terraform.io/hashicorp/aws",
                   "schema_version": 1,
                   "values": {
                     "ami": "ami-05cf2c352da0bfb2e",

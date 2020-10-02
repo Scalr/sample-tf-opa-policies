@@ -12,7 +12,7 @@
                 "mode": "managed",
                 "type": "aws_instance",
                 "name": "web",
-                "provider_name": "aws",
+                "provider_name": "registry.terraform.io/hashicorp/aws",
                 "schema_version": 1,
                 "values": {
                   "ami": "ami-0dba2cb6798deb6d8",
@@ -46,7 +46,7 @@
             "mode": "managed",
             "type": "aws_instance",
             "name": "web",
-            "provider_name": "aws",
+            "provider_name": "registry.terraform.io/hashicorp/aws",
             "change": {
               "actions": [
                 "create"
@@ -123,7 +123,7 @@
                   "mode": "data",
                   "type": "aws_ami",
                   "name": "ubuntu",
-                  "provider_name": "aws",
+                  "provider_name": "registry.terraform.io/hashicorp/aws",
                   "schema_version": 0,
                   "values": {
                     "architecture": "x86_64",
@@ -335,7 +335,7 @@
                 "mode": "managed",
                 "type": "aws_instance",
                 "name": "lb",
-                "provider_name": "aws",
+                "provider_name": "registry.terraform.io/hashicorp/aws",
                 "schema_version": 1,
                 "values": {
                   "ami": "ami-0dba2cb6798deb6d8",
@@ -368,7 +368,7 @@
             "mode": "managed",
             "type": "aws_instance",
             "name": "lb",
-            "provider_name": "aws",
+            "provider_name": "registry.terraform.io/hashicorp/aws",
             "change": {
               "actions": [
                 "create"
@@ -443,7 +443,7 @@
                   "mode": "data",
                   "type": "aws_ami",
                   "name": "ubuntu",
-                  "provider_name": "aws",
+                  "provider_name": "registry.terraform.io/hashicorp/aws",
                   "schema_version": 0,
                   "values": {
                     "architecture": "x86_64",
@@ -654,7 +654,7 @@
                 "mode": "managed",
                 "type": "aws_instance",
                 "name": "db",
-                "provider_name": "aws",
+                "provider_name": "registry.terraform.io/hashicorp/aws",
                 "schema_version": 1,
                 "values": {
                   "ami": "ami-0dba2cb6798deb6d8",
@@ -683,7 +683,7 @@
             "mode": "managed",
             "type": "aws_instance",
             "name": "db",
-            "provider_name": "aws",
+            "provider_name": "registry.terraform.io/hashicorp/aws",
             "change": {
               "actions": [
                 "create"
@@ -753,7 +753,7 @@
                   "mode": "data",
                   "type": "aws_ami",
                   "name": "ubuntu",
-                  "provider_name": "aws",
+                  "provider_name": "registry.terraform.io/hashicorp/aws",
                   "schema_version": 0,
                   "values": {
                     "architecture": "x86_64",

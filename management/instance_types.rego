@@ -22,15 +22,24 @@ array_contains(arr, elem) {
   arr[_] = elem
 }
 
+get_basename(path) = basename{
+    arr := split(path, "/")
+    basename:= arr[count(arr)-1]
+}
+
 # Extracts the instance type/size
 get_instance_type(resource) = instance_type {
-    instance_type := resource.change.after[instance_type_key[resource.provider_name]]
+    # registry.terraform.io/hashicorp/aws -> aws
+    provider_name := get_basename(resource.provider_name)
+    instance_type := resource.change.after[instance_type_key[provider_name]]
 }
 
 deny[reason] {
     resource := tfplan.resource_changes[_]
     instance_type := get_instance_type(resource)
-    not array_contains(allowed_types[resource.provider_name], instance_type)
+    # registry.terraform.io/hashicorp/aws -> aws
+    provider_name := get_basename(resource.provider_name)
+    not array_contains(allowed_types[provider_name], instance_type)
 
     reason := sprintf(
         "%s: instance type %q is not allowed",

@@ -12,9 +12,16 @@ array_contains(arr, elem) {
   arr[_] = elem
 }
 
+get_basename(path) = basename{
+    arr := split(path, "/")
+    basename:= arr[count(arr)-1]
+}
+
 # Extract the tags catering for Google where they are called "labels"
 get_tags(resource) = labels {
-    "google" == resource.provider_name
+    # registry.terraform.io/hashicorp/google -> google
+    provider_name := get_basename(resource.provider_name)
+    "google" == provider_name
     labels := resource.change.after.labels
 } else = tags {
     tags := resource.change.after.tags

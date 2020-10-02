@@ -12,7 +12,7 @@
                 "mode": "managed",
                 "type": "aws_elb",
                 "name": "elb1",
-                "provider_name": "aws",
+                "provider_name": "registry.terraform.io/hashicorp/aws",
                 "schema_version": 0,
                 "values": {
                   "access_logs": [],
@@ -42,7 +42,7 @@
                 "mode": "managed",
                 "type": "aws_lb",
                 "name": "lb1",
-                "provider_name": "aws",
+                "provider_name": "registry.terraform.io/hashicorp/aws",
                 "schema_version": 0,
                 "values": {
                   "access_logs": [],
@@ -70,7 +70,7 @@
             "mode": "managed",
             "type": "aws_elb",
             "name": "elb1",
-            "provider_name": "aws",
+            "provider_name": "registry.terraform.io/hashicorp/aws",
             "change": {
               "actions": [
                 "create"
@@ -127,7 +127,7 @@
             "mode": "managed",
             "type": "aws_lb",
             "name": "lb1",
-            "provider_name": "aws",
+            "provider_name": "registry.terraform.io/hashicorp/aws",
             "change": {
               "actions": [
                 "create"
@@ -279,7 +279,7 @@
                 "mode": "managed",
                 "type": "aws_elb",
                 "name": "elb1",
-                "provider_name": "aws",
+                "provider_name": "registry.terraform.io/hashicorp/aws",
                 "schema_version": 0,
                 "values": {
                   "access_logs": [],
@@ -309,7 +309,7 @@
                 "mode": "managed",
                 "type": "aws_lb",
                 "name": "lb1",
-                "provider_name": "aws",
+                "provider_name": "registry.terraform.io/hashicorp/aws",
                 "schema_version": 0,
                 "values": {
                   "access_logs": [],
@@ -337,7 +337,7 @@
             "mode": "managed",
             "type": "aws_elb",
             "name": "elb1",
-            "provider_name": "aws",
+            "provider_name": "registry.terraform.io/hashicorp/aws",
             "change": {
               "actions": [
                 "create"
@@ -394,7 +394,7 @@
             "mode": "managed",
             "type": "aws_lb",
             "name": "lb1",
-            "provider_name": "aws",
+            "provider_name": "registry.terraform.io/hashicorp/aws",
             "change": {
               "actions": [
                 "create"
