@@ -1,0 +1,742 @@
+{
+  "mock": {
+    "valid_sg": {
+      "tfplan": {
+        "format_version": "0.1",
+        "terraform_version": "0.13.4",
+        "planned_values": {
+          "root_module": {
+            "resources": [
+              {
+                "address": "aws_security_group.scalr_sg_1",
+                "mode": "managed",
+                "type": "aws_security_group",
+                "name": "scalr_sg_1",
+                "provider_name": "registry.terraform.io/hashicorp/aws",
+                "schema_version": 1,
+                "values": {
+                  "description": "Managed by Terraform",
+                  "ingress": [
+                    {
+                      "cidr_blocks": [
+                        "1.0.0.0/24"
+                      ],
+                      "description": "",
+                      "from_port": 22,
+                      "ipv6_cidr_blocks": [],
+                      "prefix_list_ids": [],
+                      "protocol": "tcp",
+                      "security_groups": [],
+                      "self": false,
+                      "to_port": 22
+                    }
+                  ],
+                  "name": "scalr_sg_1",
+                  "name_prefix": null,
+                  "revoke_rules_on_delete": false,
+                  "tags": null,
+                  "timeouts": null,
+                  "vpc_id": "vpc-0a72697a34dff26e7"
+                }
+              }
+            ]
+          }
+        },
+        "resource_changes": [
+          {
+            "address": "aws_security_group.scalr_sg_1",
+            "mode": "managed",
+            "type": "aws_security_group",
+            "name": "scalr_sg_1",
+            "provider_name": "registry.terraform.io/hashicorp/aws",
+            "change": {
+              "actions": [
+                "create"
+              ],
+              "before": null,
+              "after": {
+                "description": "Managed by Terraform",
+                "ingress": [
+                  {
+                    "cidr_blocks": [
+                      "1.0.0.0/24"
+                    ],
+                    "description": "",
+                    "from_port": 22,
+                    "ipv6_cidr_blocks": [],
+                    "prefix_list_ids": [],
+                    "protocol": "tcp",
+                    "security_groups": [],
+                    "self": false,
+                    "to_port": 22
+                  }
+                ],
+                "name": "scalr_sg_1",
+                "name_prefix": null,
+                "revoke_rules_on_delete": false,
+                "tags": null,
+                "timeouts": null,
+                "vpc_id": "vpc-0a72697a34dff26e7"
+              },
+              "after_unknown": {
+                "arn": true,
+                "egress": true,
+                "id": true,
+                "ingress": [
+                  {
+                    "cidr_blocks": [
+                      false
+                    ],
+                    "ipv6_cidr_blocks": [],
+                    "prefix_list_ids": [],
+                    "security_groups": []
+                  }
+                ],
+                "owner_id": true
+              }
+            }
+          }
+        ],
+        "configuration": {
+          "provider_config": {
+            "aws": {
+              "name": "aws",
+              "expressions": {
+                "region": {
+                  "constant_value": "us-east-1"
+                }
+              }
+            }
+          },
+          "root_module": {
+            "resources": [
+              {
+                "address": "aws_security_group.scalr_sg_1",
+                "mode": "managed",
+                "type": "aws_security_group",
+                "name": "scalr_sg_1",
+                "provider_config_key": "aws",
+                "expressions": {
+                  "name": {
+                    "constant_value": "scalr_sg_1"
+                  },
+                  "vpc_id": {
+                    "constant_value": "vpc-0a72697a34dff26e7"
+                  }
+                },
+                "schema_version": 1
+              }
+            ]
+          }
+        }
+      },
+      "tfrun": {
+        "workspace": {
+          "name": "opa",
+          "description": null,
+          "auto_apply": false,
+          "working_directory": null,
+          "tags": {}
+        },
+        "environment": {
+          "id": "env-t3qeqbo97mdot6o",
+          "name": "CS"
+        },
+        "vcs": null,
+        "cost_estimate": {
+          "prior_monthly_cost": 0,
+          "proposed_monthly_cost": 0,
+          "delta_monthly_cost": 0
+        },
+        "credentials": {},
+        "source": "cli",
+        "message": "Queued manually using Terraform",
+        "is_destroy": false,
+        "is_dry": true,
+        "created_by": {
+          "name": "",
+          "email": "peter@scalr.com",
+          "username": "peter@scalr.com"
+        }
+      }
+    },
+    "invalid_sg": {
+      "tfplan": {
+        "format_version": "0.1",
+        "terraform_version": "0.13.4",
+        "planned_values": {
+          "root_module": {
+            "resources": [
+              {
+                "address": "aws_security_group.scalr_sg_1",
+                "mode": "managed",
+                "type": "aws_security_group",
+                "name": "scalr_sg_1",
+                "provider_name": "registry.terraform.io/hashicorp/aws",
+                "schema_version": 1,
+                "values": {
+                  "description": "Managed by Terraform",
+                  "ingress": [
+                    {
+                      "cidr_blocks": [
+                        "0.0.0.0/0"
+                      ],
+                      "description": "",
+                      "from_port": 22,
+                      "ipv6_cidr_blocks": [],
+                      "prefix_list_ids": [],
+                      "protocol": "tcp",
+                      "security_groups": [],
+                      "self": false,
+                      "to_port": 22
+                    }
+                  ],
+                  "name": "scalr_sg_1",
+                  "name_prefix": null,
+                  "revoke_rules_on_delete": false,
+                  "tags": null,
+                  "timeouts": null,
+                  "vpc_id": "vpc-0a72697a34dff26e7"
+                }
+              }
+            ]
+          }
+        },
+        "resource_changes": [
+          {
+            "address": "aws_security_group.scalr_sg_1",
+            "mode": "managed",
+            "type": "aws_security_group",
+            "name": "scalr_sg_1",
+            "provider_name": "registry.terraform.io/hashicorp/aws",
+            "change": {
+              "actions": [
+                "create"
+              ],
+              "before": null,
+              "after": {
+                "description": "Managed by Terraform",
+                "ingress": [
+                  {
+                    "cidr_blocks": [
+                      "0.0.0.0/0"
+                    ],
+                    "description": "",
+                    "from_port": 22,
+                    "ipv6_cidr_blocks": [],
+                    "prefix_list_ids": [],
+                    "protocol": "tcp",
+                    "security_groups": [],
+                    "self": false,
+                    "to_port": 22
+                  }
+                ],
+                "name": "scalr_sg_1",
+                "name_prefix": null,
+                "revoke_rules_on_delete": false,
+                "tags": null,
+                "timeouts": null,
+                "vpc_id": "vpc-0a72697a34dff26e7"
+              },
+              "after_unknown": {
+                "arn": true,
+                "egress": true,
+                "id": true,
+                "ingress": [
+                  {
+                    "cidr_blocks": [
+                      false
+                    ],
+                    "ipv6_cidr_blocks": [],
+                    "prefix_list_ids": [],
+                    "security_groups": []
+                  }
+                ],
+                "owner_id": true
+              }
+            }
+          }
+        ],
+        "configuration": {
+          "provider_config": {
+            "aws": {
+              "name": "aws",
+              "expressions": {
+                "region": {
+                  "constant_value": "us-east-1"
+                }
+              }
+            }
+          },
+          "root_module": {
+            "resources": [
+              {
+                "address": "aws_security_group.scalr_sg_1",
+                "mode": "managed",
+                "type": "aws_security_group",
+                "name": "scalr_sg_1",
+                "provider_config_key": "aws",
+                "expressions": {
+                  "name": {
+                    "constant_value": "scalr_sg_1"
+                  },
+                  "vpc_id": {
+                    "constant_value": "vpc-0a72697a34dff26e7"
+                  }
+                },
+                "schema_version": 1
+              }
+            ]
+          }
+        }
+      },
+      "tfrun": {
+        "workspace": {
+          "name": "opa",
+          "description": null,
+          "auto_apply": false,
+          "working_directory": null,
+          "tags": {}
+        },
+        "environment": {
+          "id": "env-t3qeqbo97mdot6o",
+          "name": "CS"
+        },
+        "vcs": null,
+        "cost_estimate": {
+          "prior_monthly_cost": 0,
+          "proposed_monthly_cost": 0,
+          "delta_monthly_cost": 0
+        },
+        "credentials": {},
+        "source": "cli",
+        "message": "Queued manually using Terraform",
+        "is_destroy": false,
+        "is_dry": true,
+        "created_by": {
+          "name": "",
+          "email": "peter@scalr.com",
+          "username": "peter@scalr.com"
+        }
+      }
+    },
+    "valid_sgr": {
+      "tfplan": {
+        "format_version": "0.1",
+        "terraform_version": "0.13.4",
+        "planned_values": {
+          "root_module": {
+            "resources": [
+              {
+                "address": "aws_security_group.scalr_sg_2",
+                "mode": "managed",
+                "type": "aws_security_group",
+                "name": "scalr_sg_2",
+                "provider_name": "registry.terraform.io/hashicorp/aws",
+                "schema_version": 1,
+                "values": {
+                  "description": "Managed by Terraform",
+                  "name": "scalr_sg_2",
+                  "name_prefix": null,
+                  "revoke_rules_on_delete": false,
+                  "tags": null,
+                  "timeouts": null,
+                  "vpc_id": "vpc-0a72697a34dff26e7"
+                }
+              },
+              {
+                "address": "aws_security_group_rule.scalr_sg_2_rule_1",
+                "mode": "managed",
+                "type": "aws_security_group_rule",
+                "name": "scalr_sg_2_rule_1",
+                "provider_name": "registry.terraform.io/hashicorp/aws",
+                "schema_version": 2,
+                "values": {
+                  "cidr_blocks": [
+                    "1.2.3.0/24"
+                  ],
+                  "description": null,
+                  "from_port": 0,
+                  "ipv6_cidr_blocks": null,
+                  "prefix_list_ids": null,
+                  "protocol": "tcp",
+                  "self": false,
+                  "to_port": 65535,
+                  "type": "ingress"
+                }
+              }
+            ]
+          }
+        },
+        "resource_changes": [
+          {
+            "address": "aws_security_group.scalr_sg_2",
+            "mode": "managed",
+            "type": "aws_security_group",
+            "name": "scalr_sg_2",
+            "provider_name": "registry.terraform.io/hashicorp/aws",
+            "change": {
+              "actions": [
+                "create"
+              ],
+              "before": null,
+              "after": {
+                "description": "Managed by Terraform",
+                "name": "scalr_sg_2",
+                "name_prefix": null,
+                "revoke_rules_on_delete": false,
+                "tags": null,
+                "timeouts": null,
+                "vpc_id": "vpc-0a72697a34dff26e7"
+              },
+              "after_unknown": {
+                "arn": true,
+                "egress": true,
+                "id": true,
+                "ingress": true,
+                "owner_id": true
+              }
+            }
+          },
+          {
+            "address": "aws_security_group_rule.scalr_sg_2_rule_1",
+            "mode": "managed",
+            "type": "aws_security_group_rule",
+            "name": "scalr_sg_2_rule_1",
+            "provider_name": "registry.terraform.io/hashicorp/aws",
+            "change": {
+              "actions": [
+                "create"
+              ],
+              "before": null,
+              "after": {
+                "cidr_blocks": [
+                  "1.2.3.0/24"
+                ],
+                "description": null,
+                "from_port": 0,
+                "ipv6_cidr_blocks": null,
+                "prefix_list_ids": null,
+                "protocol": "tcp",
+                "self": false,
+                "to_port": 65535,
+                "type": "ingress"
+              },
+              "after_unknown": {
+                "cidr_blocks": [
+                  false,
+                  false
+                ],
+                "id": true,
+                "security_group_id": true,
+                "source_security_group_id": true
+              }
+            }
+          }
+        ],
+        "configuration": {
+          "provider_config": {
+            "aws": {
+              "name": "aws",
+              "expressions": {
+                "region": {
+                  "constant_value": "us-east-1"
+                }
+              }
+            }
+          },
+          "root_module": {
+            "resources": [
+              {
+                "address": "aws_security_group.scalr_sg_2",
+                "mode": "managed",
+                "type": "aws_security_group",
+                "name": "scalr_sg_2",
+                "provider_config_key": "aws",
+                "expressions": {
+                  "name": {
+                    "constant_value": "scalr_sg_2"
+                  },
+                  "vpc_id": {
+                    "constant_value": "vpc-0a72697a34dff26e7"
+                  }
+                },
+                "schema_version": 1
+              },
+              {
+                "address": "aws_security_group_rule.scalr_sg_2_rule_1",
+                "mode": "managed",
+                "type": "aws_security_group_rule",
+                "name": "scalr_sg_2_rule_1",
+                "provider_config_key": "aws",
+                "expressions": {
+                  "cidr_blocks": {
+                    "constant_value": [
+                      "1.2.3.0/24"
+                    ]
+                  },
+                  "from_port": {
+                    "constant_value": 0
+                  },
+                  "protocol": {
+                    "constant_value": "tcp"
+                  },
+                  "security_group_id": {
+                    "references": [
+                      "aws_security_group.scalr_sg_2"
+                    ]
+                  },
+                  "to_port": {
+                    "constant_value": 65535
+                  },
+                  "type": {
+                    "constant_value": "ingress"
+                  }
+                },
+                "schema_version": 2
+              }
+            ]
+          }
+        }
+      },
+      "tfrun": {
+        "workspace": {
+          "name": "opa",
+          "description": null,
+          "auto_apply": false,
+          "working_directory": null,
+          "tags": {}
+        },
+        "environment": {
+          "id": "env-t3qeqbo97mdot6o",
+          "name": "CS"
+        },
+        "vcs": null,
+        "cost_estimate": {
+          "prior_monthly_cost": 0,
+          "proposed_monthly_cost": 0,
+          "delta_monthly_cost": 0
+        },
+        "credentials": {},
+        "source": "cli",
+        "message": "Queued manually using Terraform",
+        "is_destroy": false,
+        "is_dry": true,
+        "created_by": {
+          "name": "",
+          "email": "peter@scalr.com",
+          "username": "peter@scalr.com"
+        }
+      }
+    },
+    "invalid_sgr": {
+      "tfplan": {
+        "format_version": "0.1",
+        "terraform_version": "0.13.4",
+        "planned_values": {
+          "root_module": {
+            "resources": [
+              {
+                "address": "aws_security_group.scalr_sg_2",
+                "mode": "managed",
+                "type": "aws_security_group",
+                "name": "scalr_sg_2",
+                "provider_name": "registry.terraform.io/hashicorp/aws",
+                "schema_version": 1,
+                "values": {
+                  "description": "Managed by Terraform",
+                  "name": "scalr_sg_2",
+                  "name_prefix": null,
+                  "revoke_rules_on_delete": false,
+                  "tags": null,
+                  "timeouts": null,
+                  "vpc_id": "vpc-0a72697a34dff26e7"
+                }
+              },
+              {
+                "address": "aws_security_group_rule.scalr_sg_2_rule_1",
+                "mode": "managed",
+                "type": "aws_security_group_rule",
+                "name": "scalr_sg_2_rule_1",
+                "provider_name": "registry.terraform.io/hashicorp/aws",
+                "schema_version": 2,
+                "values": {
+                  "cidr_blocks": [
+                    "0.0.0.0/0"
+                  ],
+                  "description": null,
+                  "from_port": 0,
+                  "ipv6_cidr_blocks": null,
+                  "prefix_list_ids": null,
+                  "protocol": "tcp",
+                  "self": false,
+                  "to_port": 65535,
+                  "type": "ingress"
+                }
+              }
+            ]
+          }
+        },
+        "resource_changes": [
+          {
+            "address": "aws_security_group.scalr_sg_2",
+            "mode": "managed",
+            "type": "aws_security_group",
+            "name": "scalr_sg_2",
+            "provider_name": "registry.terraform.io/hashicorp/aws",
+            "change": {
+              "actions": [
+                "create"
+              ],
+              "before": null,
+              "after": {
+                "description": "Managed by Terraform",
+                "name": "scalr_sg_2",
+                "name_prefix": null,
+                "revoke_rules_on_delete": false,
+                "tags": null,
+                "timeouts": null,
+                "vpc_id": "vpc-0a72697a34dff26e7"
+              },
+              "after_unknown": {
+                "arn": true,
+                "egress": true,
+                "id": true,
+                "ingress": true,
+                "owner_id": true
+              }
+            }
+          },
+          {
+            "address": "aws_security_group_rule.scalr_sg_2_rule_1",
+            "mode": "managed",
+            "type": "aws_security_group_rule",
+            "name": "scalr_sg_2_rule_1",
+            "provider_name": "registry.terraform.io/hashicorp/aws",
+            "change": {
+              "actions": [
+                "create"
+              ],
+              "before": null,
+              "after": {
+                "cidr_blocks": [
+                  "0.0.0.0/0"
+                ],
+                "description": null,
+                "from_port": 0,
+                "ipv6_cidr_blocks": null,
+                "prefix_list_ids": null,
+                "protocol": "tcp",
+                "self": false,
+                "to_port": 65535,
+                "type": "ingress"
+              },
+              "after_unknown": {
+                "cidr_blocks": [
+                  false,
+                  false
+                ],
+                "id": true,
+                "security_group_id": true,
+                "source_security_group_id": true
+              }
+            }
+          }
+        ],
+        "configuration": {
+          "provider_config": {
+            "aws": {
+              "name": "aws",
+              "expressions": {
+                "region": {
+                  "constant_value": "us-east-1"
+                }
+              }
+            }
+          },
+          "root_module": {
+            "resources": [
+              {
+                "address": "aws_security_group.scalr_sg_2",
+                "mode": "managed",
+                "type": "aws_security_group",
+                "name": "scalr_sg_2",
+                "provider_config_key": "aws",
+                "expressions": {
+                  "name": {
+                    "constant_value": "scalr_sg_2"
+                  },
+                  "vpc_id": {
+                    "constant_value": "vpc-0a72697a34dff26e7"
+                  }
+                },
+                "schema_version": 1
+              },
+              {
+                "address": "aws_security_group_rule.scalr_sg_2_rule_1",
+                "mode": "managed",
+                "type": "aws_security_group_rule",
+                "name": "scalr_sg_2_rule_1",
+                "provider_config_key": "aws",
+                "expressions": {
+                  "cidr_blocks": {
+                    "constant_value": [
+                       "0.0.0.0/0"
+                    ]
+                  },
+                  "from_port": {
+                    "constant_value": 0
+                  },
+                  "protocol": {
+                    "constant_value": "tcp"
+                  },
+                  "security_group_id": {
+                    "references": [
+                      "aws_security_group.scalr_sg_2"
+                    ]
+                  },
+                  "to_port": {
+                    "constant_value": 65535
+                  },
+                  "type": {
+                    "constant_value": "ingress"
+                  }
+                },
+                "schema_version": 2
+              }
+            ]
+          }
+        }
+      },
+      "tfrun": {
+        "workspace": {
+          "name": "opa",
+          "description": null,
+          "auto_apply": false,
+          "working_directory": null,
+          "tags": {}
+        },
+        "environment": {
+          "id": "env-t3qeqbo97mdot6o",
+          "name": "CS"
+        },
+        "vcs": null,
+        "cost_estimate": {
+          "prior_monthly_cost": 0,
+          "proposed_monthly_cost": 0,
+          "delta_monthly_cost": 0
+        },
+        "credentials": {},
+        "source": "cli",
+        "message": "Queued manually using Terraform",
+        "is_destroy": false,
+        "is_dry": true,
+        "created_by": {
+          "name": "",
+          "email": "peter@scalr.com",
+          "username": "peter@scalr.com"
+        }
+      }
+    }
+  }
+}
