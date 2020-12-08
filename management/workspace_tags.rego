@@ -28,3 +28,5 @@ deny[reason] {
     reason := sprintf("Workspace must be marked with '%s' tag to create resources in %s cloud",
                       [cloud_tag, cloud_tag])
 }
+
+ 
