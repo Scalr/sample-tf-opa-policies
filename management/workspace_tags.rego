@@ -20,11 +20,11 @@ deny[reason] {
     action := resource.change.actions[count(resource.change.actions) - 1]
     array_contains(["create", "update"], action)
 
-    ws_tags := [ key | tfrun.workspace.tags[key] ]
     # registry.terraform.io/hashicorp/aws -> aws
     cloud_tag := get_basename(resource.provider_name)
-    not array_contains(ws_tags, cloud_tag)
+    
+    not tfrun.workspace.tags[cloud_tag]
 
-    reason := sprintf("Workspace must be marked with %q tag to create resources in %s cloud",
+    reason := sprintf("Workspace must be marked with '%s' tag to create resources in %s cloud",
                       [cloud_tag, cloud_tag])
 }
