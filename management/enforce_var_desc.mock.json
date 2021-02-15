@@ -1,0 +1,104 @@
+{
+  "mock": {
+    "valid": {
+      "tfplan": {
+        "format_version": "0.1",
+        "terraform_version": "0.13.4",
+        "variables": {
+          "nothing": {
+            "value": 0
+          },
+          "something": {
+            "value": 1
+          }
+        },
+        "configuration": {
+          "provider_config": {
+            "aws": {
+              "name": "aws",
+              "expressions": {
+                "region": {
+                  "constant_value": "us-east-1"
+                },
+                "shared_credentials_file": {
+                  "constant_value": "credentials"
+                }
+              }
+            }
+          },
+          "root_module": {
+            "resources": [
+              {
+                "address": "random_string.foo",
+                "mode": "managed",
+                "type": "random_string",
+                "name": "foo",
+                "provider_config_key": "random",
+                "expressions": {
+                  "length": {
+                    "constant_value": 24
+                  }
+                },
+                "schema_version": 1
+              }
+            ],
+            "variables": {
+              "something": {
+                "description": "The description"
+              }
+            }
+          }
+        }
+      }
+    },
+    "invalid": {
+      "tfplan": {
+        "format_version": "0.1",
+        "terraform_version": "0.13.4",
+        "variables": {
+          "nothing": {
+            "value": 0
+          },
+          "something": {
+            "value": 1
+          }
+        },
+        "configuration": {
+          "provider_config": {
+            "aws": {
+              "name": "aws",
+              "expressions": {
+                "region": {
+                  "constant_value": "us-east-1"
+                },
+                "shared_credentials_file": {
+                  "constant_value": "credentials"
+                }
+              }
+            }
+          },
+          "root_module": {
+            "resources": [
+              {
+                "address": "random_string.foo",
+                "mode": "managed",
+                "type": "random_string",
+                "name": "foo",
+                "provider_config_key": "random",
+                "expressions": {
+                  "length": {
+                    "constant_value": 24
+                  }
+                },
+                "schema_version": 1
+              }
+            ],
+            "variables": {
+              "nothing": {}
+            }
+          }
+        }
+      }
+    }
+  }
+}
