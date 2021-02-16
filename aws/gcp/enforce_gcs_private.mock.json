@@ -1,0 +1,128 @@
+{
+  "mock": {
+    "valid_bucket_acl": {
+      "tfplan": {
+        "format_version": "0.1",
+        "terraform_version": "0.14.4",
+        "resource_changes": [
+          {
+              "address": "google_storage_bucket_acl.test_acl",
+              "mode": "managed",
+              "type": "google_storage_bucket_acl",
+              "name": "test_acl",
+              "provider_name": "registry.terraform.io/hashicorp/google",
+              "change": {
+                  "actions": [
+                      "create"
+                  ],
+                  "before": null,
+                  "after": {
+                      "bucket": "pg-gcs-1",
+                      "default_acl": null,
+                      "predefined_acl": "authenticatedRead"
+                  },
+                  "after_unknown": {
+                      "id": true,
+                      "role_entity": true
+                  }
+              }
+          }
+        ]
+      }
+    },
+    "invalid_bucket_acl": {
+      "tfplan": {
+        "format_version": "0.1",
+        "terraform_version": "0.14.4",
+        "resource_changes": [
+          {
+              "address": "google_storage_bucket_acl.test_acl",
+              "mode": "managed",
+              "type": "google_storage_bucket_acl",
+              "name": "test_acl",
+              "provider_name": "registry.terraform.io/hashicorp/google",
+              "change": {
+                  "actions": [
+                      "create"
+                  ],
+                  "before": null,
+                  "after": {
+                      "bucket": "pg-gcs-1",
+                      "default_acl": null,
+                      "predefined_acl": "publicRead"
+                  },
+                  "after_unknown": {
+                      "id": true,
+                      "role_entity": true
+                  }
+              }
+          }
+        ]
+      }
+    },
+    "valid_access_control": {
+      "tfplan": {
+        "format_version": "0.1",
+        "terraform_version": "0.14.4",
+        "resource_changes": [
+          {
+            "address": "google_storage_bucket_access_control.public_rule",
+            "mode": "managed",
+            "type": "google_storage_bucket_access_control",
+            "name": "public_rule",
+            "provider_name": "registry.terraform.io/hashicorp/google",
+            "change": {
+                "actions": [
+                    "create"
+                ],
+                "before": null,
+                "after": {
+                    "bucket": "pg-gcs-1",
+                    "entity": "allUsers",
+                    "role": "READER",
+                    "timeouts": null
+                },
+                "after_unknown": {
+                    "domain": true,
+                    "email": true,
+                    "id": true
+                }
+            }
+          }
+        ]
+      }
+    },
+    "invalid_access_control": {
+      "tfplan": {
+        "format_version": "0.1",
+        "terraform_version": "0.14.4",
+        "resource_changes": [
+          {
+            "address": "google_storage_bucket_access_control.public_rule",
+            "mode": "managed",
+            "type": "google_storage_bucket_access_control",
+            "name": "public_rule",
+            "provider_name": "registry.terraform.io/hashicorp/google",
+            "change": {
+                "actions": [
+                    "create"
+                ],
+                "before": null,
+                "after": {
+                    "bucket": "pg-gcs-1",
+                    "entity": "Public",
+                    "role": "READER",
+                    "timeouts": null
+                },
+                "after_unknown": {
+                    "domain": true,
+                    "email": true,
+                    "id": true
+                }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -48,12 +48,15 @@ Many policies contain arrays of values that are checked against resources. The a
 | [aws/enforce_kms_key_names.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_kms_key_names.rego) | Check KMS keys (by name) against allowed list.                           |
 | [aws/enforce_lb_subnets.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_lb_subnets.rego) | Check Loadbalancers are using allowed subnets |
 | [aws/enforce_s3_buckets_encryption.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_s3_buckets_encryption.rego) | Check encryption is set for S3 buckets.                                  |
+| [aws/enforce_s3_private.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_s3_private.rego) | Check S3 buckets are not public.                                  |
 | [aws/enforce_sec_group.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_sec_group.rego) | Check security groups have been specified and are in allowed list.       |
 | [aws/enforce_rds_subnets.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_rds_subnets.rego) | Check RDS clusters are using allowed subnets |
 | [cost/limit_monthly_cost.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/cost/limit_monthly_cost.rego) | Check estimated cost against an upper limit.                             |
 | [external_data/random_decision.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/external_data/random_decision.rego) | Example of using external data (HTTP GET) in a policy.                   |
+| [gcp/enforce_gcs_private.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/gcp/enforce_gcs_private.rego) | Check GCS buckets are not public.                   |
 | [management/denied_provisioners.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/management/denied_provisioners.rego) | Checks provisioner types against an allowed list.                        |
 | [management/enforce_ami_owners.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/management/enforce_ami_owners.rego) | Checks AMI's being used belong to allowed list of AMI owners.            |
+| [management/enforce_var_desc.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/management/enforce_var_desc.rego) | Checks variables have descriptions.            |
 | [management/instance_types.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/management/instance_types.rego) | Checks instance types/sizes against allowed list. AWS, Azure and GCP.    |
 | [management/resource_tags.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/management/resource_tags.rego) | Checks required tags are configured for all clouds.                      |
 | [management/whitelist_ami.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/management/whitelist_ami.rego) | Checks AMI against allowed list or configured from data source.          |
