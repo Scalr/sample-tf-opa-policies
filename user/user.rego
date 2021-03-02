@@ -5,6 +5,7 @@ import input.tfrun as tfrun
 
 
 allowed_cli_users = ["d.johnson", "j.smith"]
+user_team_names[name] { name := tfrun.created_by.teams[_].name}
 
 
 array_contains(arr, elem) {
@@ -27,4 +28,8 @@ deny["Only commits from authorized authors are allowed to trigger AWS infrastruc
     provider_name := get_basename(resource.provider_name)
     "aws" == provider_name
     not endswith(tfrun.vcs.commit.author.email, "-aws-ops@foo.bar")
+}
+
+deny["Only admin users allowed to perform this action"] {
+    not array_contains(user_team_names, "Admins")
 }
