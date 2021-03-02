@@ -5,7 +5,7 @@ import input.tfrun as tfrun
 
 
 allowed_cli_users = ["d.johnson", "j.smith"]
-user_team_names[name] { name := tfrun.created_by.teams[_].name}
+user_team_names[name] {"vcs" != tfrun.source; name := tfrun.created_by.teams[_].name}
 
 
 array_contains(arr, elem) {
@@ -31,5 +31,6 @@ deny["Only commits from authorized authors are allowed to trigger AWS infrastruc
 }
 
 deny["Only admin users allowed to perform this action"] {
+    "vcs" != tfrun.source
     not array_contains(user_team_names, "Admins")
 }
