@@ -1,0 +1,4114 @@
+{
+    "tfplan": {
+        "format_version": "0.1",
+        "terraform_version": "0.14.4",
+        "variables": {
+            "offer": {
+                "value": "UbuntuServer"
+            },
+            "publisher": {
+                "value": "canonical"
+            },
+            "sku": {
+                "value": "16.04.0-LTS"
+            }
+        },
+        "planned_values": {
+            "root_module": {
+                "resources": [
+                    {
+                        "address": "aws_ec2_capacity_reservation.invalid_type",
+                        "mode": "managed",
+                        "type": "aws_ec2_capacity_reservation",
+                        "name": "invalid_type",
+                        "provider_name": "registry.terraform.io/hashicorp/aws",
+                        "schema_version": 0,
+                        "values": {
+                            "availability_zone": "eu-west-1a",
+                            "ebs_optimized": false,
+                            "end_date": null,
+                            "end_date_type": "unlimited",
+                            "ephemeral_storage": false,
+                            "instance_count": 1,
+                            "instance_match_criteria": "open",
+                            "instance_platform": "Linux/UNIX",
+                            "instance_type": "t3.nano",
+                            "tags": null,
+                            "tenancy": "default"
+                        }
+                    },
+                    {
+                        "address": "aws_ec2_capacity_reservation.valid_type",
+                        "mode": "managed",
+                        "type": "aws_ec2_capacity_reservation",
+                        "name": "valid_type",
+                        "provider_name": "registry.terraform.io/hashicorp/aws",
+                        "schema_version": 0,
+                        "values": {
+                            "availability_zone": "eu-west-1a",
+                            "ebs_optimized": false,
+                            "end_date": null,
+                            "end_date_type": "unlimited",
+                            "ephemeral_storage": false,
+                            "instance_count": 1,
+                            "instance_match_criteria": "open",
+                            "instance_platform": "Linux/UNIX",
+                            "instance_type": "t2.micro",
+                            "tags": null,
+                            "tenancy": "default"
+                        }
+                    },
+                    {
+                        "address": "aws_instance.invalid_type",
+                        "mode": "managed",
+                        "type": "aws_instance",
+                        "name": "invalid_type",
+                        "provider_name": "registry.terraform.io/hashicorp/aws",
+                        "schema_version": 1,
+                        "values": {
+                            "ami": "ami-09943f9da1f1b7899",
+                            "credit_specification": [],
+                            "disable_api_termination": null,
+                            "ebs_optimized": null,
+                            "get_password_data": false,
+                            "hibernation": null,
+                            "iam_instance_profile": null,
+                            "instance_initiated_shutdown_behavior": null,
+                            "instance_type": "t2.medium",
+                            "monitoring": null,
+                            "source_dest_check": true,
+                            "tags": null,
+                            "timeouts": null,
+                            "user_data": null,
+                            "user_data_base64": null,
+                            "volume_tags": null
+                        }
+                    },
+                    {
+                        "address": "aws_instance.valid_type",
+                        "mode": "managed",
+                        "type": "aws_instance",
+                        "name": "valid_type",
+                        "provider_name": "registry.terraform.io/hashicorp/aws",
+                        "schema_version": 1,
+                        "values": {
+                            "ami": "ami-09943f9da1f1b7899",
+                            "credit_specification": [],
+                            "disable_api_termination": null,
+                            "ebs_optimized": null,
+                            "get_password_data": false,
+                            "hibernation": null,
+                            "iam_instance_profile": null,
+                            "instance_initiated_shutdown_behavior": null,
+                            "instance_type": "t2.nano",
+                            "monitoring": null,
+                            "source_dest_check": true,
+                            "tags": null,
+                            "timeouts": null,
+                            "user_data": null,
+                            "user_data_base64": null,
+                            "volume_tags": null
+                        }
+                    },
+                    {
+                        "address": "aws_launch_configuration.invalid_type",
+                        "mode": "managed",
+                        "type": "aws_launch_configuration",
+                        "name": "invalid_type",
+                        "provider_name": "registry.terraform.io/hashicorp/aws",
+                        "schema_version": 0,
+                        "values": {
+                            "associate_public_ip_address": false,
+                            "enable_monitoring": true,
+                            "ephemeral_block_device": [],
+                            "iam_instance_profile": null,
+                            "image_id": "ami-09943f9da1f1b7899",
+                            "instance_type": "t3.large",
+                            "name": "invalid-alc",
+                            "name_prefix": null,
+                            "placement_tenancy": null,
+                            "security_groups": null,
+                            "spot_price": null,
+                            "user_data": null,
+                            "user_data_base64": null,
+                            "vpc_classic_link_id": null,
+                            "vpc_classic_link_security_groups": null
+                        }
+                    },
+                    {
+                        "address": "aws_launch_configuration.valid_type",
+                        "mode": "managed",
+                        "type": "aws_launch_configuration",
+                        "name": "valid_type",
+                        "provider_name": "registry.terraform.io/hashicorp/aws",
+                        "schema_version": 0,
+                        "values": {
+                            "associate_public_ip_address": false,
+                            "enable_monitoring": true,
+                            "ephemeral_block_device": [],
+                            "iam_instance_profile": null,
+                            "image_id": "ami-09943f9da1f1b7899",
+                            "instance_type": "t2.micro",
+                            "name": "valid-alc",
+                            "name_prefix": null,
+                            "placement_tenancy": null,
+                            "security_groups": null,
+                            "spot_price": null,
+                            "user_data": null,
+                            "user_data_base64": null,
+                            "vpc_classic_link_id": null,
+                            "vpc_classic_link_security_groups": null
+                        }
+                    },
+                    {
+                        "address": "azurerm_linux_virtual_machine.invalid-alvm",
+                        "mode": "managed",
+                        "type": "azurerm_linux_virtual_machine",
+                        "name": "invalid-alvm",
+                        "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                        "schema_version": 0,
+                        "values": {
+                            "additional_capabilities": [],
+                            "admin_password": null,
+                            "admin_ssh_key": [],
+                            "admin_username": "adminuser",
+                            "allow_extension_operations": true,
+                            "availability_set_id": null,
+                            "boot_diagnostics": [],
+                            "custom_data": null,
+                            "dedicated_host_id": null,
+                            "disable_password_authentication": true,
+                            "encryption_at_host_enabled": null,
+                            "eviction_policy": null,
+                            "extensions_time_budget": "PT1H30M",
+                            "identity": [],
+                            "license_type": null,
+                            "location": "westeurope",
+                            "max_bid_price": -1,
+                            "name": "invalid-alvm",
+                            "os_disk": [
+                                {
+                                    "caching": "ReadWrite",
+                                    "diff_disk_settings": [],
+                                    "disk_encryption_set_id": null,
+                                    "storage_account_type": "Premium_LRS",
+                                    "write_accelerator_enabled": false
+                                }
+                            ],
+                            "plan": [],
+                            "platform_fault_domain": -1,
+                            "priority": "Regular",
+                            "provision_vm_agent": true,
+                            "proximity_placement_group_id": null,
+                            "resource_group_name": "arg-1",
+                            "secret": [],
+                            "size": "Standard_A2",
+                            "source_image_id": null,
+                            "source_image_reference": [
+                                {
+                                    "offer": "UbuntuServer",
+                                    "publisher": "canonical",
+                                    "sku": "16.04.0-LTS",
+                                    "version": "latest"
+                                }
+                            ],
+                            "tags": null,
+                            "timeouts": null,
+                            "virtual_machine_scale_set_id": null
+                        }
+                    },
+                    {
+                        "address": "azurerm_linux_virtual_machine.valid-alvm",
+                        "mode": "managed",
+                        "type": "azurerm_linux_virtual_machine",
+                        "name": "valid-alvm",
+                        "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                        "schema_version": 0,
+                        "values": {
+                            "additional_capabilities": [],
+                            "admin_password": null,
+                            "admin_ssh_key": [],
+                            "admin_username": "adminuser",
+                            "allow_extension_operations": true,
+                            "availability_set_id": null,
+                            "boot_diagnostics": [],
+                            "custom_data": null,
+                            "dedicated_host_id": null,
+                            "disable_password_authentication": true,
+                            "encryption_at_host_enabled": null,
+                            "eviction_policy": null,
+                            "extensions_time_budget": "PT1H30M",
+                            "identity": [],
+                            "license_type": null,
+                            "location": "westeurope",
+                            "max_bid_price": -1,
+                            "name": "valid-alvm",
+                            "os_disk": [
+                                {
+                                    "caching": "ReadWrite",
+                                    "diff_disk_settings": [],
+                                    "disk_encryption_set_id": null,
+                                    "storage_account_type": "Premium_LRS",
+                                    "write_accelerator_enabled": false
+                                }
+                            ],
+                            "plan": [],
+                            "platform_fault_domain": -1,
+                            "priority": "Regular",
+                            "provision_vm_agent": true,
+                            "proximity_placement_group_id": null,
+                            "resource_group_name": "arg-1",
+                            "secret": [],
+                            "size": "Standard_A0",
+                            "source_image_id": null,
+                            "source_image_reference": [
+                                {
+                                    "offer": "UbuntuServer",
+                                    "publisher": "canonical",
+                                    "sku": "16.04.0-LTS",
+                                    "version": "latest"
+                                }
+                            ],
+                            "tags": null,
+                            "timeouts": null,
+                            "virtual_machine_scale_set_id": null
+                        }
+                    },
+                    {
+                        "address": "azurerm_linux_virtual_machine_scale_set.invalid-alvmss",
+                        "mode": "managed",
+                        "type": "azurerm_linux_virtual_machine_scale_set",
+                        "name": "invalid-alvmss",
+                        "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                        "schema_version": 0,
+                        "values": {
+                            "additional_capabilities": [],
+                            "admin_password": null,
+                            "admin_ssh_key": [],
+                            "admin_username": "adminuser",
+                            "automatic_os_upgrade_policy": [],
+                            "boot_diagnostics": [],
+                            "custom_data": null,
+                            "data_disk": [],
+                            "disable_password_authentication": true,
+                            "do_not_run_extensions_on_overprovisioned_machines": false,
+                            "encryption_at_host_enabled": null,
+                            "eviction_policy": null,
+                            "extensions_time_budget": "PT1H30M",
+                            "health_probe_id": null,
+                            "identity": [],
+                            "instances": 1,
+                            "location": "westeurope",
+                            "max_bid_price": -1,
+                            "name": "invalid-alvmss",
+                            "network_interface": [
+                                {
+                                    "dns_servers": null,
+                                    "enable_accelerated_networking": false,
+                                    "enable_ip_forwarding": false,
+                                    "ip_configuration": [
+                                        {
+                                            "application_gateway_backend_address_pool_ids": null,
+                                            "application_security_group_ids": null,
+                                            "load_balancer_backend_address_pool_ids": null,
+                                            "load_balancer_inbound_nat_rules_ids": null,
+                                            "name": "internal",
+                                            "primary": true,
+                                            "public_ip_address": [],
+                                            "version": "IPv4"
+                                        }
+                                    ],
+                                    "name": "example",
+                                    "network_security_group_id": null,
+                                    "primary": true
+                                }
+                            ],
+                            "os_disk": [
+                                {
+                                    "caching": "ReadWrite",
+                                    "diff_disk_settings": [],
+                                    "disk_encryption_set_id": null,
+                                    "storage_account_type": "Standard_LRS",
+                                    "write_accelerator_enabled": false
+                                }
+                            ],
+                            "overprovision": true,
+                            "plan": [],
+                            "priority": "Regular",
+                            "provision_vm_agent": true,
+                            "proximity_placement_group_id": null,
+                            "resource_group_name": "arg-1",
+                            "rolling_upgrade_policy": [],
+                            "scale_in_policy": "Default",
+                            "secret": [],
+                            "single_placement_group": true,
+                            "sku": "Standard_F2",
+                            "source_image_id": null,
+                            "source_image_reference": [
+                                {
+                                    "offer": "UbuntuServer",
+                                    "publisher": "canonical",
+                                    "sku": "16.04.0-LTS",
+                                    "version": "latest"
+                                }
+                            ],
+                            "tags": null,
+                            "timeouts": null,
+                            "upgrade_mode": "Manual",
+                            "zone_balance": false,
+                            "zones": null
+                        }
+                    },
+                    {
+                        "address": "azurerm_linux_virtual_machine_scale_set.valid-alvmss",
+                        "mode": "managed",
+                        "type": "azurerm_linux_virtual_machine_scale_set",
+                        "name": "valid-alvmss",
+                        "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                        "schema_version": 0,
+                        "values": {
+                            "additional_capabilities": [],
+                            "admin_password": null,
+                            "admin_ssh_key": [],
+                            "admin_username": "adminuser",
+                            "automatic_os_upgrade_policy": [],
+                            "boot_diagnostics": [],
+                            "custom_data": null,
+                            "data_disk": [],
+                            "disable_password_authentication": true,
+                            "do_not_run_extensions_on_overprovisioned_machines": false,
+                            "encryption_at_host_enabled": null,
+                            "eviction_policy": null,
+                            "extensions_time_budget": "PT1H30M",
+                            "health_probe_id": null,
+                            "identity": [],
+                            "instances": 1,
+                            "location": "westeurope",
+                            "max_bid_price": -1,
+                            "name": "valid-alvmss",
+                            "network_interface": [
+                                {
+                                    "dns_servers": null,
+                                    "enable_accelerated_networking": false,
+                                    "enable_ip_forwarding": false,
+                                    "ip_configuration": [
+                                        {
+                                            "application_gateway_backend_address_pool_ids": null,
+                                            "application_security_group_ids": null,
+                                            "load_balancer_backend_address_pool_ids": null,
+                                            "load_balancer_inbound_nat_rules_ids": null,
+                                            "name": "internal",
+                                            "primary": true,
+                                            "public_ip_address": [],
+                                            "version": "IPv4"
+                                        }
+                                    ],
+                                    "name": "example",
+                                    "network_security_group_id": null,
+                                    "primary": true
+                                }
+                            ],
+                            "os_disk": [
+                                {
+                                    "caching": "ReadWrite",
+                                    "diff_disk_settings": [],
+                                    "disk_encryption_set_id": null,
+                                    "storage_account_type": "Standard_LRS",
+                                    "write_accelerator_enabled": false
+                                }
+                            ],
+                            "overprovision": true,
+                            "plan": [],
+                            "priority": "Regular",
+                            "provision_vm_agent": true,
+                            "proximity_placement_group_id": null,
+                            "resource_group_name": "arg-1",
+                            "rolling_upgrade_policy": [],
+                            "scale_in_policy": "Default",
+                            "secret": [],
+                            "single_placement_group": true,
+                            "sku": "Standard_A0",
+                            "source_image_id": null,
+                            "source_image_reference": [
+                                {
+                                    "offer": "UbuntuServer",
+                                    "publisher": "canonical",
+                                    "sku": "16.04.0-LTS",
+                                    "version": "latest"
+                                }
+                            ],
+                            "tags": null,
+                            "timeouts": null,
+                            "upgrade_mode": "Manual",
+                            "zone_balance": false,
+                            "zones": null
+                        }
+                    },
+                    {
+                        "address": "azurerm_network_interface.ani[0]",
+                        "mode": "managed",
+                        "type": "azurerm_network_interface",
+                        "name": "ani",
+                        "index": 0,
+                        "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                        "schema_version": 0,
+                        "values": {
+                            "enable_accelerated_networking": false,
+                            "enable_ip_forwarding": false,
+                            "ip_configuration": [
+                                {
+                                    "name": "internal",
+                                    "private_ip_address_allocation": "dynamic",
+                                    "private_ip_address_version": "IPv4",
+                                    "public_ip_address_id": null
+                                }
+                            ],
+                            "location": "westeurope",
+                            "name": "ani-0",
+                            "resource_group_name": "arg-1",
+                            "tags": null,
+                            "timeouts": null
+                        }
+                    },
+                    {
+                        "address": "azurerm_network_interface.ani[1]",
+                        "mode": "managed",
+                        "type": "azurerm_network_interface",
+                        "name": "ani",
+                        "index": 1,
+                        "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                        "schema_version": 0,
+                        "values": {
+                            "enable_accelerated_networking": false,
+                            "enable_ip_forwarding": false,
+                            "ip_configuration": [
+                                {
+                                    "name": "internal",
+                                    "private_ip_address_allocation": "dynamic",
+                                    "private_ip_address_version": "IPv4",
+                                    "public_ip_address_id": null
+                                }
+                            ],
+                            "location": "westeurope",
+                            "name": "ani-1",
+                            "resource_group_name": "arg-1",
+                            "tags": null,
+                            "timeouts": null
+                        }
+                    },
+                    {
+                        "address": "azurerm_network_interface.ani[2]",
+                        "mode": "managed",
+                        "type": "azurerm_network_interface",
+                        "name": "ani",
+                        "index": 2,
+                        "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                        "schema_version": 0,
+                        "values": {
+                            "enable_accelerated_networking": false,
+                            "enable_ip_forwarding": false,
+                            "ip_configuration": [
+                                {
+                                    "name": "internal",
+                                    "private_ip_address_allocation": "dynamic",
+                                    "private_ip_address_version": "IPv4",
+                                    "public_ip_address_id": null
+                                }
+                            ],
+                            "location": "westeurope",
+                            "name": "ani-2",
+                            "resource_group_name": "arg-1",
+                            "tags": null,
+                            "timeouts": null
+                        }
+                    },
+                    {
+                        "address": "azurerm_network_interface.ani[3]",
+                        "mode": "managed",
+                        "type": "azurerm_network_interface",
+                        "name": "ani",
+                        "index": 3,
+                        "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                        "schema_version": 0,
+                        "values": {
+                            "enable_accelerated_networking": false,
+                            "enable_ip_forwarding": false,
+                            "ip_configuration": [
+                                {
+                                    "name": "internal",
+                                    "private_ip_address_allocation": "dynamic",
+                                    "private_ip_address_version": "IPv4",
+                                    "public_ip_address_id": null
+                                }
+                            ],
+                            "location": "westeurope",
+                            "name": "ani-3",
+                            "resource_group_name": "arg-1",
+                            "tags": null,
+                            "timeouts": null
+                        }
+                    },
+                    {
+                        "address": "azurerm_resource_group.arg-1",
+                        "mode": "managed",
+                        "type": "azurerm_resource_group",
+                        "name": "arg-1",
+                        "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                        "schema_version": 0,
+                        "values": {
+                            "location": "westeurope",
+                            "name": "arg-1",
+                            "tags": null,
+                            "timeouts": null
+                        }
+                    },
+                    {
+                        "address": "azurerm_subnet.as-1",
+                        "mode": "managed",
+                        "type": "azurerm_subnet",
+                        "name": "as-1",
+                        "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                        "schema_version": 0,
+                        "values": {
+                            "address_prefixes": [
+                                "10.0.2.0/24"
+                            ],
+                            "delegation": [],
+                            "enforce_private_link_endpoint_network_policies": false,
+                            "enforce_private_link_service_network_policies": false,
+                            "name": "internal",
+                            "resource_group_name": "arg-1",
+                            "service_endpoint_policy_ids": null,
+                            "service_endpoints": null,
+                            "timeouts": null,
+                            "virtual_network_name": "example-network"
+                        }
+                    },
+                    {
+                        "address": "azurerm_virtual_network.avn-1",
+                        "mode": "managed",
+                        "type": "azurerm_virtual_network",
+                        "name": "avn-1",
+                        "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                        "schema_version": 0,
+                        "values": {
+                            "address_space": [
+                                "10.0.0.0/16"
+                            ],
+                            "bgp_community": null,
+                            "ddos_protection_plan": [],
+                            "dns_servers": null,
+                            "location": "westeurope",
+                            "name": "example-network",
+                            "resource_group_name": "arg-1",
+                            "tags": null,
+                            "timeouts": null,
+                            "vm_protection_enabled": false
+                        }
+                    },
+                    {
+                        "address": "azurerm_windows_virtual_machine.invalid-awvm",
+                        "mode": "managed",
+                        "type": "azurerm_windows_virtual_machine",
+                        "name": "invalid-awvm",
+                        "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                        "schema_version": 0,
+                        "values": {
+                            "additional_capabilities": [],
+                            "additional_unattend_content": [],
+                            "admin_password": "P@$$w0rd1234!",
+                            "admin_username": "adminuser",
+                            "allow_extension_operations": true,
+                            "availability_set_id": null,
+                            "boot_diagnostics": [],
+                            "custom_data": null,
+                            "dedicated_host_id": null,
+                            "enable_automatic_updates": true,
+                            "encryption_at_host_enabled": null,
+                            "eviction_policy": null,
+                            "extensions_time_budget": "PT1H30M",
+                            "identity": [],
+                            "license_type": null,
+                            "location": "westeurope",
+                            "max_bid_price": -1,
+                            "name": "invalid-awvm",
+                            "os_disk": [
+                                {
+                                    "caching": "ReadWrite",
+                                    "diff_disk_settings": [],
+                                    "disk_encryption_set_id": null,
+                                    "storage_account_type": "Standard_LRS",
+                                    "write_accelerator_enabled": false
+                                }
+                            ],
+                            "patch_mode": "AutomaticByOS",
+                            "plan": [],
+                            "platform_fault_domain": -1,
+                            "priority": "Regular",
+                            "provision_vm_agent": true,
+                            "proximity_placement_group_id": null,
+                            "resource_group_name": "arg-1",
+                            "secret": [],
+                            "size": "Standard_F2",
+                            "source_image_id": null,
+                            "source_image_reference": [
+                                {
+                                    "offer": "WindowsServer",
+                                    "publisher": "MicrosoftWindowsServer",
+                                    "sku": "2016-Datacenter",
+                                    "version": "latest"
+                                }
+                            ],
+                            "tags": null,
+                            "timeouts": null,
+                            "timezone": null,
+                            "virtual_machine_scale_set_id": null,
+                            "winrm_listener": []
+                        }
+                    },
+                    {
+                        "address": "azurerm_windows_virtual_machine.valid-awvm",
+                        "mode": "managed",
+                        "type": "azurerm_windows_virtual_machine",
+                        "name": "valid-awvm",
+                        "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                        "schema_version": 0,
+                        "values": {
+                            "additional_capabilities": [],
+                            "additional_unattend_content": [],
+                            "admin_password": "P@$$w0rd1234!",
+                            "admin_username": "adminuser",
+                            "allow_extension_operations": true,
+                            "availability_set_id": null,
+                            "boot_diagnostics": [],
+                            "custom_data": null,
+                            "dedicated_host_id": null,
+                            "enable_automatic_updates": true,
+                            "encryption_at_host_enabled": null,
+                            "eviction_policy": null,
+                            "extensions_time_budget": "PT1H30M",
+                            "identity": [],
+                            "license_type": null,
+                            "location": "westeurope",
+                            "max_bid_price": -1,
+                            "name": "valid-awvm",
+                            "os_disk": [
+                                {
+                                    "caching": "ReadWrite",
+                                    "diff_disk_settings": [],
+                                    "disk_encryption_set_id": null,
+                                    "storage_account_type": "Standard_LRS",
+                                    "write_accelerator_enabled": false
+                                }
+                            ],
+                            "patch_mode": "AutomaticByOS",
+                            "plan": [],
+                            "platform_fault_domain": -1,
+                            "priority": "Regular",
+                            "provision_vm_agent": true,
+                            "proximity_placement_group_id": null,
+                            "resource_group_name": "arg-1",
+                            "secret": [],
+                            "size": "Standard_A0",
+                            "source_image_id": null,
+                            "source_image_reference": [
+                                {
+                                    "offer": "WindowsServer",
+                                    "publisher": "MicrosoftWindowsServer",
+                                    "sku": "2016-Datacenter",
+                                    "version": "latest"
+                                }
+                            ],
+                            "tags": null,
+                            "timeouts": null,
+                            "timezone": null,
+                            "virtual_machine_scale_set_id": null,
+                            "winrm_listener": []
+                        }
+                    },
+                    {
+                        "address": "azurerm_windows_virtual_machine_scale_set.invalid-awvmss",
+                        "mode": "managed",
+                        "type": "azurerm_windows_virtual_machine_scale_set",
+                        "name": "invalid-awvmss",
+                        "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                        "schema_version": 0,
+                        "values": {
+                            "additional_capabilities": [],
+                            "additional_unattend_content": [],
+                            "admin_password": "P@55w0rd1234!",
+                            "admin_username": "adminuser",
+                            "automatic_os_upgrade_policy": [],
+                            "boot_diagnostics": [],
+                            "custom_data": null,
+                            "data_disk": [],
+                            "do_not_run_extensions_on_overprovisioned_machines": false,
+                            "enable_automatic_updates": true,
+                            "encryption_at_host_enabled": null,
+                            "eviction_policy": null,
+                            "extensions_time_budget": "PT1H30M",
+                            "health_probe_id": null,
+                            "identity": [],
+                            "instances": 1,
+                            "license_type": null,
+                            "location": "westeurope",
+                            "max_bid_price": -1,
+                            "name": "invalid-awvmss",
+                            "network_interface": [
+                                {
+                                    "dns_servers": null,
+                                    "enable_accelerated_networking": false,
+                                    "enable_ip_forwarding": false,
+                                    "ip_configuration": [
+                                        {
+                                            "application_gateway_backend_address_pool_ids": null,
+                                            "application_security_group_ids": null,
+                                            "load_balancer_backend_address_pool_ids": null,
+                                            "load_balancer_inbound_nat_rules_ids": null,
+                                            "name": "internal",
+                                            "primary": true,
+                                            "public_ip_address": [],
+                                            "version": "IPv4"
+                                        }
+                                    ],
+                                    "name": "example",
+                                    "network_security_group_id": null,
+                                    "primary": true
+                                }
+                            ],
+                            "os_disk": [
+                                {
+                                    "caching": "ReadWrite",
+                                    "diff_disk_settings": [],
+                                    "disk_encryption_set_id": null,
+                                    "storage_account_type": "Standard_LRS",
+                                    "write_accelerator_enabled": false
+                                }
+                            ],
+                            "overprovision": true,
+                            "plan": [],
+                            "priority": "Regular",
+                            "provision_vm_agent": true,
+                            "proximity_placement_group_id": null,
+                            "resource_group_name": "arg-1",
+                            "rolling_upgrade_policy": [],
+                            "scale_in_policy": "Default",
+                            "secret": [],
+                            "single_placement_group": true,
+                            "sku": "Standard_F2",
+                            "source_image_id": null,
+                            "source_image_reference": [
+                                {
+                                    "offer": "WindowsServer",
+                                    "publisher": "MicrosoftWindowsServer",
+                                    "sku": "2016-Datacenter-Server-Core",
+                                    "version": "latest"
+                                }
+                            ],
+                            "tags": null,
+                            "timeouts": null,
+                            "timezone": null,
+                            "upgrade_mode": "Manual",
+                            "winrm_listener": [],
+                            "zone_balance": false,
+                            "zones": null
+                        }
+                    },
+                    {
+                        "address": "azurerm_windows_virtual_machine_scale_set.valid-awvmss",
+                        "mode": "managed",
+                        "type": "azurerm_windows_virtual_machine_scale_set",
+                        "name": "valid-awvmss",
+                        "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                        "schema_version": 0,
+                        "values": {
+                            "additional_capabilities": [],
+                            "additional_unattend_content": [],
+                            "admin_password": "P@55w0rd1234!",
+                            "admin_username": "adminuser",
+                            "automatic_os_upgrade_policy": [],
+                            "boot_diagnostics": [],
+                            "custom_data": null,
+                            "data_disk": [],
+                            "do_not_run_extensions_on_overprovisioned_machines": false,
+                            "enable_automatic_updates": true,
+                            "encryption_at_host_enabled": null,
+                            "eviction_policy": null,
+                            "extensions_time_budget": "PT1H30M",
+                            "health_probe_id": null,
+                            "identity": [],
+                            "instances": 1,
+                            "license_type": null,
+                            "location": "westeurope",
+                            "max_bid_price": -1,
+                            "name": "valid-awvmss",
+                            "network_interface": [
+                                {
+                                    "dns_servers": null,
+                                    "enable_accelerated_networking": false,
+                                    "enable_ip_forwarding": false,
+                                    "ip_configuration": [
+                                        {
+                                            "application_gateway_backend_address_pool_ids": null,
+                                            "application_security_group_ids": null,
+                                            "load_balancer_backend_address_pool_ids": null,
+                                            "load_balancer_inbound_nat_rules_ids": null,
+                                            "name": "internal",
+                                            "primary": true,
+                                            "public_ip_address": [],
+                                            "version": "IPv4"
+                                        }
+                                    ],
+                                    "name": "example",
+                                    "network_security_group_id": null,
+                                    "primary": true
+                                }
+                            ],
+                            "os_disk": [
+                                {
+                                    "caching": "ReadWrite",
+                                    "diff_disk_settings": [],
+                                    "disk_encryption_set_id": null,
+                                    "storage_account_type": "Standard_LRS",
+                                    "write_accelerator_enabled": false
+                                }
+                            ],
+                            "overprovision": true,
+                            "plan": [],
+                            "priority": "Regular",
+                            "provision_vm_agent": true,
+                            "proximity_placement_group_id": null,
+                            "resource_group_name": "arg-1",
+                            "rolling_upgrade_policy": [],
+                            "scale_in_policy": "Default",
+                            "secret": [],
+                            "single_placement_group": true,
+                            "sku": "Standard_A0",
+                            "source_image_id": null,
+                            "source_image_reference": [
+                                {
+                                    "offer": "WindowsServer",
+                                    "publisher": "MicrosoftWindowsServer",
+                                    "sku": "2016-Datacenter-Server-Core",
+                                    "version": "latest"
+                                }
+                            ],
+                            "tags": null,
+                            "timeouts": null,
+                            "timezone": null,
+                            "upgrade_mode": "Manual",
+                            "winrm_listener": [],
+                            "zone_balance": false,
+                            "zones": null
+                        }
+                    },
+                    {
+                        "address": "google_compute_instance.invalid_type",
+                        "mode": "managed",
+                        "type": "google_compute_instance",
+                        "name": "invalid_type",
+                        "provider_name": "registry.terraform.io/hashicorp/google",
+                        "schema_version": 6,
+                        "values": {
+                            "allow_stopping_for_update": null,
+                            "attached_disk": [],
+                            "boot_disk": [
+                                {
+                                    "auto_delete": true,
+                                    "disk_encryption_key_raw": null,
+                                    "initialize_params": [
+                                        {
+                                            "image": "debian-cloud/debian-9"
+                                        }
+                                    ],
+                                    "mode": "READ_WRITE"
+                                }
+                            ],
+                            "can_ip_forward": false,
+                            "deletion_protection": false,
+                            "description": null,
+                            "desired_status": null,
+                            "enable_display": null,
+                            "hostname": null,
+                            "labels": null,
+                            "machine_type": "e2-medium",
+                            "metadata": null,
+                            "metadata_startup_script": null,
+                            "name": "invalid-gci",
+                            "network_interface": [
+                                {
+                                    "access_config": [],
+                                    "alias_ip_range": [],
+                                    "network": "default",
+                                    "nic_type": null
+                                }
+                            ],
+                            "resource_policies": null,
+                            "scratch_disk": [],
+                            "service_account": [],
+                            "shielded_instance_config": [],
+                            "tags": null,
+                            "timeouts": null,
+                            "zone": "us-central1-a"
+                        }
+                    },
+                    {
+                        "address": "google_compute_instance.valid_type",
+                        "mode": "managed",
+                        "type": "google_compute_instance",
+                        "name": "valid_type",
+                        "provider_name": "registry.terraform.io/hashicorp/google",
+                        "schema_version": 6,
+                        "values": {
+                            "allow_stopping_for_update": null,
+                            "attached_disk": [],
+                            "boot_disk": [
+                                {
+                                    "auto_delete": true,
+                                    "disk_encryption_key_raw": null,
+                                    "initialize_params": [
+                                        {
+                                            "image": "debian-cloud/debian-9"
+                                        }
+                                    ],
+                                    "mode": "READ_WRITE"
+                                }
+                            ],
+                            "can_ip_forward": false,
+                            "deletion_protection": false,
+                            "description": null,
+                            "desired_status": null,
+                            "enable_display": null,
+                            "hostname": null,
+                            "labels": null,
+                            "machine_type": "n1-standard-1",
+                            "metadata": null,
+                            "metadata_startup_script": null,
+                            "name": "valid-gci",
+                            "network_interface": [
+                                {
+                                    "access_config": [],
+                                    "alias_ip_range": [],
+                                    "network": "default",
+                                    "nic_type": null
+                                }
+                            ],
+                            "resource_policies": null,
+                            "scratch_disk": [],
+                            "service_account": [],
+                            "shielded_instance_config": [],
+                            "tags": null,
+                            "timeouts": null,
+                            "zone": "us-central1-a"
+                        }
+                    },
+                    {
+                        "address": "google_compute_instance_template.invalid_type",
+                        "mode": "managed",
+                        "type": "google_compute_instance_template",
+                        "name": "invalid_type",
+                        "provider_name": "registry.terraform.io/hashicorp/google",
+                        "schema_version": 1,
+                        "values": {
+                            "can_ip_forward": false,
+                            "description": null,
+                            "disk": [
+                                {
+                                    "auto_delete": true,
+                                    "disk_encryption_key": [],
+                                    "disk_name": null,
+                                    "labels": null,
+                                    "resource_policies": null,
+                                    "source": null,
+                                    "source_image": "debian-cloud/debian-9"
+                                }
+                            ],
+                            "enable_display": null,
+                            "guest_accelerator": [],
+                            "instance_description": null,
+                            "labels": null,
+                            "machine_type": "e2-medium",
+                            "metadata": null,
+                            "metadata_startup_script": null,
+                            "min_cpu_platform": null,
+                            "network_interface": [
+                                {
+                                    "access_config": [],
+                                    "alias_ip_range": [],
+                                    "network": "default",
+                                    "network_ip": null
+                                }
+                            ],
+                            "service_account": [],
+                            "shielded_instance_config": [],
+                            "tags": null,
+                            "timeouts": null
+                        }
+                    },
+                    {
+                        "address": "google_compute_instance_template.valid_type",
+                        "mode": "managed",
+                        "type": "google_compute_instance_template",
+                        "name": "valid_type",
+                        "provider_name": "registry.terraform.io/hashicorp/google",
+                        "schema_version": 1,
+                        "values": {
+                            "can_ip_forward": false,
+                            "description": null,
+                            "disk": [
+                                {
+                                    "auto_delete": true,
+                                    "disk_encryption_key": [],
+                                    "disk_name": null,
+                                    "labels": null,
+                                    "resource_policies": null,
+                                    "source": null,
+                                    "source_image": "debian-cloud/debian-9"
+                                }
+                            ],
+                            "enable_display": null,
+                            "guest_accelerator": [],
+                            "instance_description": null,
+                            "labels": null,
+                            "machine_type": "n1-standard-1",
+                            "metadata": null,
+                            "metadata_startup_script": null,
+                            "min_cpu_platform": null,
+                            "network_interface": [
+                                {
+                                    "access_config": [],
+                                    "alias_ip_range": [],
+                                    "network": "default",
+                                    "network_ip": null
+                                }
+                            ],
+                            "service_account": [],
+                            "shielded_instance_config": [],
+                            "tags": null,
+                            "timeouts": null
+                        }
+                    }
+                ]
+            }
+        },
+        "resource_changes": [
+            {
+                "address": "aws_ec2_capacity_reservation.invalid_type",
+                "mode": "managed",
+                "type": "aws_ec2_capacity_reservation",
+                "name": "invalid_type",
+                "provider_name": "registry.terraform.io/hashicorp/aws",
+                "change": {
+                    "actions": [
+                        "create"
+                    ],
+                    "before": null,
+                    "after": {
+                        "availability_zone": "eu-west-1a",
+                        "ebs_optimized": false,
+                        "end_date": null,
+                        "end_date_type": "unlimited",
+                        "ephemeral_storage": false,
+                        "instance_count": 1,
+                        "instance_match_criteria": "open",
+                        "instance_platform": "Linux/UNIX",
+                        "instance_type": "t3.nano",
+                        "tags": null,
+                        "tenancy": "default"
+                    },
+                    "after_unknown": {
+                        "arn": true,
+                        "id": true,
+                        "owner_id": true
+                    }
+                }
+            },
+            {
+                "address": "aws_ec2_capacity_reservation.valid_type",
+                "mode": "managed",
+                "type": "aws_ec2_capacity_reservation",
+                "name": "valid_type",
+                "provider_name": "registry.terraform.io/hashicorp/aws",
+                "change": {
+                    "actions": [
+                        "create"
+                    ],
+                    "before": null,
+                    "after": {
+                        "availability_zone": "eu-west-1a",
+                        "ebs_optimized": false,
+                        "end_date": null,
+                        "end_date_type": "unlimited",
+                        "ephemeral_storage": false,
+                        "instance_count": 1,
+                        "instance_match_criteria": "open",
+                        "instance_platform": "Linux/UNIX",
+                        "instance_type": "t2.micro",
+                        "tags": null,
+                        "tenancy": "default"
+                    },
+                    "after_unknown": {
+                        "arn": true,
+                        "id": true,
+                        "owner_id": true
+                    }
+                }
+            },
+            {
+                "address": "aws_instance.invalid_type",
+                "mode": "managed",
+                "type": "aws_instance",
+                "name": "invalid_type",
+                "provider_name": "registry.terraform.io/hashicorp/aws",
+                "change": {
+                    "actions": [
+                        "create"
+                    ],
+                    "before": null,
+                    "after": {
+                        "ami": "ami-09943f9da1f1b7899",
+                        "credit_specification": [],
+                        "disable_api_termination": null,
+                        "ebs_optimized": null,
+                        "get_password_data": false,
+                        "hibernation": null,
+                        "iam_instance_profile": null,
+                        "instance_initiated_shutdown_behavior": null,
+                        "instance_type": "t2.medium",
+                        "monitoring": null,
+                        "source_dest_check": true,
+                        "tags": null,
+                        "timeouts": null,
+                        "user_data": null,
+                        "user_data_base64": null,
+                        "volume_tags": null
+                    },
+                    "after_unknown": {
+                        "arn": true,
+                        "associate_public_ip_address": true,
+                        "availability_zone": true,
+                        "cpu_core_count": true,
+                        "cpu_threads_per_core": true,
+                        "credit_specification": [],
+                        "ebs_block_device": true,
+                        "enclave_options": true,
+                        "ephemeral_block_device": true,
+                        "host_id": true,
+                        "id": true,
+                        "instance_state": true,
+                        "ipv6_address_count": true,
+                        "ipv6_addresses": true,
+                        "key_name": true,
+                        "metadata_options": true,
+                        "network_interface": true,
+                        "outpost_arn": true,
+                        "password_data": true,
+                        "placement_group": true,
+                        "primary_network_interface_id": true,
+                        "private_dns": true,
+                        "private_ip": true,
+                        "public_dns": true,
+                        "public_ip": true,
+                        "root_block_device": true,
+                        "secondary_private_ips": true,
+                        "security_groups": true,
+                        "subnet_id": true,
+                        "tenancy": true,
+                        "vpc_security_group_ids": true
+                    }
+                }
+            },
+            {
+                "address": "aws_instance.valid_type",
+                "mode": "managed",
+                "type": "aws_instance",
+                "name": "valid_type",
+                "provider_name": "registry.terraform.io/hashicorp/aws",
+                "change": {
+                    "actions": [
+                        "create"
+                    ],
+                    "before": null,
+                    "after": {
+                        "ami": "ami-09943f9da1f1b7899",
+                        "credit_specification": [],
+                        "disable_api_termination": null,
+                        "ebs_optimized": null,
+                        "get_password_data": false,
+                        "hibernation": null,
+                        "iam_instance_profile": null,
+                        "instance_initiated_shutdown_behavior": null,
+                        "instance_type": "t2.nano",
+                        "monitoring": null,
+                        "source_dest_check": true,
+                        "tags": null,
+                        "timeouts": null,
+                        "user_data": null,
+                        "user_data_base64": null,
+                        "volume_tags": null
+                    },
+                    "after_unknown": {
+                        "arn": true,
+                        "associate_public_ip_address": true,
+                        "availability_zone": true,
+                        "cpu_core_count": true,
+                        "cpu_threads_per_core": true,
+                        "credit_specification": [],
+                        "ebs_block_device": true,
+                        "enclave_options": true,
+                        "ephemeral_block_device": true,
+                        "host_id": true,
+                        "id": true,
+                        "instance_state": true,
+                        "ipv6_address_count": true,
+                        "ipv6_addresses": true,
+                        "key_name": true,
+                        "metadata_options": true,
+                        "network_interface": true,
+                        "outpost_arn": true,
+                        "password_data": true,
+                        "placement_group": true,
+                        "primary_network_interface_id": true,
+                        "private_dns": true,
+                        "private_ip": true,
+                        "public_dns": true,
+                        "public_ip": true,
+                        "root_block_device": true,
+                        "secondary_private_ips": true,
+                        "security_groups": true,
+                        "subnet_id": true,
+                        "tenancy": true,
+                        "vpc_security_group_ids": true
+                    }
+                }
+            },
+            {
+                "address": "aws_launch_configuration.invalid_type",
+                "mode": "managed",
+                "type": "aws_launch_configuration",
+                "name": "invalid_type",
+                "provider_name": "registry.terraform.io/hashicorp/aws",
+                "change": {
+                    "actions": [
+                        "create"
+                    ],
+                    "before": null,
+                    "after": {
+                        "associate_public_ip_address": false,
+                        "enable_monitoring": true,
+                        "ephemeral_block_device": [],
+                        "iam_instance_profile": null,
+                        "image_id": "ami-09943f9da1f1b7899",
+                        "instance_type": "t3.large",
+                        "name": "invalid-alc",
+                        "name_prefix": null,
+                        "placement_tenancy": null,
+                        "security_groups": null,
+                        "spot_price": null,
+                        "user_data": null,
+                        "user_data_base64": null,
+                        "vpc_classic_link_id": null,
+                        "vpc_classic_link_security_groups": null
+                    },
+                    "after_unknown": {
+                        "arn": true,
+                        "ebs_block_device": true,
+                        "ebs_optimized": true,
+                        "ephemeral_block_device": [],
+                        "id": true,
+                        "key_name": true,
+                        "metadata_options": true,
+                        "root_block_device": true
+                    }
+                }
+            },
+            {
+                "address": "aws_launch_configuration.valid_type",
+                "mode": "managed",
+                "type": "aws_launch_configuration",
+                "name": "valid_type",
+                "provider_name": "registry.terraform.io/hashicorp/aws",
+                "change": {
+                    "actions": [
+                        "create"
+                    ],
+                    "before": null,
+                    "after": {
+                        "associate_public_ip_address": false,
+                        "enable_monitoring": true,
+                        "ephemeral_block_device": [],
+                        "iam_instance_profile": null,
+                        "image_id": "ami-09943f9da1f1b7899",
+                        "instance_type": "t2.micro",
+                        "name": "valid-alc",
+                        "name_prefix": null,
+                        "placement_tenancy": null,
+                        "security_groups": null,
+                        "spot_price": null,
+                        "user_data": null,
+                        "user_data_base64": null,
+                        "vpc_classic_link_id": null,
+                        "vpc_classic_link_security_groups": null
+                    },
+                    "after_unknown": {
+                        "arn": true,
+                        "ebs_block_device": true,
+                        "ebs_optimized": true,
+                        "ephemeral_block_device": [],
+                        "id": true,
+                        "key_name": true,
+                        "metadata_options": true,
+                        "root_block_device": true
+                    }
+                }
+            },
+            {
+                "address": "azurerm_linux_virtual_machine.invalid-alvm",
+                "mode": "managed",
+                "type": "azurerm_linux_virtual_machine",
+                "name": "invalid-alvm",
+                "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                "change": {
+                    "actions": [
+                        "create"
+                    ],
+                    "before": null,
+                    "after": {
+                        "additional_capabilities": [],
+                        "admin_password": null,
+                        "admin_ssh_key": [],
+                        "admin_username": "adminuser",
+                        "allow_extension_operations": true,
+                        "availability_set_id": null,
+                        "boot_diagnostics": [],
+                        "custom_data": null,
+                        "dedicated_host_id": null,
+                        "disable_password_authentication": true,
+                        "encryption_at_host_enabled": null,
+                        "eviction_policy": null,
+                        "extensions_time_budget": "PT1H30M",
+                        "identity": [],
+                        "license_type": null,
+                        "location": "westeurope",
+                        "max_bid_price": -1,
+                        "name": "invalid-alvm",
+                        "os_disk": [
+                            {
+                                "caching": "ReadWrite",
+                                "diff_disk_settings": [],
+                                "disk_encryption_set_id": null,
+                                "storage_account_type": "Premium_LRS",
+                                "write_accelerator_enabled": false
+                            }
+                        ],
+                        "plan": [],
+                        "platform_fault_domain": -1,
+                        "priority": "Regular",
+                        "provision_vm_agent": true,
+                        "proximity_placement_group_id": null,
+                        "resource_group_name": "arg-1",
+                        "secret": [],
+                        "size": "Standard_A2",
+                        "source_image_id": null,
+                        "source_image_reference": [
+                            {
+                                "offer": "UbuntuServer",
+                                "publisher": "canonical",
+                                "sku": "16.04.0-LTS",
+                                "version": "latest"
+                            }
+                        ],
+                        "tags": null,
+                        "timeouts": null,
+                        "virtual_machine_scale_set_id": null
+                    },
+                    "after_unknown": {
+                        "additional_capabilities": [],
+                        "admin_ssh_key": [],
+                        "boot_diagnostics": [],
+                        "computer_name": true,
+                        "id": true,
+                        "identity": [],
+                        "network_interface_ids": true,
+                        "os_disk": [
+                            {
+                                "diff_disk_settings": [],
+                                "disk_size_gb": true,
+                                "name": true
+                            }
+                        ],
+                        "plan": [],
+                        "private_ip_address": true,
+                        "private_ip_addresses": true,
+                        "public_ip_address": true,
+                        "public_ip_addresses": true,
+                        "secret": [],
+                        "source_image_reference": [
+                            {}
+                        ],
+                        "virtual_machine_id": true,
+                        "zone": true
+                    }
+                }
+            },
+            {
+                "address": "azurerm_linux_virtual_machine.valid-alvm",
+                "mode": "managed",
+                "type": "azurerm_linux_virtual_machine",
+                "name": "valid-alvm",
+                "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                "change": {
+                    "actions": [
+                        "create"
+                    ],
+                    "before": null,
+                    "after": {
+                        "additional_capabilities": [],
+                        "admin_password": null,
+                        "admin_ssh_key": [],
+                        "admin_username": "adminuser",
+                        "allow_extension_operations": true,
+                        "availability_set_id": null,
+                        "boot_diagnostics": [],
+                        "custom_data": null,
+                        "dedicated_host_id": null,
+                        "disable_password_authentication": true,
+                        "encryption_at_host_enabled": null,
+                        "eviction_policy": null,
+                        "extensions_time_budget": "PT1H30M",
+                        "identity": [],
+                        "license_type": null,
+                        "location": "westeurope",
+                        "max_bid_price": -1,
+                        "name": "valid-alvm",
+                        "os_disk": [
+                            {
+                                "caching": "ReadWrite",
+                                "diff_disk_settings": [],
+                                "disk_encryption_set_id": null,
+                                "storage_account_type": "Premium_LRS",
+                                "write_accelerator_enabled": false
+                            }
+                        ],
+                        "plan": [],
+                        "platform_fault_domain": -1,
+                        "priority": "Regular",
+                        "provision_vm_agent": true,
+                        "proximity_placement_group_id": null,
+                        "resource_group_name": "arg-1",
+                        "secret": [],
+                        "size": "Standard_A0",
+                        "source_image_id": null,
+                        "source_image_reference": [
+                            {
+                                "offer": "UbuntuServer",
+                                "publisher": "canonical",
+                                "sku": "16.04.0-LTS",
+                                "version": "latest"
+                            }
+                        ],
+                        "tags": null,
+                        "timeouts": null,
+                        "virtual_machine_scale_set_id": null
+                    },
+                    "after_unknown": {
+                        "additional_capabilities": [],
+                        "admin_ssh_key": [],
+                        "boot_diagnostics": [],
+                        "computer_name": true,
+                        "id": true,
+                        "identity": [],
+                        "network_interface_ids": true,
+                        "os_disk": [
+                            {
+                                "diff_disk_settings": [],
+                                "disk_size_gb": true,
+                                "name": true
+                            }
+                        ],
+                        "plan": [],
+                        "private_ip_address": true,
+                        "private_ip_addresses": true,
+                        "public_ip_address": true,
+                        "public_ip_addresses": true,
+                        "secret": [],
+                        "source_image_reference": [
+                            {}
+                        ],
+                        "virtual_machine_id": true,
+                        "zone": true
+                    }
+                }
+            },
+            {
+                "address": "azurerm_linux_virtual_machine_scale_set.invalid-alvmss",
+                "mode": "managed",
+                "type": "azurerm_linux_virtual_machine_scale_set",
+                "name": "invalid-alvmss",
+                "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                "change": {
+                    "actions": [
+                        "create"
+                    ],
+                    "before": null,
+                    "after": {
+                        "additional_capabilities": [],
+                        "admin_password": null,
+                        "admin_ssh_key": [],
+                        "admin_username": "adminuser",
+                        "automatic_os_upgrade_policy": [],
+                        "boot_diagnostics": [],
+                        "custom_data": null,
+                        "data_disk": [],
+                        "disable_password_authentication": true,
+                        "do_not_run_extensions_on_overprovisioned_machines": false,
+                        "encryption_at_host_enabled": null,
+                        "eviction_policy": null,
+                        "extensions_time_budget": "PT1H30M",
+                        "health_probe_id": null,
+                        "identity": [],
+                        "instances": 1,
+                        "location": "westeurope",
+                        "max_bid_price": -1,
+                        "name": "invalid-alvmss",
+                        "network_interface": [
+                            {
+                                "dns_servers": null,
+                                "enable_accelerated_networking": false,
+                                "enable_ip_forwarding": false,
+                                "ip_configuration": [
+                                    {
+                                        "application_gateway_backend_address_pool_ids": null,
+                                        "application_security_group_ids": null,
+                                        "load_balancer_backend_address_pool_ids": null,
+                                        "load_balancer_inbound_nat_rules_ids": null,
+                                        "name": "internal",
+                                        "primary": true,
+                                        "public_ip_address": [],
+                                        "version": "IPv4"
+                                    }
+                                ],
+                                "name": "example",
+                                "network_security_group_id": null,
+                                "primary": true
+                            }
+                        ],
+                        "os_disk": [
+                            {
+                                "caching": "ReadWrite",
+                                "diff_disk_settings": [],
+                                "disk_encryption_set_id": null,
+                                "storage_account_type": "Standard_LRS",
+                                "write_accelerator_enabled": false
+                            }
+                        ],
+                        "overprovision": true,
+                        "plan": [],
+                        "priority": "Regular",
+                        "provision_vm_agent": true,
+                        "proximity_placement_group_id": null,
+                        "resource_group_name": "arg-1",
+                        "rolling_upgrade_policy": [],
+                        "scale_in_policy": "Default",
+                        "secret": [],
+                        "single_placement_group": true,
+                        "sku": "Standard_F2",
+                        "source_image_id": null,
+                        "source_image_reference": [
+                            {
+                                "offer": "UbuntuServer",
+                                "publisher": "canonical",
+                                "sku": "16.04.0-LTS",
+                                "version": "latest"
+                            }
+                        ],
+                        "tags": null,
+                        "timeouts": null,
+                        "upgrade_mode": "Manual",
+                        "zone_balance": false,
+                        "zones": null
+                    },
+                    "after_unknown": {
+                        "additional_capabilities": [],
+                        "admin_ssh_key": [],
+                        "automatic_instance_repair": true,
+                        "automatic_os_upgrade_policy": [],
+                        "boot_diagnostics": [],
+                        "computer_name_prefix": true,
+                        "data_disk": [],
+                        "extension": true,
+                        "id": true,
+                        "identity": [],
+                        "network_interface": [
+                            {
+                                "ip_configuration": [
+                                    {
+                                        "public_ip_address": [],
+                                        "subnet_id": true
+                                    }
+                                ]
+                            }
+                        ],
+                        "os_disk": [
+                            {
+                                "diff_disk_settings": [],
+                                "disk_size_gb": true
+                            }
+                        ],
+                        "plan": [],
+                        "platform_fault_domain_count": true,
+                        "rolling_upgrade_policy": [],
+                        "secret": [],
+                        "source_image_reference": [
+                            {}
+                        ],
+                        "terminate_notification": true,
+                        "unique_id": true
+                    }
+                }
+            },
+            {
+                "address": "azurerm_linux_virtual_machine_scale_set.valid-alvmss",
+                "mode": "managed",
+                "type": "azurerm_linux_virtual_machine_scale_set",
+                "name": "valid-alvmss",
+                "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                "change": {
+                    "actions": [
+                        "create"
+                    ],
+                    "before": null,
+                    "after": {
+                        "additional_capabilities": [],
+                        "admin_password": null,
+                        "admin_ssh_key": [],
+                        "admin_username": "adminuser",
+                        "automatic_os_upgrade_policy": [],
+                        "boot_diagnostics": [],
+                        "custom_data": null,
+                        "data_disk": [],
+                        "disable_password_authentication": true,
+                        "do_not_run_extensions_on_overprovisioned_machines": false,
+                        "encryption_at_host_enabled": null,
+                        "eviction_policy": null,
+                        "extensions_time_budget": "PT1H30M",
+                        "health_probe_id": null,
+                        "identity": [],
+                        "instances": 1,
+                        "location": "westeurope",
+                        "max_bid_price": -1,
+                        "name": "valid-alvmss",
+                        "network_interface": [
+                            {
+                                "dns_servers": null,
+                                "enable_accelerated_networking": false,
+                                "enable_ip_forwarding": false,
+                                "ip_configuration": [
+                                    {
+                                        "application_gateway_backend_address_pool_ids": null,
+                                        "application_security_group_ids": null,
+                                        "load_balancer_backend_address_pool_ids": null,
+                                        "load_balancer_inbound_nat_rules_ids": null,
+                                        "name": "internal",
+                                        "primary": true,
+                                        "public_ip_address": [],
+                                        "version": "IPv4"
+                                    }
+                                ],
+                                "name": "example",
+                                "network_security_group_id": null,
+                                "primary": true
+                            }
+                        ],
+                        "os_disk": [
+                            {
+                                "caching": "ReadWrite",
+                                "diff_disk_settings": [],
+                                "disk_encryption_set_id": null,
+                                "storage_account_type": "Standard_LRS",
+                                "write_accelerator_enabled": false
+                            }
+                        ],
+                        "overprovision": true,
+                        "plan": [],
+                        "priority": "Regular",
+                        "provision_vm_agent": true,
+                        "proximity_placement_group_id": null,
+                        "resource_group_name": "arg-1",
+                        "rolling_upgrade_policy": [],
+                        "scale_in_policy": "Default",
+                        "secret": [],
+                        "single_placement_group": true,
+                        "sku": "Standard_A0",
+                        "source_image_id": null,
+                        "source_image_reference": [
+                            {
+                                "offer": "UbuntuServer",
+                                "publisher": "canonical",
+                                "sku": "16.04.0-LTS",
+                                "version": "latest"
+                            }
+                        ],
+                        "tags": null,
+                        "timeouts": null,
+                        "upgrade_mode": "Manual",
+                        "zone_balance": false,
+                        "zones": null
+                    },
+                    "after_unknown": {
+                        "additional_capabilities": [],
+                        "admin_ssh_key": [],
+                        "automatic_instance_repair": true,
+                        "automatic_os_upgrade_policy": [],
+                        "boot_diagnostics": [],
+                        "computer_name_prefix": true,
+                        "data_disk": [],
+                        "extension": true,
+                        "id": true,
+                        "identity": [],
+                        "network_interface": [
+                            {
+                                "ip_configuration": [
+                                    {
+                                        "public_ip_address": [],
+                                        "subnet_id": true
+                                    }
+                                ]
+                            }
+                        ],
+                        "os_disk": [
+                            {
+                                "diff_disk_settings": [],
+                                "disk_size_gb": true
+                            }
+                        ],
+                        "plan": [],
+                        "platform_fault_domain_count": true,
+                        "rolling_upgrade_policy": [],
+                        "secret": [],
+                        "source_image_reference": [
+                            {}
+                        ],
+                        "terminate_notification": true,
+                        "unique_id": true
+                    }
+                }
+            },
+            {
+                "address": "azurerm_network_interface.ani[0]",
+                "mode": "managed",
+                "type": "azurerm_network_interface",
+                "name": "ani",
+                "index": 0,
+                "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                "change": {
+                    "actions": [
+                        "create"
+                    ],
+                    "before": null,
+                    "after": {
+                        "enable_accelerated_networking": false,
+                        "enable_ip_forwarding": false,
+                        "ip_configuration": [
+                            {
+                                "name": "internal",
+                                "private_ip_address_allocation": "dynamic",
+                                "private_ip_address_version": "IPv4",
+                                "public_ip_address_id": null
+                            }
+                        ],
+                        "location": "westeurope",
+                        "name": "ani-0",
+                        "resource_group_name": "arg-1",
+                        "tags": null,
+                        "timeouts": null
+                    },
+                    "after_unknown": {
+                        "applied_dns_servers": true,
+                        "dns_servers": true,
+                        "id": true,
+                        "internal_dns_name_label": true,
+                        "internal_domain_name_suffix": true,
+                        "ip_configuration": [
+                            {
+                                "primary": true,
+                                "private_ip_address": true,
+                                "subnet_id": true
+                            }
+                        ],
+                        "mac_address": true,
+                        "private_ip_address": true,
+                        "private_ip_addresses": true,
+                        "virtual_machine_id": true
+                    }
+                }
+            },
+            {
+                "address": "azurerm_network_interface.ani[1]",
+                "mode": "managed",
+                "type": "azurerm_network_interface",
+                "name": "ani",
+                "index": 1,
+                "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                "change": {
+                    "actions": [
+                        "create"
+                    ],
+                    "before": null,
+                    "after": {
+                        "enable_accelerated_networking": false,
+                        "enable_ip_forwarding": false,
+                        "ip_configuration": [
+                            {
+                                "name": "internal",
+                                "private_ip_address_allocation": "dynamic",
+                                "private_ip_address_version": "IPv4",
+                                "public_ip_address_id": null
+                            }
+                        ],
+                        "location": "westeurope",
+                        "name": "ani-1",
+                        "resource_group_name": "arg-1",
+                        "tags": null,
+                        "timeouts": null
+                    },
+                    "after_unknown": {
+                        "applied_dns_servers": true,
+                        "dns_servers": true,
+                        "id": true,
+                        "internal_dns_name_label": true,
+                        "internal_domain_name_suffix": true,
+                        "ip_configuration": [
+                            {
+                                "primary": true,
+                                "private_ip_address": true,
+                                "subnet_id": true
+                            }
+                        ],
+                        "mac_address": true,
+                        "private_ip_address": true,
+                        "private_ip_addresses": true,
+                        "virtual_machine_id": true
+                    }
+                }
+            },
+            {
+                "address": "azurerm_network_interface.ani[2]",
+                "mode": "managed",
+                "type": "azurerm_network_interface",
+                "name": "ani",
+                "index": 2,
+                "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                "change": {
+                    "actions": [
+                        "create"
+                    ],
+                    "before": null,
+                    "after": {
+                        "enable_accelerated_networking": false,
+                        "enable_ip_forwarding": false,
+                        "ip_configuration": [
+                            {
+                                "name": "internal",
+                                "private_ip_address_allocation": "dynamic",
+                                "private_ip_address_version": "IPv4",
+                                "public_ip_address_id": null
+                            }
+                        ],
+                        "location": "westeurope",
+                        "name": "ani-2",
+                        "resource_group_name": "arg-1",
+                        "tags": null,
+                        "timeouts": null
+                    },
+                    "after_unknown": {
+                        "applied_dns_servers": true,
+                        "dns_servers": true,
+                        "id": true,
+                        "internal_dns_name_label": true,
+                        "internal_domain_name_suffix": true,
+                        "ip_configuration": [
+                            {
+                                "primary": true,
+                                "private_ip_address": true,
+                                "subnet_id": true
+                            }
+                        ],
+                        "mac_address": true,
+                        "private_ip_address": true,
+                        "private_ip_addresses": true,
+                        "virtual_machine_id": true
+                    }
+                }
+            },
+            {
+                "address": "azurerm_network_interface.ani[3]",
+                "mode": "managed",
+                "type": "azurerm_network_interface",
+                "name": "ani",
+                "index": 3,
+                "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                "change": {
+                    "actions": [
+                        "create"
+                    ],
+                    "before": null,
+                    "after": {
+                        "enable_accelerated_networking": false,
+                        "enable_ip_forwarding": false,
+                        "ip_configuration": [
+                            {
+                                "name": "internal",
+                                "private_ip_address_allocation": "dynamic",
+                                "private_ip_address_version": "IPv4",
+                                "public_ip_address_id": null
+                            }
+                        ],
+                        "location": "westeurope",
+                        "name": "ani-3",
+                        "resource_group_name": "arg-1",
+                        "tags": null,
+                        "timeouts": null
+                    },
+                    "after_unknown": {
+                        "applied_dns_servers": true,
+                        "dns_servers": true,
+                        "id": true,
+                        "internal_dns_name_label": true,
+                        "internal_domain_name_suffix": true,
+                        "ip_configuration": [
+                            {
+                                "primary": true,
+                                "private_ip_address": true,
+                                "subnet_id": true
+                            }
+                        ],
+                        "mac_address": true,
+                        "private_ip_address": true,
+                        "private_ip_addresses": true,
+                        "virtual_machine_id": true
+                    }
+                }
+            },
+            {
+                "address": "azurerm_resource_group.arg-1",
+                "mode": "managed",
+                "type": "azurerm_resource_group",
+                "name": "arg-1",
+                "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                "change": {
+                    "actions": [
+                        "create"
+                    ],
+                    "before": null,
+                    "after": {
+                        "location": "westeurope",
+                        "name": "arg-1",
+                        "tags": null,
+                        "timeouts": null
+                    },
+                    "after_unknown": {
+                        "id": true
+                    }
+                }
+            },
+            {
+                "address": "azurerm_subnet.as-1",
+                "mode": "managed",
+                "type": "azurerm_subnet",
+                "name": "as-1",
+                "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                "change": {
+                    "actions": [
+                        "create"
+                    ],
+                    "before": null,
+                    "after": {
+                        "address_prefixes": [
+                            "10.0.2.0/24"
+                        ],
+                        "delegation": [],
+                        "enforce_private_link_endpoint_network_policies": false,
+                        "enforce_private_link_service_network_policies": false,
+                        "name": "internal",
+                        "resource_group_name": "arg-1",
+                        "service_endpoint_policy_ids": null,
+                        "service_endpoints": null,
+                        "timeouts": null,
+                        "virtual_network_name": "example-network"
+                    },
+                    "after_unknown": {
+                        "address_prefix": true,
+                        "address_prefixes": [
+                            false
+                        ],
+                        "delegation": [],
+                        "id": true
+                    }
+                }
+            },
+            {
+                "address": "azurerm_virtual_network.avn-1",
+                "mode": "managed",
+                "type": "azurerm_virtual_network",
+                "name": "avn-1",
+                "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                "change": {
+                    "actions": [
+                        "create"
+                    ],
+                    "before": null,
+                    "after": {
+                        "address_space": [
+                            "10.0.0.0/16"
+                        ],
+                        "bgp_community": null,
+                        "ddos_protection_plan": [],
+                        "dns_servers": null,
+                        "location": "westeurope",
+                        "name": "example-network",
+                        "resource_group_name": "arg-1",
+                        "tags": null,
+                        "timeouts": null,
+                        "vm_protection_enabled": false
+                    },
+                    "after_unknown": {
+                        "address_space": [
+                            false
+                        ],
+                        "ddos_protection_plan": [],
+                        "guid": true,
+                        "id": true,
+                        "subnet": true
+                    }
+                }
+            },
+            {
+                "address": "azurerm_windows_virtual_machine.invalid-awvm",
+                "mode": "managed",
+                "type": "azurerm_windows_virtual_machine",
+                "name": "invalid-awvm",
+                "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                "change": {
+                    "actions": [
+                        "create"
+                    ],
+                    "before": null,
+                    "after": {
+                        "additional_capabilities": [],
+                        "additional_unattend_content": [],
+                        "admin_password": "P@$$w0rd1234!",
+                        "admin_username": "adminuser",
+                        "allow_extension_operations": true,
+                        "availability_set_id": null,
+                        "boot_diagnostics": [],
+                        "custom_data": null,
+                        "dedicated_host_id": null,
+                        "enable_automatic_updates": true,
+                        "encryption_at_host_enabled": null,
+                        "eviction_policy": null,
+                        "extensions_time_budget": "PT1H30M",
+                        "identity": [],
+                        "license_type": null,
+                        "location": "westeurope",
+                        "max_bid_price": -1,
+                        "name": "invalid-awvm",
+                        "os_disk": [
+                            {
+                                "caching": "ReadWrite",
+                                "diff_disk_settings": [],
+                                "disk_encryption_set_id": null,
+                                "storage_account_type": "Standard_LRS",
+                                "write_accelerator_enabled": false
+                            }
+                        ],
+                        "patch_mode": "AutomaticByOS",
+                        "plan": [],
+                        "platform_fault_domain": -1,
+                        "priority": "Regular",
+                        "provision_vm_agent": true,
+                        "proximity_placement_group_id": null,
+                        "resource_group_name": "arg-1",
+                        "secret": [],
+                        "size": "Standard_F2",
+                        "source_image_id": null,
+                        "source_image_reference": [
+                            {
+                                "offer": "WindowsServer",
+                                "publisher": "MicrosoftWindowsServer",
+                                "sku": "2016-Datacenter",
+                                "version": "latest"
+                            }
+                        ],
+                        "tags": null,
+                        "timeouts": null,
+                        "timezone": null,
+                        "virtual_machine_scale_set_id": null,
+                        "winrm_listener": []
+                    },
+                    "after_unknown": {
+                        "additional_capabilities": [],
+                        "additional_unattend_content": [],
+                        "boot_diagnostics": [],
+                        "computer_name": true,
+                        "id": true,
+                        "identity": [],
+                        "network_interface_ids": true,
+                        "os_disk": [
+                            {
+                                "diff_disk_settings": [],
+                                "disk_size_gb": true,
+                                "name": true
+                            }
+                        ],
+                        "plan": [],
+                        "private_ip_address": true,
+                        "private_ip_addresses": true,
+                        "public_ip_address": true,
+                        "public_ip_addresses": true,
+                        "secret": [],
+                        "source_image_reference": [
+                            {}
+                        ],
+                        "virtual_machine_id": true,
+                        "winrm_listener": [],
+                        "zone": true
+                    }
+                }
+            },
+            {
+                "address": "azurerm_windows_virtual_machine.valid-awvm",
+                "mode": "managed",
+                "type": "azurerm_windows_virtual_machine",
+                "name": "valid-awvm",
+                "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                "change": {
+                    "actions": [
+                        "create"
+                    ],
+                    "before": null,
+                    "after": {
+                        "additional_capabilities": [],
+                        "additional_unattend_content": [],
+                        "admin_password": "P@$$w0rd1234!",
+                        "admin_username": "adminuser",
+                        "allow_extension_operations": true,
+                        "availability_set_id": null,
+                        "boot_diagnostics": [],
+                        "custom_data": null,
+                        "dedicated_host_id": null,
+                        "enable_automatic_updates": true,
+                        "encryption_at_host_enabled": null,
+                        "eviction_policy": null,
+                        "extensions_time_budget": "PT1H30M",
+                        "identity": [],
+                        "license_type": null,
+                        "location": "westeurope",
+                        "max_bid_price": -1,
+                        "name": "valid-awvm",
+                        "os_disk": [
+                            {
+                                "caching": "ReadWrite",
+                                "diff_disk_settings": [],
+                                "disk_encryption_set_id": null,
+                                "storage_account_type": "Standard_LRS",
+                                "write_accelerator_enabled": false
+                            }
+                        ],
+                        "patch_mode": "AutomaticByOS",
+                        "plan": [],
+                        "platform_fault_domain": -1,
+                        "priority": "Regular",
+                        "provision_vm_agent": true,
+                        "proximity_placement_group_id": null,
+                        "resource_group_name": "arg-1",
+                        "secret": [],
+                        "size": "Standard_A0",
+                        "source_image_id": null,
+                        "source_image_reference": [
+                            {
+                                "offer": "WindowsServer",
+                                "publisher": "MicrosoftWindowsServer",
+                                "sku": "2016-Datacenter",
+                                "version": "latest"
+                            }
+                        ],
+                        "tags": null,
+                        "timeouts": null,
+                        "timezone": null,
+                        "virtual_machine_scale_set_id": null,
+                        "winrm_listener": []
+                    },
+                    "after_unknown": {
+                        "additional_capabilities": [],
+                        "additional_unattend_content": [],
+                        "boot_diagnostics": [],
+                        "computer_name": true,
+                        "id": true,
+                        "identity": [],
+                        "network_interface_ids": true,
+                        "os_disk": [
+                            {
+                                "diff_disk_settings": [],
+                                "disk_size_gb": true,
+                                "name": true
+                            }
+                        ],
+                        "plan": [],
+                        "private_ip_address": true,
+                        "private_ip_addresses": true,
+                        "public_ip_address": true,
+                        "public_ip_addresses": true,
+                        "secret": [],
+                        "source_image_reference": [
+                            {}
+                        ],
+                        "virtual_machine_id": true,
+                        "winrm_listener": [],
+                        "zone": true
+                    }
+                }
+            },
+            {
+                "address": "azurerm_windows_virtual_machine_scale_set.invalid-awvmss",
+                "mode": "managed",
+                "type": "azurerm_windows_virtual_machine_scale_set",
+                "name": "invalid-awvmss",
+                "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                "change": {
+                    "actions": [
+                        "create"
+                    ],
+                    "before": null,
+                    "after": {
+                        "additional_capabilities": [],
+                        "additional_unattend_content": [],
+                        "admin_password": "P@55w0rd1234!",
+                        "admin_username": "adminuser",
+                        "automatic_os_upgrade_policy": [],
+                        "boot_diagnostics": [],
+                        "custom_data": null,
+                        "data_disk": [],
+                        "do_not_run_extensions_on_overprovisioned_machines": false,
+                        "enable_automatic_updates": true,
+                        "encryption_at_host_enabled": null,
+                        "eviction_policy": null,
+                        "extensions_time_budget": "PT1H30M",
+                        "health_probe_id": null,
+                        "identity": [],
+                        "instances": 1,
+                        "license_type": null,
+                        "location": "westeurope",
+                        "max_bid_price": -1,
+                        "name": "invalid-awvmss",
+                        "network_interface": [
+                            {
+                                "dns_servers": null,
+                                "enable_accelerated_networking": false,
+                                "enable_ip_forwarding": false,
+                                "ip_configuration": [
+                                    {
+                                        "application_gateway_backend_address_pool_ids": null,
+                                        "application_security_group_ids": null,
+                                        "load_balancer_backend_address_pool_ids": null,
+                                        "load_balancer_inbound_nat_rules_ids": null,
+                                        "name": "internal",
+                                        "primary": true,
+                                        "public_ip_address": [],
+                                        "version": "IPv4"
+                                    }
+                                ],
+                                "name": "example",
+                                "network_security_group_id": null,
+                                "primary": true
+                            }
+                        ],
+                        "os_disk": [
+                            {
+                                "caching": "ReadWrite",
+                                "diff_disk_settings": [],
+                                "disk_encryption_set_id": null,
+                                "storage_account_type": "Standard_LRS",
+                                "write_accelerator_enabled": false
+                            }
+                        ],
+                        "overprovision": true,
+                        "plan": [],
+                        "priority": "Regular",
+                        "provision_vm_agent": true,
+                        "proximity_placement_group_id": null,
+                        "resource_group_name": "arg-1",
+                        "rolling_upgrade_policy": [],
+                        "scale_in_policy": "Default",
+                        "secret": [],
+                        "single_placement_group": true,
+                        "sku": "Standard_F2",
+                        "source_image_id": null,
+                        "source_image_reference": [
+                            {
+                                "offer": "WindowsServer",
+                                "publisher": "MicrosoftWindowsServer",
+                                "sku": "2016-Datacenter-Server-Core",
+                                "version": "latest"
+                            }
+                        ],
+                        "tags": null,
+                        "timeouts": null,
+                        "timezone": null,
+                        "upgrade_mode": "Manual",
+                        "winrm_listener": [],
+                        "zone_balance": false,
+                        "zones": null
+                    },
+                    "after_unknown": {
+                        "additional_capabilities": [],
+                        "additional_unattend_content": [],
+                        "automatic_instance_repair": true,
+                        "automatic_os_upgrade_policy": [],
+                        "boot_diagnostics": [],
+                        "computer_name_prefix": true,
+                        "data_disk": [],
+                        "extension": true,
+                        "id": true,
+                        "identity": [],
+                        "network_interface": [
+                            {
+                                "ip_configuration": [
+                                    {
+                                        "public_ip_address": [],
+                                        "subnet_id": true
+                                    }
+                                ]
+                            }
+                        ],
+                        "os_disk": [
+                            {
+                                "diff_disk_settings": [],
+                                "disk_size_gb": true
+                            }
+                        ],
+                        "plan": [],
+                        "platform_fault_domain_count": true,
+                        "rolling_upgrade_policy": [],
+                        "secret": [],
+                        "source_image_reference": [
+                            {}
+                        ],
+                        "terminate_notification": true,
+                        "unique_id": true,
+                        "winrm_listener": []
+                    }
+                }
+            },
+            {
+                "address": "azurerm_windows_virtual_machine_scale_set.valid-awvmss",
+                "mode": "managed",
+                "type": "azurerm_windows_virtual_machine_scale_set",
+                "name": "valid-awvmss",
+                "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                "change": {
+                    "actions": [
+                        "create"
+                    ],
+                    "before": null,
+                    "after": {
+                        "additional_capabilities": [],
+                        "additional_unattend_content": [],
+                        "admin_password": "P@55w0rd1234!",
+                        "admin_username": "adminuser",
+                        "automatic_os_upgrade_policy": [],
+                        "boot_diagnostics": [],
+                        "custom_data": null,
+                        "data_disk": [],
+                        "do_not_run_extensions_on_overprovisioned_machines": false,
+                        "enable_automatic_updates": true,
+                        "encryption_at_host_enabled": null,
+                        "eviction_policy": null,
+                        "extensions_time_budget": "PT1H30M",
+                        "health_probe_id": null,
+                        "identity": [],
+                        "instances": 1,
+                        "license_type": null,
+                        "location": "westeurope",
+                        "max_bid_price": -1,
+                        "name": "valid-awvmss",
+                        "network_interface": [
+                            {
+                                "dns_servers": null,
+                                "enable_accelerated_networking": false,
+                                "enable_ip_forwarding": false,
+                                "ip_configuration": [
+                                    {
+                                        "application_gateway_backend_address_pool_ids": null,
+                                        "application_security_group_ids": null,
+                                        "load_balancer_backend_address_pool_ids": null,
+                                        "load_balancer_inbound_nat_rules_ids": null,
+                                        "name": "internal",
+                                        "primary": true,
+                                        "public_ip_address": [],
+                                        "version": "IPv4"
+                                    }
+                                ],
+                                "name": "example",
+                                "network_security_group_id": null,
+                                "primary": true
+                            }
+                        ],
+                        "os_disk": [
+                            {
+                                "caching": "ReadWrite",
+                                "diff_disk_settings": [],
+                                "disk_encryption_set_id": null,
+                                "storage_account_type": "Standard_LRS",
+                                "write_accelerator_enabled": false
+                            }
+                        ],
+                        "overprovision": true,
+                        "plan": [],
+                        "priority": "Regular",
+                        "provision_vm_agent": true,
+                        "proximity_placement_group_id": null,
+                        "resource_group_name": "arg-1",
+                        "rolling_upgrade_policy": [],
+                        "scale_in_policy": "Default",
+                        "secret": [],
+                        "single_placement_group": true,
+                        "sku": "Standard_A0",
+                        "source_image_id": null,
+                        "source_image_reference": [
+                            {
+                                "offer": "WindowsServer",
+                                "publisher": "MicrosoftWindowsServer",
+                                "sku": "2016-Datacenter-Server-Core",
+                                "version": "latest"
+                            }
+                        ],
+                        "tags": null,
+                        "timeouts": null,
+                        "timezone": null,
+                        "upgrade_mode": "Manual",
+                        "winrm_listener": [],
+                        "zone_balance": false,
+                        "zones": null
+                    },
+                    "after_unknown": {
+                        "additional_capabilities": [],
+                        "additional_unattend_content": [],
+                        "automatic_instance_repair": true,
+                        "automatic_os_upgrade_policy": [],
+                        "boot_diagnostics": [],
+                        "computer_name_prefix": true,
+                        "data_disk": [],
+                        "extension": true,
+                        "id": true,
+                        "identity": [],
+                        "network_interface": [
+                            {
+                                "ip_configuration": [
+                                    {
+                                        "public_ip_address": [],
+                                        "subnet_id": true
+                                    }
+                                ]
+                            }
+                        ],
+                        "os_disk": [
+                            {
+                                "diff_disk_settings": [],
+                                "disk_size_gb": true
+                            }
+                        ],
+                        "plan": [],
+                        "platform_fault_domain_count": true,
+                        "rolling_upgrade_policy": [],
+                        "secret": [],
+                        "source_image_reference": [
+                            {}
+                        ],
+                        "terminate_notification": true,
+                        "unique_id": true,
+                        "winrm_listener": []
+                    }
+                }
+            },
+            {
+                "address": "google_compute_instance.invalid_type",
+                "mode": "managed",
+                "type": "google_compute_instance",
+                "name": "invalid_type",
+                "provider_name": "registry.terraform.io/hashicorp/google",
+                "change": {
+                    "actions": [
+                        "create"
+                    ],
+                    "before": null,
+                    "after": {
+                        "allow_stopping_for_update": null,
+                        "attached_disk": [],
+                        "boot_disk": [
+                            {
+                                "auto_delete": true,
+                                "disk_encryption_key_raw": null,
+                                "initialize_params": [
+                                    {
+                                        "image": "debian-cloud/debian-9"
+                                    }
+                                ],
+                                "mode": "READ_WRITE"
+                            }
+                        ],
+                        "can_ip_forward": false,
+                        "deletion_protection": false,
+                        "description": null,
+                        "desired_status": null,
+                        "enable_display": null,
+                        "hostname": null,
+                        "labels": null,
+                        "machine_type": "e2-medium",
+                        "metadata": null,
+                        "metadata_startup_script": null,
+                        "name": "invalid-gci",
+                        "network_interface": [
+                            {
+                                "access_config": [],
+                                "alias_ip_range": [],
+                                "network": "default",
+                                "nic_type": null
+                            }
+                        ],
+                        "resource_policies": null,
+                        "scratch_disk": [],
+                        "service_account": [],
+                        "shielded_instance_config": [],
+                        "tags": null,
+                        "timeouts": null,
+                        "zone": "us-central1-a"
+                    },
+                    "after_unknown": {
+                        "attached_disk": [],
+                        "boot_disk": [
+                            {
+                                "device_name": true,
+                                "disk_encryption_key_sha256": true,
+                                "initialize_params": [
+                                    {
+                                        "labels": true,
+                                        "size": true,
+                                        "type": true
+                                    }
+                                ],
+                                "kms_key_self_link": true,
+                                "source": true
+                            }
+                        ],
+                        "confidential_instance_config": true,
+                        "cpu_platform": true,
+                        "current_status": true,
+                        "guest_accelerator": true,
+                        "id": true,
+                        "instance_id": true,
+                        "label_fingerprint": true,
+                        "metadata_fingerprint": true,
+                        "min_cpu_platform": true,
+                        "network_interface": [
+                            {
+                                "access_config": [],
+                                "alias_ip_range": [],
+                                "name": true,
+                                "network_ip": true,
+                                "subnetwork": true,
+                                "subnetwork_project": true
+                            }
+                        ],
+                        "project": true,
+                        "scheduling": true,
+                        "scratch_disk": [],
+                        "self_link": true,
+                        "service_account": [],
+                        "shielded_instance_config": [],
+                        "tags_fingerprint": true
+                    }
+                }
+            },
+            {
+                "address": "google_compute_instance.valid_type",
+                "mode": "managed",
+                "type": "google_compute_instance",
+                "name": "valid_type",
+                "provider_name": "registry.terraform.io/hashicorp/google",
+                "change": {
+                    "actions": [
+                        "create"
+                    ],
+                    "before": null,
+                    "after": {
+                        "allow_stopping_for_update": null,
+                        "attached_disk": [],
+                        "boot_disk": [
+                            {
+                                "auto_delete": true,
+                                "disk_encryption_key_raw": null,
+                                "initialize_params": [
+                                    {
+                                        "image": "debian-cloud/debian-9"
+                                    }
+                                ],
+                                "mode": "READ_WRITE"
+                            }
+                        ],
+                        "can_ip_forward": false,
+                        "deletion_protection": false,
+                        "description": null,
+                        "desired_status": null,
+                        "enable_display": null,
+                        "hostname": null,
+                        "labels": null,
+                        "machine_type": "n1-standard-1",
+                        "metadata": null,
+                        "metadata_startup_script": null,
+                        "name": "valid-gci",
+                        "network_interface": [
+                            {
+                                "access_config": [],
+                                "alias_ip_range": [],
+                                "network": "default",
+                                "nic_type": null
+                            }
+                        ],
+                        "resource_policies": null,
+                        "scratch_disk": [],
+                        "service_account": [],
+                        "shielded_instance_config": [],
+                        "tags": null,
+                        "timeouts": null,
+                        "zone": "us-central1-a"
+                    },
+                    "after_unknown": {
+                        "attached_disk": [],
+                        "boot_disk": [
+                            {
+                                "device_name": true,
+                                "disk_encryption_key_sha256": true,
+                                "initialize_params": [
+                                    {
+                                        "labels": true,
+                                        "size": true,
+                                        "type": true
+                                    }
+                                ],
+                                "kms_key_self_link": true,
+                                "source": true
+                            }
+                        ],
+                        "confidential_instance_config": true,
+                        "cpu_platform": true,
+                        "current_status": true,
+                        "guest_accelerator": true,
+                        "id": true,
+                        "instance_id": true,
+                        "label_fingerprint": true,
+                        "metadata_fingerprint": true,
+                        "min_cpu_platform": true,
+                        "network_interface": [
+                            {
+                                "access_config": [],
+                                "alias_ip_range": [],
+                                "name": true,
+                                "network_ip": true,
+                                "subnetwork": true,
+                                "subnetwork_project": true
+                            }
+                        ],
+                        "project": true,
+                        "scheduling": true,
+                        "scratch_disk": [],
+                        "self_link": true,
+                        "service_account": [],
+                        "shielded_instance_config": [],
+                        "tags_fingerprint": true
+                    }
+                }
+            },
+            {
+                "address": "google_compute_instance_template.invalid_type",
+                "mode": "managed",
+                "type": "google_compute_instance_template",
+                "name": "invalid_type",
+                "provider_name": "registry.terraform.io/hashicorp/google",
+                "change": {
+                    "actions": [
+                        "create"
+                    ],
+                    "before": null,
+                    "after": {
+                        "can_ip_forward": false,
+                        "description": null,
+                        "disk": [
+                            {
+                                "auto_delete": true,
+                                "disk_encryption_key": [],
+                                "disk_name": null,
+                                "labels": null,
+                                "resource_policies": null,
+                                "source": null,
+                                "source_image": "debian-cloud/debian-9"
+                            }
+                        ],
+                        "enable_display": null,
+                        "guest_accelerator": [],
+                        "instance_description": null,
+                        "labels": null,
+                        "machine_type": "e2-medium",
+                        "metadata": null,
+                        "metadata_startup_script": null,
+                        "min_cpu_platform": null,
+                        "network_interface": [
+                            {
+                                "access_config": [],
+                                "alias_ip_range": [],
+                                "network": "default",
+                                "network_ip": null
+                            }
+                        ],
+                        "service_account": [],
+                        "shielded_instance_config": [],
+                        "tags": null,
+                        "timeouts": null
+                    },
+                    "after_unknown": {
+                        "confidential_instance_config": true,
+                        "disk": [
+                            {
+                                "boot": true,
+                                "device_name": true,
+                                "disk_encryption_key": [],
+                                "disk_size_gb": true,
+                                "disk_type": true,
+                                "interface": true,
+                                "mode": true,
+                                "type": true
+                            }
+                        ],
+                        "guest_accelerator": [],
+                        "id": true,
+                        "metadata_fingerprint": true,
+                        "name": true,
+                        "name_prefix": true,
+                        "network_interface": [
+                            {
+                                "access_config": [],
+                                "alias_ip_range": [],
+                                "name": true,
+                                "subnetwork": true,
+                                "subnetwork_project": true
+                            }
+                        ],
+                        "project": true,
+                        "region": true,
+                        "scheduling": true,
+                        "self_link": true,
+                        "service_account": [],
+                        "shielded_instance_config": [],
+                        "tags_fingerprint": true
+                    }
+                }
+            },
+            {
+                "address": "google_compute_instance_template.valid_type",
+                "mode": "managed",
+                "type": "google_compute_instance_template",
+                "name": "valid_type",
+                "provider_name": "registry.terraform.io/hashicorp/google",
+                "change": {
+                    "actions": [
+                        "create"
+                    ],
+                    "before": null,
+                    "after": {
+                        "can_ip_forward": false,
+                        "description": null,
+                        "disk": [
+                            {
+                                "auto_delete": true,
+                                "disk_encryption_key": [],
+                                "disk_name": null,
+                                "labels": null,
+                                "resource_policies": null,
+                                "source": null,
+                                "source_image": "debian-cloud/debian-9"
+                            }
+                        ],
+                        "enable_display": null,
+                        "guest_accelerator": [],
+                        "instance_description": null,
+                        "labels": null,
+                        "machine_type": "n1-standard-1",
+                        "metadata": null,
+                        "metadata_startup_script": null,
+                        "min_cpu_platform": null,
+                        "network_interface": [
+                            {
+                                "access_config": [],
+                                "alias_ip_range": [],
+                                "network": "default",
+                                "network_ip": null
+                            }
+                        ],
+                        "service_account": [],
+                        "shielded_instance_config": [],
+                        "tags": null,
+                        "timeouts": null
+                    },
+                    "after_unknown": {
+                        "confidential_instance_config": true,
+                        "disk": [
+                            {
+                                "boot": true,
+                                "device_name": true,
+                                "disk_encryption_key": [],
+                                "disk_size_gb": true,
+                                "disk_type": true,
+                                "interface": true,
+                                "mode": true,
+                                "type": true
+                            }
+                        ],
+                        "guest_accelerator": [],
+                        "id": true,
+                        "metadata_fingerprint": true,
+                        "name": true,
+                        "name_prefix": true,
+                        "network_interface": [
+                            {
+                                "access_config": [],
+                                "alias_ip_range": [],
+                                "name": true,
+                                "subnetwork": true,
+                                "subnetwork_project": true
+                            }
+                        ],
+                        "project": true,
+                        "region": true,
+                        "scheduling": true,
+                        "self_link": true,
+                        "service_account": [],
+                        "shielded_instance_config": [],
+                        "tags_fingerprint": true
+                    }
+                }
+            }
+        ],
+        "prior_state": {
+            "format_version": "0.1",
+            "terraform_version": "0.14.4",
+            "values": {
+                "root_module": {
+                    "resources": [
+                        {
+                            "address": "data.aws_ami.the_ami",
+                            "mode": "data",
+                            "type": "aws_ami",
+                            "name": "the_ami",
+                            "provider_name": "registry.terraform.io/hashicorp/aws",
+                            "schema_version": 0,
+                            "values": {
+                                "architecture": "x86_64",
+                                "arn": "arn:aws:ec2:us-east-1::image/ami-09943f9da1f1b7899",
+                                "block_device_mappings": [
+                                    {
+                                        "device_name": "/dev/sda1",
+                                        "ebs": {
+                                            "delete_on_termination": "true",
+                                            "encrypted": "false",
+                                            "iops": "0",
+                                            "snapshot_id": "snap-00fc25e1e01269cd9",
+                                            "throughput": "0",
+                                            "volume_size": "8",
+                                            "volume_type": "gp2"
+                                        },
+                                        "no_device": "",
+                                        "virtual_name": ""
+                                    },
+                                    {
+                                        "device_name": "/dev/sdb",
+                                        "ebs": {},
+                                        "no_device": "",
+                                        "virtual_name": "ephemeral0"
+                                    },
+                                    {
+                                        "device_name": "/dev/sdc",
+                                        "ebs": {},
+                                        "no_device": "",
+                                        "virtual_name": "ephemeral1"
+                                    }
+                                ],
+                                "creation_date": "2021-02-24T17:38:23.000Z",
+                                "description": "Canonical, Ubuntu, 16.04 LTS, amd64 xenial image build on 2021-02-24",
+                                "ena_support": true,
+                                "executable_users": null,
+                                "filter": [
+                                    {
+                                        "name": "architecture",
+                                        "values": [
+                                            "x86_64"
+                                        ]
+                                    },
+                                    {
+                                        "name": "name",
+                                        "values": [
+                                            "ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-*"
+                                        ]
+                                    },
+                                    {
+                                        "name": "virtualization-type",
+                                        "values": [
+                                            "hvm"
+                                        ]
+                                    }
+                                ],
+                                "hypervisor": "xen",
+                                "id": "ami-09943f9da1f1b7899",
+                                "image_id": "ami-09943f9da1f1b7899",
+                                "image_location": "099720109477/ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-20210224",
+                                "image_owner_alias": null,
+                                "image_type": "machine",
+                                "kernel_id": null,
+                                "most_recent": true,
+                                "name": "ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-20210224",
+                                "name_regex": null,
+                                "owner_id": "099720109477",
+                                "owners": [
+                                    "099720109477"
+                                ],
+                                "platform": null,
+                                "platform_details": "Linux/UNIX",
+                                "product_codes": [],
+                                "public": true,
+                                "ramdisk_id": null,
+                                "root_device_name": "/dev/sda1",
+                                "root_device_type": "ebs",
+                                "root_snapshot_id": "snap-00fc25e1e01269cd9",
+                                "sriov_net_support": "simple",
+                                "state": "available",
+                                "state_reason": {
+                                    "code": "UNSET",
+                                    "message": "UNSET"
+                                },
+                                "tags": {},
+                                "usage_operation": "RunInstances",
+                                "virtualization_type": "hvm"
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        "configuration": {
+            "provider_config": {
+                "aws": {
+                    "name": "aws",
+                    "expressions": {
+                        "region": {
+                            "constant_value": "us-east-1"
+                        }
+                    }
+                },
+                "azurerm": {
+                    "name": "azurerm",
+                    "expressions": {
+                        "features": [
+                            {}
+                        ]
+                    }
+                },
+                "google": {
+                    "name": "google",
+                    "expressions": {
+                        "project": {
+                            "constant_value": "customer-success-261820"
+                        },
+                        "region": {
+                            "constant_value": "us-central1"
+                        },
+                        "zone": {
+                            "constant_value": "us-central1-c"
+                        }
+                    }
+                }
+            },
+            "root_module": {
+                "resources": [
+                    {
+                        "address": "aws_ec2_capacity_reservation.invalid_type",
+                        "mode": "managed",
+                        "type": "aws_ec2_capacity_reservation",
+                        "name": "invalid_type",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                            "availability_zone": {
+                                "constant_value": "eu-west-1a"
+                            },
+                            "instance_count": {
+                                "constant_value": 1
+                            },
+                            "instance_platform": {
+                                "constant_value": "Linux/UNIX"
+                            },
+                            "instance_type": {
+                                "constant_value": "t3.nano"
+                            }
+                        },
+                        "schema_version": 0
+                    },
+                    {
+                        "address": "aws_ec2_capacity_reservation.valid_type",
+                        "mode": "managed",
+                        "type": "aws_ec2_capacity_reservation",
+                        "name": "valid_type",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                            "availability_zone": {
+                                "constant_value": "eu-west-1a"
+                            },
+                            "instance_count": {
+                                "constant_value": 1
+                            },
+                            "instance_platform": {
+                                "constant_value": "Linux/UNIX"
+                            },
+                            "instance_type": {
+                                "constant_value": "t2.micro"
+                            }
+                        },
+                        "schema_version": 0
+                    },
+                    {
+                        "address": "aws_instance.invalid_type",
+                        "mode": "managed",
+                        "type": "aws_instance",
+                        "name": "invalid_type",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                            "ami": {
+                                "references": [
+                                    "data.aws_ami.the_ami"
+                                ]
+                            },
+                            "instance_type": {
+                                "constant_value": "t2.medium"
+                            }
+                        },
+                        "schema_version": 1
+                    },
+                    {
+                        "address": "aws_instance.valid_type",
+                        "mode": "managed",
+                        "type": "aws_instance",
+                        "name": "valid_type",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                            "ami": {
+                                "references": [
+                                    "data.aws_ami.the_ami"
+                                ]
+                            },
+                            "instance_type": {
+                                "constant_value": "t2.nano"
+                            }
+                        },
+                        "schema_version": 1
+                    },
+                    {
+                        "address": "aws_launch_configuration.invalid_type",
+                        "mode": "managed",
+                        "type": "aws_launch_configuration",
+                        "name": "invalid_type",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                            "image_id": {
+                                "references": [
+                                    "data.aws_ami.the_ami"
+                                ]
+                            },
+                            "instance_type": {
+                                "constant_value": "t3.large"
+                            },
+                            "name": {
+                                "constant_value": "invalid-alc"
+                            }
+                        },
+                        "schema_version": 0
+                    },
+                    {
+                        "address": "aws_launch_configuration.valid_type",
+                        "mode": "managed",
+                        "type": "aws_launch_configuration",
+                        "name": "valid_type",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                            "image_id": {
+                                "references": [
+                                    "data.aws_ami.the_ami"
+                                ]
+                            },
+                            "instance_type": {
+                                "constant_value": "t2.micro"
+                            },
+                            "name": {
+                                "constant_value": "valid-alc"
+                            }
+                        },
+                        "schema_version": 0
+                    },
+                    {
+                        "address": "azurerm_linux_virtual_machine.invalid-alvm",
+                        "mode": "managed",
+                        "type": "azurerm_linux_virtual_machine",
+                        "name": "invalid-alvm",
+                        "provider_config_key": "azurerm",
+                        "expressions": {
+                            "admin_username": {
+                                "constant_value": "adminuser"
+                            },
+                            "location": {
+                                "references": [
+                                    "azurerm_resource_group.arg-1"
+                                ]
+                            },
+                            "name": {
+                                "constant_value": "invalid-alvm"
+                            },
+                            "network_interface_ids": {
+                                "references": [
+                                    "azurerm_network_interface.ani[1]"
+                                ]
+                            },
+                            "os_disk": [
+                                {
+                                    "caching": {
+                                        "constant_value": "ReadWrite"
+                                    },
+                                    "storage_account_type": {
+                                        "constant_value": "Premium_LRS"
+                                    }
+                                }
+                            ],
+                            "resource_group_name": {
+                                "references": [
+                                    "azurerm_resource_group.arg-1"
+                                ]
+                            },
+                            "size": {
+                                "constant_value": "Standard_A2"
+                            },
+                            "source_image_reference": [
+                                {
+                                    "offer": {
+                                        "references": [
+                                            "var.offer"
+                                        ]
+                                    },
+                                    "publisher": {
+                                        "references": [
+                                            "var.publisher"
+                                        ]
+                                    },
+                                    "sku": {
+                                        "references": [
+                                            "var.sku"
+                                        ]
+                                    },
+                                    "version": {
+                                        "constant_value": "latest"
+                                    }
+                                }
+                            ]
+                        },
+                        "schema_version": 0
+                    },
+                    {
+                        "address": "azurerm_linux_virtual_machine.valid-alvm",
+                        "mode": "managed",
+                        "type": "azurerm_linux_virtual_machine",
+                        "name": "valid-alvm",
+                        "provider_config_key": "azurerm",
+                        "expressions": {
+                            "admin_username": {
+                                "constant_value": "adminuser"
+                            },
+                            "location": {
+                                "references": [
+                                    "azurerm_resource_group.arg-1"
+                                ]
+                            },
+                            "name": {
+                                "constant_value": "valid-alvm"
+                            },
+                            "network_interface_ids": {
+                                "references": [
+                                    "azurerm_network_interface.ani[0]"
+                                ]
+                            },
+                            "os_disk": [
+                                {
+                                    "caching": {
+                                        "constant_value": "ReadWrite"
+                                    },
+                                    "storage_account_type": {
+                                        "constant_value": "Premium_LRS"
+                                    }
+                                }
+                            ],
+                            "resource_group_name": {
+                                "references": [
+                                    "azurerm_resource_group.arg-1"
+                                ]
+                            },
+                            "size": {
+                                "constant_value": "Standard_A0"
+                            },
+                            "source_image_reference": [
+                                {
+                                    "offer": {
+                                        "references": [
+                                            "var.offer"
+                                        ]
+                                    },
+                                    "publisher": {
+                                        "references": [
+                                            "var.publisher"
+                                        ]
+                                    },
+                                    "sku": {
+                                        "references": [
+                                            "var.sku"
+                                        ]
+                                    },
+                                    "version": {
+                                        "constant_value": "latest"
+                                    }
+                                }
+                            ]
+                        },
+                        "schema_version": 0
+                    },
+                    {
+                        "address": "azurerm_linux_virtual_machine_scale_set.invalid-alvmss",
+                        "mode": "managed",
+                        "type": "azurerm_linux_virtual_machine_scale_set",
+                        "name": "invalid-alvmss",
+                        "provider_config_key": "azurerm",
+                        "expressions": {
+                            "admin_username": {
+                                "constant_value": "adminuser"
+                            },
+                            "instances": {
+                                "constant_value": 1
+                            },
+                            "location": {
+                                "references": [
+                                    "azurerm_resource_group.arg-1"
+                                ]
+                            },
+                            "name": {
+                                "constant_value": "invalid-alvmss"
+                            },
+                            "network_interface": [
+                                {
+                                    "ip_configuration": [
+                                        {
+                                            "name": {
+                                                "constant_value": "internal"
+                                            },
+                                            "primary": {
+                                                "constant_value": true
+                                            },
+                                            "subnet_id": {
+                                                "references": [
+                                                    "azurerm_subnet.as-1"
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "name": {
+                                        "constant_value": "example"
+                                    },
+                                    "primary": {
+                                        "constant_value": true
+                                    }
+                                }
+                            ],
+                            "os_disk": [
+                                {
+                                    "caching": {
+                                        "constant_value": "ReadWrite"
+                                    },
+                                    "storage_account_type": {
+                                        "constant_value": "Standard_LRS"
+                                    }
+                                }
+                            ],
+                            "resource_group_name": {
+                                "references": [
+                                    "azurerm_resource_group.arg-1"
+                                ]
+                            },
+                            "sku": {
+                                "constant_value": "Standard_F2"
+                            },
+                            "source_image_reference": [
+                                {
+                                    "offer": {
+                                        "references": [
+                                            "var.offer"
+                                        ]
+                                    },
+                                    "publisher": {
+                                        "references": [
+                                            "var.publisher"
+                                        ]
+                                    },
+                                    "sku": {
+                                        "references": [
+                                            "var.sku"
+                                        ]
+                                    },
+                                    "version": {
+                                        "constant_value": "latest"
+                                    }
+                                }
+                            ]
+                        },
+                        "schema_version": 0
+                    },
+                    {
+                        "address": "azurerm_linux_virtual_machine_scale_set.valid-alvmss",
+                        "mode": "managed",
+                        "type": "azurerm_linux_virtual_machine_scale_set",
+                        "name": "valid-alvmss",
+                        "provider_config_key": "azurerm",
+                        "expressions": {
+                            "admin_username": {
+                                "constant_value": "adminuser"
+                            },
+                            "instances": {
+                                "constant_value": 1
+                            },
+                            "location": {
+                                "references": [
+                                    "azurerm_resource_group.arg-1"
+                                ]
+                            },
+                            "name": {
+                                "constant_value": "valid-alvmss"
+                            },
+                            "network_interface": [
+                                {
+                                    "ip_configuration": [
+                                        {
+                                            "name": {
+                                                "constant_value": "internal"
+                                            },
+                                            "primary": {
+                                                "constant_value": true
+                                            },
+                                            "subnet_id": {
+                                                "references": [
+                                                    "azurerm_subnet.as-1"
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "name": {
+                                        "constant_value": "example"
+                                    },
+                                    "primary": {
+                                        "constant_value": true
+                                    }
+                                }
+                            ],
+                            "os_disk": [
+                                {
+                                    "caching": {
+                                        "constant_value": "ReadWrite"
+                                    },
+                                    "storage_account_type": {
+                                        "constant_value": "Standard_LRS"
+                                    }
+                                }
+                            ],
+                            "resource_group_name": {
+                                "references": [
+                                    "azurerm_resource_group.arg-1"
+                                ]
+                            },
+                            "sku": {
+                                "constant_value": "Standard_A0"
+                            },
+                            "source_image_reference": [
+                                {
+                                    "offer": {
+                                        "references": [
+                                            "var.offer"
+                                        ]
+                                    },
+                                    "publisher": {
+                                        "references": [
+                                            "var.publisher"
+                                        ]
+                                    },
+                                    "sku": {
+                                        "references": [
+                                            "var.sku"
+                                        ]
+                                    },
+                                    "version": {
+                                        "constant_value": "latest"
+                                    }
+                                }
+                            ]
+                        },
+                        "schema_version": 0
+                    },
+                    {
+                        "address": "azurerm_network_interface.ani",
+                        "mode": "managed",
+                        "type": "azurerm_network_interface",
+                        "name": "ani",
+                        "provider_config_key": "azurerm",
+                        "expressions": {
+                            "ip_configuration": [
+                                {
+                                    "name": {
+                                        "constant_value": "internal"
+                                    },
+                                    "private_ip_address_allocation": {
+                                        "constant_value": "Dynamic"
+                                    },
+                                    "subnet_id": {
+                                        "references": [
+                                            "azurerm_subnet.as-1"
+                                        ]
+                                    }
+                                }
+                            ],
+                            "location": {
+                                "references": [
+                                    "azurerm_resource_group.arg-1"
+                                ]
+                            },
+                            "name": {
+                                "references": [
+                                    "count.index"
+                                ]
+                            },
+                            "resource_group_name": {
+                                "references": [
+                                    "azurerm_resource_group.arg-1"
+                                ]
+                            }
+                        },
+                        "schema_version": 0,
+                        "count_expression": {
+                            "constant_value": 4
+                        }
+                    },
+                    {
+                        "address": "azurerm_resource_group.arg-1",
+                        "mode": "managed",
+                        "type": "azurerm_resource_group",
+                        "name": "arg-1",
+                        "provider_config_key": "azurerm",
+                        "expressions": {
+                            "location": {
+                                "constant_value": "West Europe"
+                            },
+                            "name": {
+                                "constant_value": "arg-1"
+                            }
+                        },
+                        "schema_version": 0
+                    },
+                    {
+                        "address": "azurerm_subnet.as-1",
+                        "mode": "managed",
+                        "type": "azurerm_subnet",
+                        "name": "as-1",
+                        "provider_config_key": "azurerm",
+                        "expressions": {
+                            "address_prefixes": {
+                                "constant_value": [
+                                    "10.0.2.0/24"
+                                ]
+                            },
+                            "name": {
+                                "constant_value": "internal"
+                            },
+                            "resource_group_name": {
+                                "references": [
+                                    "azurerm_resource_group.arg-1"
+                                ]
+                            },
+                            "virtual_network_name": {
+                                "references": [
+                                    "azurerm_virtual_network.avn-1"
+                                ]
+                            }
+                        },
+                        "schema_version": 0
+                    },
+                    {
+                        "address": "azurerm_virtual_network.avn-1",
+                        "mode": "managed",
+                        "type": "azurerm_virtual_network",
+                        "name": "avn-1",
+                        "provider_config_key": "azurerm",
+                        "expressions": {
+                            "address_space": {
+                                "constant_value": [
+                                    "10.0.0.0/16"
+                                ]
+                            },
+                            "location": {
+                                "references": [
+                                    "azurerm_resource_group.arg-1"
+                                ]
+                            },
+                            "name": {
+                                "constant_value": "example-network"
+                            },
+                            "resource_group_name": {
+                                "references": [
+                                    "azurerm_resource_group.arg-1"
+                                ]
+                            }
+                        },
+                        "schema_version": 0
+                    },
+                    {
+                        "address": "azurerm_windows_virtual_machine.invalid-awvm",
+                        "mode": "managed",
+                        "type": "azurerm_windows_virtual_machine",
+                        "name": "invalid-awvm",
+                        "provider_config_key": "azurerm",
+                        "expressions": {
+                            "admin_password": {
+                                "constant_value": "P@$$w0rd1234!"
+                            },
+                            "admin_username": {
+                                "constant_value": "adminuser"
+                            },
+                            "location": {
+                                "references": [
+                                    "azurerm_resource_group.arg-1"
+                                ]
+                            },
+                            "name": {
+                                "constant_value": "invalid-awvm"
+                            },
+                            "network_interface_ids": {
+                                "references": [
+                                    "azurerm_network_interface.ani[3]"
+                                ]
+                            },
+                            "os_disk": [
+                                {
+                                    "caching": {
+                                        "constant_value": "ReadWrite"
+                                    },
+                                    "storage_account_type": {
+                                        "constant_value": "Standard_LRS"
+                                    }
+                                }
+                            ],
+                            "resource_group_name": {
+                                "references": [
+                                    "azurerm_resource_group.arg-1"
+                                ]
+                            },
+                            "size": {
+                                "constant_value": "Standard_F2"
+                            },
+                            "source_image_reference": [
+                                {
+                                    "offer": {
+                                        "constant_value": "WindowsServer"
+                                    },
+                                    "publisher": {
+                                        "constant_value": "MicrosoftWindowsServer"
+                                    },
+                                    "sku": {
+                                        "constant_value": "2016-Datacenter"
+                                    },
+                                    "version": {
+                                        "constant_value": "latest"
+                                    }
+                                }
+                            ]
+                        },
+                        "schema_version": 0
+                    },
+                    {
+                        "address": "azurerm_windows_virtual_machine.valid-awvm",
+                        "mode": "managed",
+                        "type": "azurerm_windows_virtual_machine",
+                        "name": "valid-awvm",
+                        "provider_config_key": "azurerm",
+                        "expressions": {
+                            "admin_password": {
+                                "constant_value": "P@$$w0rd1234!"
+                            },
+                            "admin_username": {
+                                "constant_value": "adminuser"
+                            },
+                            "location": {
+                                "references": [
+                                    "azurerm_resource_group.arg-1"
+                                ]
+                            },
+                            "name": {
+                                "constant_value": "valid-awvm"
+                            },
+                            "network_interface_ids": {
+                                "references": [
+                                    "azurerm_network_interface.ani[2]"
+                                ]
+                            },
+                            "os_disk": [
+                                {
+                                    "caching": {
+                                        "constant_value": "ReadWrite"
+                                    },
+                                    "storage_account_type": {
+                                        "constant_value": "Standard_LRS"
+                                    }
+                                }
+                            ],
+                            "resource_group_name": {
+                                "references": [
+                                    "azurerm_resource_group.arg-1"
+                                ]
+                            },
+                            "size": {
+                                "constant_value": "Standard_A0"
+                            },
+                            "source_image_reference": [
+                                {
+                                    "offer": {
+                                        "constant_value": "WindowsServer"
+                                    },
+                                    "publisher": {
+                                        "constant_value": "MicrosoftWindowsServer"
+                                    },
+                                    "sku": {
+                                        "constant_value": "2016-Datacenter"
+                                    },
+                                    "version": {
+                                        "constant_value": "latest"
+                                    }
+                                }
+                            ]
+                        },
+                        "schema_version": 0
+                    },
+                    {
+                        "address": "azurerm_windows_virtual_machine_scale_set.invalid-awvmss",
+                        "mode": "managed",
+                        "type": "azurerm_windows_virtual_machine_scale_set",
+                        "name": "invalid-awvmss",
+                        "provider_config_key": "azurerm",
+                        "expressions": {
+                            "admin_password": {
+                                "constant_value": "P@55w0rd1234!"
+                            },
+                            "admin_username": {
+                                "constant_value": "adminuser"
+                            },
+                            "instances": {
+                                "constant_value": 1
+                            },
+                            "location": {
+                                "references": [
+                                    "azurerm_resource_group.arg-1"
+                                ]
+                            },
+                            "name": {
+                                "constant_value": "invalid-awvmss"
+                            },
+                            "network_interface": [
+                                {
+                                    "ip_configuration": [
+                                        {
+                                            "name": {
+                                                "constant_value": "internal"
+                                            },
+                                            "primary": {
+                                                "constant_value": true
+                                            },
+                                            "subnet_id": {
+                                                "references": [
+                                                    "azurerm_subnet.as-1"
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "name": {
+                                        "constant_value": "example"
+                                    },
+                                    "primary": {
+                                        "constant_value": true
+                                    }
+                                }
+                            ],
+                            "os_disk": [
+                                {
+                                    "caching": {
+                                        "constant_value": "ReadWrite"
+                                    },
+                                    "storage_account_type": {
+                                        "constant_value": "Standard_LRS"
+                                    }
+                                }
+                            ],
+                            "resource_group_name": {
+                                "references": [
+                                    "azurerm_resource_group.arg-1"
+                                ]
+                            },
+                            "sku": {
+                                "constant_value": "Standard_F2"
+                            },
+                            "source_image_reference": [
+                                {
+                                    "offer": {
+                                        "constant_value": "WindowsServer"
+                                    },
+                                    "publisher": {
+                                        "constant_value": "MicrosoftWindowsServer"
+                                    },
+                                    "sku": {
+                                        "constant_value": "2016-Datacenter-Server-Core"
+                                    },
+                                    "version": {
+                                        "constant_value": "latest"
+                                    }
+                                }
+                            ]
+                        },
+                        "schema_version": 0
+                    },
+                    {
+                        "address": "azurerm_windows_virtual_machine_scale_set.valid-awvmss",
+                        "mode": "managed",
+                        "type": "azurerm_windows_virtual_machine_scale_set",
+                        "name": "valid-awvmss",
+                        "provider_config_key": "azurerm",
+                        "expressions": {
+                            "admin_password": {
+                                "constant_value": "P@55w0rd1234!"
+                            },
+                            "admin_username": {
+                                "constant_value": "adminuser"
+                            },
+                            "instances": {
+                                "constant_value": 1
+                            },
+                            "location": {
+                                "references": [
+                                    "azurerm_resource_group.arg-1"
+                                ]
+                            },
+                            "name": {
+                                "constant_value": "valid-awvmss"
+                            },
+                            "network_interface": [
+                                {
+                                    "ip_configuration": [
+                                        {
+                                            "name": {
+                                                "constant_value": "internal"
+                                            },
+                                            "primary": {
+                                                "constant_value": true
+                                            },
+                                            "subnet_id": {
+                                                "references": [
+                                                    "azurerm_subnet.as-1"
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "name": {
+                                        "constant_value": "example"
+                                    },
+                                    "primary": {
+                                        "constant_value": true
+                                    }
+                                }
+                            ],
+                            "os_disk": [
+                                {
+                                    "caching": {
+                                        "constant_value": "ReadWrite"
+                                    },
+                                    "storage_account_type": {
+                                        "constant_value": "Standard_LRS"
+                                    }
+                                }
+                            ],
+                            "resource_group_name": {
+                                "references": [
+                                    "azurerm_resource_group.arg-1"
+                                ]
+                            },
+                            "sku": {
+                                "constant_value": "Standard_A0"
+                            },
+                            "source_image_reference": [
+                                {
+                                    "offer": {
+                                        "constant_value": "WindowsServer"
+                                    },
+                                    "publisher": {
+                                        "constant_value": "MicrosoftWindowsServer"
+                                    },
+                                    "sku": {
+                                        "constant_value": "2016-Datacenter-Server-Core"
+                                    },
+                                    "version": {
+                                        "constant_value": "latest"
+                                    }
+                                }
+                            ]
+                        },
+                        "schema_version": 0
+                    },
+                    {
+                        "address": "google_compute_instance.invalid_type",
+                        "mode": "managed",
+                        "type": "google_compute_instance",
+                        "name": "invalid_type",
+                        "provider_config_key": "google",
+                        "expressions": {
+                            "boot_disk": [
+                                {
+                                    "initialize_params": [
+                                        {
+                                            "image": {
+                                                "constant_value": "debian-cloud/debian-9"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ],
+                            "machine_type": {
+                                "constant_value": "e2-medium"
+                            },
+                            "name": {
+                                "constant_value": "invalid-gci"
+                            },
+                            "network_interface": [
+                                {
+                                    "network": {
+                                        "constant_value": "default"
+                                    }
+                                }
+                            ],
+                            "zone": {
+                                "constant_value": "us-central1-a"
+                            }
+                        },
+                        "schema_version": 6
+                    },
+                    {
+                        "address": "google_compute_instance.valid_type",
+                        "mode": "managed",
+                        "type": "google_compute_instance",
+                        "name": "valid_type",
+                        "provider_config_key": "google",
+                        "expressions": {
+                            "boot_disk": [
+                                {
+                                    "initialize_params": [
+                                        {
+                                            "image": {
+                                                "constant_value": "debian-cloud/debian-9"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ],
+                            "machine_type": {
+                                "constant_value": "n1-standard-1"
+                            },
+                            "name": {
+                                "constant_value": "valid-gci"
+                            },
+                            "network_interface": [
+                                {
+                                    "network": {
+                                        "constant_value": "default"
+                                    }
+                                }
+                            ],
+                            "zone": {
+                                "constant_value": "us-central1-a"
+                            }
+                        },
+                        "schema_version": 6
+                    },
+                    {
+                        "address": "google_compute_instance_template.invalid_type",
+                        "mode": "managed",
+                        "type": "google_compute_instance_template",
+                        "name": "invalid_type",
+                        "provider_config_key": "google",
+                        "expressions": {
+                            "disk": [
+                                {
+                                    "source_image": {
+                                        "constant_value": "debian-cloud/debian-9"
+                                    }
+                                }
+                            ],
+                            "machine_type": {
+                                "constant_value": "e2-medium"
+                            },
+                            "network_interface": [
+                                {
+                                    "network": {
+                                        "constant_value": "default"
+                                    }
+                                }
+                            ]
+                        },
+                        "schema_version": 1
+                    },
+                    {
+                        "address": "google_compute_instance_template.valid_type",
+                        "mode": "managed",
+                        "type": "google_compute_instance_template",
+                        "name": "valid_type",
+                        "provider_config_key": "google",
+                        "expressions": {
+                            "disk": [
+                                {
+                                    "source_image": {
+                                        "constant_value": "debian-cloud/debian-9"
+                                    }
+                                }
+                            ],
+                            "machine_type": {
+                                "constant_value": "n1-standard-1"
+                            },
+                            "network_interface": [
+                                {
+                                    "network": {
+                                        "constant_value": "default"
+                                    }
+                                }
+                            ]
+                        },
+                        "schema_version": 1
+                    },
+                    {
+                        "address": "data.aws_ami.the_ami",
+                        "mode": "data",
+                        "type": "aws_ami",
+                        "name": "the_ami",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                            "filter": [
+                                {
+                                    "name": {
+                                        "constant_value": "name"
+                                    },
+                                    "values": {
+                                        "constant_value": [
+                                            "ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-*"
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": {
+                                        "constant_value": "virtualization-type"
+                                    },
+                                    "values": {
+                                        "constant_value": [
+                                            "hvm"
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": {
+                                        "constant_value": "architecture"
+                                    },
+                                    "values": {
+                                        "constant_value": [
+                                            "x86_64"
+                                        ]
+                                    }
+                                }
+                            ],
+                            "most_recent": {
+                                "constant_value": true
+                            },
+                            "owners": {
+                                "constant_value": [
+                                    "099720109477"
+                                ]
+                            }
+                        },
+                        "schema_version": 0
+                    }
+                ],
+                "variables": {
+                    "offer": {
+                        "default": "UbuntuServer"
+                    },
+                    "publisher": {
+                        "default": "canonical"
+                    },
+                    "sku": {
+                        "default": "16.04.0-LTS"
+                    }
+                }
+            }
+        }
+    },
+    "tfrun": {
+        "workspace": {
+            "name": "opa-test",
+            "description": null,
+            "auto_apply": false,
+            "working_directory": null,
+            "tags": {}
+        },
+        "environment": {
+            "id": "env-t3qeqbo97mdot6o",
+            "name": "CS"
+        },
+        "vcs": null,
+        "cost_estimate": null,
+        "credentials": {
+            "azure": "cred-tb8elb008h6iol0",
+            "ec2": "cred-tc5racmimrmbo8o",
+            "gce": "cred-tcic77g7nkj8d40"
+        },
+        "source": "cli",
+        "message": "Queued manually using Terraform",
+        "is_destroy": false,
+        "is_dry": true,
+        "created_by": {
+            "name": "",
+            "email": "peter@scalr.com",
+            "username": "peter@scalr.com",
+            "teams": [
+                {
+                    "id": "team-t58u31j2ohgil50",
+                    "name": "CS"
+                }
+            ]
+        }
+    }
+}

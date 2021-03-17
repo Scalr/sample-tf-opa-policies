@@ -1,0 +1,11 @@
+[
+  "aws_ec2_capacity_reservation.invalid_type                    ::  'instance_type' of 't3.nano' is not allowed",
+  "aws_instance.invalid_type                                    ::  'instance_type' of 't2.medium' is not allowed",
+  "aws_launch_configuration.invalid_type                        ::  'instance_type' of 't3.large' is not allowed",
+  "azurerm_linux_virtual_machine.invalid-alvm                   ::  'size' of 'Standard_A2' is not allowed",
+  "azurerm_linux_virtual_machine_scale_set.invalid-alvmss       ::  'sku' of 'Standard_F2' is not allowed",
+  "azurerm_windows_virtual_machine.invalid-awvm                 ::  'size' of 'Standard_F2' is not allowed",
+  "azurerm_windows_virtual_machine_scale_set.invalid-awvmss     ::  'sku' of 'Standard_F2' is not allowed",
+  "google_compute_instance.invalid_type                         ::  'machine_type' of 'e2-medium' is not allowed",
+  "google_compute_instance_template.invalid_type                ::  'machine_type' of 'e2-medium' is not allowed"
+]
