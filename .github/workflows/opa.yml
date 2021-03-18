@@ -34,3 +34,34 @@ jobs:
           placement
           providers
           user
+
+  test-new-style:
+    runs-on: ubuntu-latest
+    container:
+      image: ubuntu:latest  # Because it has 'curl'
+      options: --cpus 1
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2.0.0
+    - name: Install OPA
+      env:
+        OPA_VERSION: "0.27.1"
+      run: |-
+        apt-get -yq update && apt-get install -yq curl;
+        curl -L -o /usr/bin/opa https://github.com/open-policy-agent/opa/releases/download/v${OPA_VERSION}/opa_linux_amd64 2>/dev/null;
+        chmod +x /usr/bin/opa;
+    - name: Test
+      env:
+        TERM: xterm-256color
+      run: |-
+        # Directories having 'main.tf' are considered a 'new-style' example
+        dirs=$(find . -name 'main.tf' | awk -F'/[^/]*$' '{print $1}' | sort | uniq);
+        for polgrp in $dirs; do
+          # Call opa test command for every Rego file in every example directory.
+          for pol in $(find $polgrp -name '*.rego'); do
+            tput setaf 2;
+            echo "Test $pol";
+            tput sgr0;
+            opa eval -f pretty --data $pol -i ${pol%.rego}.input.json data.terraform.deny;
+          done;
+        done;
