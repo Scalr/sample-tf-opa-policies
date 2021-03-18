@@ -1,0 +1,4 @@
+.terraform.lock.hcl
+.terraform/
+main.tf.clean
+main.tf.sensitive

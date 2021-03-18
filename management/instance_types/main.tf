@@ -43,7 +43,7 @@ data "aws_ami" "the_ami" {
   most_recent = true
   filter {
     name   = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-*"]
+    values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
   }
   filter {
     name   = "virtualization-type"
@@ -109,7 +109,7 @@ variable "offer" {
   default = "UbuntuServer"
 }
 variable "sku" {
-  default = "16.04.0-LTS"
+  default = "20.04.0-LTS"
 }
 
 provider "azurerm" {
@@ -379,8 +379,12 @@ resource "azurerm_windows_virtual_machine_scale_set" "invalid-awvmss" {
 #----------
 # Google
 
+variable "project" {
+  sensitive = true
+}
+
 provider "google" {
-  project = "customer-success-261820"
+  project = var.project
   region  = "us-central1"
   zone    = "us-central1-c"
 }

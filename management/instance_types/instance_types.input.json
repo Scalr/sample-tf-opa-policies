@@ -6,11 +6,14 @@
             "offer": {
                 "value": "UbuntuServer"
             },
+            "project": {
+                "value": "xxxxxxxxxxxxxxx"
+            },
             "publisher": {
                 "value": "canonical"
             },
             "sku": {
-                "value": "16.04.0-LTS"
+                "value": "20.04.0-LTS"
             }
         },
         "planned_values": {
@@ -66,7 +69,7 @@
                         "provider_name": "registry.terraform.io/hashicorp/aws",
                         "schema_version": 1,
                         "values": {
-                            "ami": "ami-09943f9da1f1b7899",
+                            "ami": "ami-0fa37863afb290840",
                             "credit_specification": [],
                             "disable_api_termination": null,
                             "ebs_optimized": null,
@@ -92,7 +95,7 @@
                         "provider_name": "registry.terraform.io/hashicorp/aws",
                         "schema_version": 1,
                         "values": {
-                            "ami": "ami-09943f9da1f1b7899",
+                            "ami": "ami-0fa37863afb290840",
                             "credit_specification": [],
                             "disable_api_termination": null,
                             "ebs_optimized": null,
@@ -122,7 +125,7 @@
                             "enable_monitoring": true,
                             "ephemeral_block_device": [],
                             "iam_instance_profile": null,
-                            "image_id": "ami-09943f9da1f1b7899",
+                            "image_id": "ami-0fa37863afb290840",
                             "instance_type": "t3.large",
                             "name": "invalid-alc",
                             "name_prefix": null,
@@ -147,7 +150,7 @@
                             "enable_monitoring": true,
                             "ephemeral_block_device": [],
                             "iam_instance_profile": null,
-                            "image_id": "ami-09943f9da1f1b7899",
+                            "image_id": "ami-0fa37863afb290840",
                             "instance_type": "t2.micro",
                             "name": "valid-alc",
                             "name_prefix": null,
@@ -208,7 +211,7 @@
                                 {
                                     "offer": "UbuntuServer",
                                     "publisher": "canonical",
-                                    "sku": "16.04.0-LTS",
+                                    "sku": "20.04.0-LTS",
                                     "version": "latest"
                                 }
                             ],
@@ -265,7 +268,7 @@
                                 {
                                     "offer": "UbuntuServer",
                                     "publisher": "canonical",
-                                    "sku": "16.04.0-LTS",
+                                    "sku": "20.04.0-LTS",
                                     "version": "latest"
                                 }
                             ],
@@ -348,7 +351,7 @@
                                 {
                                     "offer": "UbuntuServer",
                                     "publisher": "canonical",
-                                    "sku": "16.04.0-LTS",
+                                    "sku": "20.04.0-LTS",
                                     "version": "latest"
                                 }
                             ],
@@ -433,7 +436,7 @@
                                 {
                                     "offer": "UbuntuServer",
                                     "publisher": "canonical",
-                                    "sku": "16.04.0-LTS",
+                                    "sku": "20.04.0-LTS",
                                     "version": "latest"
                                 }
                             ],
@@ -1166,7 +1169,7 @@
                     ],
                     "before": null,
                     "after": {
-                        "ami": "ami-09943f9da1f1b7899",
+                        "ami": "ami-0fa37863afb290840",
                         "credit_specification": [],
                         "disable_api_termination": null,
                         "ebs_optimized": null,
@@ -1230,7 +1233,7 @@
                     ],
                     "before": null,
                     "after": {
-                        "ami": "ami-09943f9da1f1b7899",
+                        "ami": "ami-0fa37863afb290840",
                         "credit_specification": [],
                         "disable_api_termination": null,
                         "ebs_optimized": null,
@@ -1298,7 +1301,7 @@
                         "enable_monitoring": true,
                         "ephemeral_block_device": [],
                         "iam_instance_profile": null,
-                        "image_id": "ami-09943f9da1f1b7899",
+                        "image_id": "ami-0fa37863afb290840",
                         "instance_type": "t3.large",
                         "name": "invalid-alc",
                         "name_prefix": null,
@@ -1338,7 +1341,7 @@
                         "enable_monitoring": true,
                         "ephemeral_block_device": [],
                         "iam_instance_profile": null,
-                        "image_id": "ami-09943f9da1f1b7899",
+                        "image_id": "ami-0fa37863afb290840",
                         "instance_type": "t2.micro",
                         "name": "valid-alc",
                         "name_prefix": null,
@@ -1414,7 +1417,7 @@
                             {
                                 "offer": "UbuntuServer",
                                 "publisher": "canonical",
-                                "sku": "16.04.0-LTS",
+                                "sku": "20.04.0-LTS",
                                 "version": "latest"
                             }
                         ],
@@ -1503,7 +1506,7 @@
                             {
                                 "offer": "UbuntuServer",
                                 "publisher": "canonical",
-                                "sku": "16.04.0-LTS",
+                                "sku": "20.04.0-LTS",
                                 "version": "latest"
                             }
                         ],
@@ -1618,7 +1621,7 @@
                             {
                                 "offer": "UbuntuServer",
                                 "publisher": "canonical",
-                                "sku": "16.04.0-LTS",
+                                "sku": "20.04.0-LTS",
                                 "version": "latest"
                             }
                         ],
@@ -1745,7 +1748,7 @@
                             {
                                 "offer": "UbuntuServer",
                                 "publisher": "canonical",
-                                "sku": "16.04.0-LTS",
+                                "sku": "20.04.0-LTS",
                                 "version": "latest"
                             }
                         ],
@@ -2913,7 +2916,7 @@
                             "schema_version": 0,
                             "values": {
                                 "architecture": "x86_64",
-                                "arn": "arn:aws:ec2:us-east-1::image/ami-09943f9da1f1b7899",
+                                "arn": "arn:aws:ec2:us-east-1::image/ami-0fa37863afb290840",
                                 "block_device_mappings": [
                                     {
                                         "device_name": "/dev/sda1",
@@ -2921,7 +2924,7 @@
                                             "delete_on_termination": "true",
                                             "encrypted": "false",
                                             "iops": "0",
-                                            "snapshot_id": "snap-00fc25e1e01269cd9",
+                                            "snapshot_id": "snap-08dcc63a77cdebe56",
                                             "throughput": "0",
                                             "volume_size": "8",
                                             "volume_type": "gp2"
@@ -2942,8 +2945,8 @@
                                         "virtual_name": "ephemeral1"
                                     }
                                 ],
-                                "creation_date": "2021-02-24T17:38:23.000Z",
-                                "description": "Canonical, Ubuntu, 16.04 LTS, amd64 xenial image build on 2021-02-24",
+                                "creation_date": "2021-03-16T00:50:17.000Z",
+                                "description": "Canonical, Ubuntu, 20.04 LTS, amd64 focal image build on 2021-03-15",
                                 "ena_support": true,
                                 "executable_users": null,
                                 "filter": [
@@ -2956,7 +2959,7 @@
                                     {
                                         "name": "name",
                                         "values": [
-                                            "ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-*"
+                                            "ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"
                                         ]
                                     },
                                     {
@@ -2967,14 +2970,14 @@
                                     }
                                 ],
                                 "hypervisor": "xen",
-                                "id": "ami-09943f9da1f1b7899",
-                                "image_id": "ami-09943f9da1f1b7899",
-                                "image_location": "099720109477/ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-20210224",
+                                "id": "ami-0fa37863afb290840",
+                                "image_id": "ami-0fa37863afb290840",
+                                "image_location": "099720109477/ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-20210315",
                                 "image_owner_alias": null,
                                 "image_type": "machine",
                                 "kernel_id": null,
                                 "most_recent": true,
-                                "name": "ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-20210224",
+                                "name": "ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-20210315",
                                 "name_regex": null,
                                 "owner_id": "099720109477",
                                 "owners": [
@@ -2987,7 +2990,7 @@
                                 "ramdisk_id": null,
                                 "root_device_name": "/dev/sda1",
                                 "root_device_type": "ebs",
-                                "root_snapshot_id": "snap-00fc25e1e01269cd9",
+                                "root_snapshot_id": "snap-08dcc63a77cdebe56",
                                 "sriov_net_support": "simple",
                                 "state": "available",
                                 "state_reason": {
@@ -3025,7 +3028,9 @@
                     "name": "google",
                     "expressions": {
                         "project": {
-                            "constant_value": "customer-success-261820"
+                            "references": [
+                                "var.project"
+                            ]
                         },
                         "region": {
                             "constant_value": "us-central1"
@@ -4025,7 +4030,7 @@
                                     },
                                     "values": {
                                         "constant_value": [
-                                            "ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-*"
+                                            "ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"
                                         ]
                                     }
                                 },
@@ -4066,11 +4071,12 @@
                     "offer": {
                         "default": "UbuntuServer"
                     },
+                    "project": {},
                     "publisher": {
                         "default": "canonical"
                     },
                     "sku": {
-                        "default": "16.04.0-LTS"
+                        "default": "20.04.0-LTS"
                     }
                 }
             }
