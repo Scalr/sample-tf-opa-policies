@@ -8,8 +8,6 @@ NOTE: This does NOT necessarily include all applicable resource types
 terraform {
 
   backend "remote" {
-    hostname     = "scalr-customer-success.scalr.io"
-    organization = "env-t3qeqbo97mdot6o"
     workspaces {
       name = "opa-test"
     }
