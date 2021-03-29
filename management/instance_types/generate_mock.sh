@@ -34,4 +34,4 @@ tar xvf .mock.zip
 
 echo "Mock data file downloaded to 'input.json'"
 
-rm -f .plan.out .mock.zip input.json
+rm -f .plan.out .mock.zip
