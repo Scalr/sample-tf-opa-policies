@@ -22,7 +22,7 @@ terraform plan | tee .plan.out
 
 # Extract the run_id
 
-RUN_ID=$(grep "https://${HOSTNAME}/app/env-.*/runs/run-" .plan.out | cut -d'/' -f 8 | cut -c1-19)
+RUN_ID=$(grep "https://${HOSTNAME}/app/-.*/runs/run-" .plan.out | cut -d'/' -f 8 | cut -c1-19)
 
 # Download the mock data zip file and unpack
 
@@ -34,3 +34,4 @@ tar xvf .mock.zip
 
 echo "Mock data file downloaded to 'input.json'"
 
+rm -f .plan.out .mock.zip input.json

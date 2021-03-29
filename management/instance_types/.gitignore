@@ -1,4 +1,5 @@
 .terraform.lock.hcl
 .terraform/
-main.tf.clean
-main.tf.sensitive
+.plan.out
+.mock.zip
+input.json

@@ -23,6 +23,8 @@ NOTE: See [Terraform CLI with Scalr](https://docs.scalr.com/en/latest/cli.html) 
 
 ---
 
+The Terraform config in this repo is an example that requires AWS, Azure and Google credentials.
+
 1. Clone this repository
 2. Edit instances_types.rego as required, e.g. to adjust whitelists
 3. Replace instances_types.tf with your own Terraform configuration that you need to test the policy against. Ensure the config contains a [partial backend configuration](https://www.terraform.io/docs/language/settings/backends/configuration.html#partial-configuration) similar to this with a workspace name of your choice.
@@ -46,7 +48,7 @@ terraform {
   The environment_id will be in the form `env-{random_string}` and can be obtained from the environment dashboard.
 
 5. Run `terraform init` to initialize the workspace.
-6. Run `./generate_plan.sh` to generate a plan and downlaod the mock data.
+6. Run `./generate_plan.sh` to generate a plan and download the mock data.
 7. Evaluate the policy using `opa eval -f pretty --data instance_types.rego -i input.json data.terraform.deny`
 
 #### Adding to a Policy Group
