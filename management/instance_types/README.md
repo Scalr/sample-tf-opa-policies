@@ -42,7 +42,7 @@ terraform {
 
 4. Set your remote backed hostname and organization (Scalr environment) parameters using `TF_CLI_ARGS_init` as follows.
 
-`export TF_CLI_ARGS_init='-backend-config="hostname=s{your-scalr-hostname}" -backed-config="organization={your-scalr-evironment_id}"`.
+`export TF_CLI_ARGS_init='-backend-config="hostname={your-scalr-hostname}" -backend-config="organization={your-scalr-evironment_id}"'`.
 
   When using Scalr SaaS the hostname will be in the form `my-account.scalr.io`.
   The environment_id will be in the form `env-{random_string}` and can be obtained from the environment dashboard.
