@@ -1,12 +1,13 @@
-# Enforce that specificied resource types are only created by specific modules and not in the root module.
+# Enforce that only specific modules be used to provision different resource
+# types by denying all other modules in the root module from creating them.
 
 package terraform
 
 import input.tfplan as tfplan
 
 
-# Map of resource types which must be created only using module
-# with corresponding module source
+# Map of resource types to paths to each module 
+# you want to enforce usage of.
 resource_modules = {
     "aws_db_instance": "terraform-aws-modules/rds/aws"
 }
