@@ -6,6 +6,11 @@ policy "enforce_ami_owners" {
   enforcement_level = "hard-mandatory"
 }
 
+policy "workspace_destroy" {
+  enabled           = true
+  enforcement_level = "hard-mandatory"
+}
+
 policy "instance_types" {
   enabled           = true
   enforcement_level = "hard-mandatory"
