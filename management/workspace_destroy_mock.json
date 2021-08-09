@@ -1,6 +1,6 @@
 {
   "mock": {
-    "has_active_state": {
+    "has_resources": {
       "tfplan": {
         "resource_changes": [
           {
@@ -10,7 +10,7 @@
                 "delete"
               ],
               "before": {
-                "has_active_state": true,
+                "has_resources": true,
                 "id": "ws-thhc2ktb7iukgp0"
               }
             }
@@ -18,7 +18,7 @@
         ]
       }
     },
-    "does_not_have_active_state": {
+    "does_resources": {
       "tfplan": {
         "resource_changes": [
           {
@@ -28,7 +28,7 @@
                 "delete"
               ],
               "before": {
-                "has_active_state": false,
+                "has_resources": false,
                 "id": "ws-thhc2ktb7iukgp0"
               }
             }

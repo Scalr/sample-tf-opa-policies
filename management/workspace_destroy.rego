@@ -10,5 +10,5 @@ deny["Can not destroy workspace with active state"] {
     "delete" == resource.change.actions[count(resource.change.actions) - 1]
     "scalr_workspace" == resource.type
 
-    resource.change.before.has_active_state
+    resource.change.before.has_resources
 }
