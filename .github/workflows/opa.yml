@@ -28,6 +28,7 @@ jobs:
           management/resource_tags.rego;management/resource_tags_test.rego;management/resource_tags_mock.json
           management/whitelist_ami.rego;management/whitelist_ami_test.rego;management/whitelist_ami_mock.json
           management/workspace_name.rego;management/workspace_name_test.rego;management/workspace_name_mock.json
+          management/workspace_destroy.rego;management/workspace_destroy_test.rego;management/workspace_destroy_mock.json
           management/workspace_tags.rego;management/workspace_tags_test.rego;management/workspace_tags_mock.json
           modules/pin_module_version.rego;modules/pin_module_version_test.rego;modules/pin_module_version_mock.json;
           modules/required_modules.rego;modules/required_modules_test.rego;modules/required_modules_mock.json;

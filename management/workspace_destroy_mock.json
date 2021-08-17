@@ -1,0 +1,40 @@
+{
+  "mock": {
+    "has_resources": {
+      "tfplan": {
+        "resource_changes": [
+          {
+            "type": "scalr_workspace",
+            "change": {
+              "actions": [
+                "delete"
+              ],
+              "before": {
+                "has_resources": true,
+                "id": "ws-thhc2ktb7iukgp0"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "does_not_have_resources": {
+      "tfplan": {
+        "resource_changes": [
+          {
+            "type": "scalr_workspace",
+            "change": {
+              "actions": [
+                "delete"
+              ],
+              "before": {
+                "has_resources": false,
+                "id": "ws-thhc2ktb7iukgp0"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
