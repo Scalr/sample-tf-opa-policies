@@ -1,0 +1,31 @@
+{
+	"mock": {
+        "same": {
+            "tfrun": {
+                "vcs": {
+                    "pull_request": {
+                        "author": "user",
+                        "merged_by": "user"
+                    }
+                }
+            }
+        },
+        "not_same": {
+            "tfrun": {
+                "vcs": {
+                    "pull_request": {
+                        "author": "user",
+                        "merged_by": "another_user"
+                    }
+                }
+            }
+        },
+        "no_pr": {
+            "tfrun": {
+                "vcs": {
+                    "pull_request": null
+                }
+            }
+        }
+    }
+}
