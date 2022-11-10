@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4cef5f54-1d35-4e3c-a3d6-a897e55668f2" name="Changes" comment="test">
+      <change beforePath="$PROJECT_DIR$/external_data/random_decision5.rego" beforeDir="false" afterPath="$PROJECT_DIR$/external_data/random_decision4.rego" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/external_data/scalr-policy.hcl" beforeDir="false" afterPath="$PROJECT_DIR$/external_data/scalr-policy.hcl" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="KubernetesApiPersistence">
+    <option name="context" value="gke_scalr-dev_europe-west1-b_testenv-v2" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2EARGv1xKpdPJTI1iNrZIGVtAxp" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TF_FMT": "false",
+    "WebServerToolWindowFactoryState": "true",
+    "last_opened_file_path": "/Users/lyzohub/Work/sample-tf-opa-policies/external_data",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/external_data" />
+      <recent name="$PROJECT_DIR$/always_fail" />
+      <recent name="$PROJECT_DIR$/always_pass" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Opa eval.eval data.terraform.allowed_roles_map">
+    <configuration name="eval data.terraform.allowed_roles_map" type="OPA_RUN_CONFIGURATION" factoryName="Opa configuration factory" temporary="true">
+      <option name="query" value="data.terraform.allowed_roles_map" />
+      <option name="additionalargs" value="-f pretty " />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="OPA_TEST_RUN_CONFIGURATION" factoryName="Opa configuration factory">
+      <option name="additionalargs" value="" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="test terraform" type="OPA_TEST_RUN_CONFIGURATION" factoryName="Opa configuration factory" temporary="true">
+      <option name="additionalargs" value="-f pretty  -r data.terraform" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Opa eval.eval data.terraform.allowed_roles_map" />
+        <item itemvalue="Opa test.test terraform" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4cef5f54-1d35-4e3c-a3d6-a897e55668f2" name="Changes" comment="" />
+      <created>1662036309600</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1662036309600</updated>
+      <workItem from="1662036310719" duration="618000" />
+      <workItem from="1665149554872" duration="727000" />
+      <workItem from="1665494691153" duration="598000" />
+      <workItem from="1665561285741" duration="596000" />
+      <workItem from="1666262382052" duration="382000" />
+      <workItem from="1666262775597" duration="1000" />
+      <workItem from="1666263582970" duration="215000" />
+      <workItem from="1666264176570" duration="100000" />
+      <workItem from="1668098276454" duration="357000" />
+    </task>
+    <task id="LOCAL-00001" summary="1">
+      <created>1665149600331</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1665149600331</updated>
+    </task>
+    <task id="LOCAL-00002" summary="1">
+      <created>1665149678659</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1665149678659</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add dummy policies">
+      <created>1666262708869</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1666262708869</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add dummy policies">
+      <created>1666263614938</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1666263614938</updated>
+    </task>
+    <task id="LOCAL-00005" summary="test">
+      <created>1668098299943</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1668098299943</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1" />
+    <MESSAGE value="Add dummy policies" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
+  </component>
+</project>
