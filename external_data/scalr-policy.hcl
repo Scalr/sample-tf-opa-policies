@@ -20,7 +20,7 @@ policy "random_decision3" {
   enforcement_level = "advisory"
 }
 
-policy "random_decision5" {
+policy "random_decision4" {
   enabled           = true
   enforcement_level = "advisory"
 }
