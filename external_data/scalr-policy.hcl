@@ -24,3 +24,8 @@ policy "random_decision4" {
   enabled           = true
   enforcement_level = "advisory"
 }
+
+policy "random_decision5" {
+  enabled           = true
+  enforcement_level = "advisory"
+}
