@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4cef5f54-1d35-4e3c-a3d6-a897e55668f2" name="Changes" comment="test">
-      <change beforePath="$PROJECT_DIR$/external_data/random_decision5.rego" beforeDir="false" afterPath="$PROJECT_DIR$/external_data/random_decision4.rego" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/external_data/scalr-policy.hcl" beforeDir="false" afterPath="$PROJECT_DIR$/external_data/scalr-policy.hcl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -12,6 +12,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="KubernetesApiPersistence">
     <option name="context" value="gke_scalr-dev_europe-west1-b_testenv-v2" />
@@ -25,18 +26,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "TF_FMT": "false",
-    "WebServerToolWindowFactoryState": "true",
-    "last_opened_file_path": "/Users/lyzohub/Work/sample-tf-opa-policies/external_data",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;TF_FMT&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/lyzohub/Work/sample-tf-opa-policies/external_data&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/external_data" />
@@ -46,14 +47,15 @@
     </key>
   </component>
   <component name="RunManager" selected="Opa eval.eval data.terraform.allowed_roles_map">
-    <configuration name="eval data.terraform.allowed_roles_map" type="OPA_RUN_CONFIGURATION" factoryName="Opa configuration factory" temporary="true">
-      <option name="query" value="data.terraform.allowed_roles_map" />
-      <option name="additionalargs" value="-f pretty " />
+    <configuration default="true" type="OPA_RUN_CONFIGURATION" factoryName="Opa configuration factory">
+      <option name="query" value="" />
+      <option name="additionalargs" value="" />
       <envs />
       <method v="2" />
     </configuration>
-    <configuration default="true" type="OPA_TEST_RUN_CONFIGURATION" factoryName="Opa configuration factory">
-      <option name="additionalargs" value="" />
+    <configuration name="eval data.terraform.allowed_roles_map" type="OPA_RUN_CONFIGURATION" factoryName="Opa configuration factory" temporary="true">
+      <option name="query" value="data.terraform.allowed_roles_map" />
+      <option name="additionalargs" value="-f pretty " />
       <envs />
       <method v="2" />
     </configuration>
