@@ -46,7 +46,6 @@ Many policies contain arrays of values that are checked against resources. The a
 | [aws/enforce_iam_instance_profiles.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_iam_instance_profiles.rego) | Check IAM instance profile is in allowed list.                          |
 | [aws/enforce_instance_subnets.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_instance_subnets.rego) | Check instances are using allowed subnets |
 | [aws/enforce_kms_key_names.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_kms_key_names.rego) | Check KMS keys (by name) against allowed list.                           |
-| [aws/enforce_lb_subnets.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_lb_subnets.rego) | Check Loadbalancers are using allowed subnets |
 | [aws/enforce_s3_buckets_encryption.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_s3_buckets_encryption.rego) | Check encryption is set for S3 buckets.                                  |
 | [aws/enforce_s3_private.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_s3_private.rego) | Check S3 buckets are not public.                                  |
 | [aws/enforce_sec_group.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/aws/enforce_sec_group.rego) | Check security groups have been specified and are in allowed list.       |
