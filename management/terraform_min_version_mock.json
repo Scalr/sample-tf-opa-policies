@@ -1,0 +1,16 @@
+{
+   "mock":{
+      "not_allowed_version":{
+         "tfplan":{
+            "format_version":"0.1",
+            "terraform_version":"0.13.0"
+         }
+      },
+      "allowed_version":{
+         "tfplan":{
+            "format_version":"0.1",
+            "terraform_version":"1.3.5"
+         }
+      }
+   }
+}
