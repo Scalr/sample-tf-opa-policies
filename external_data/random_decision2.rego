@@ -6,6 +6,7 @@
 package terraform
 
 
+
 random_number = num {
     request := {
         "url": "https://www.random.org/integers/?num=1&min=0&max=9&base=10&col=1&format=plain",
