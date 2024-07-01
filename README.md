@@ -61,6 +61,7 @@ Many policies contain arrays of values that are checked against resources. The a
 | [management/resource_tags.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/management/resource_tags.rego) | Checks required tags are configured for all clouds.                      |
 | [management/whitelist_ami.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/management/whitelist_ami.rego) | Checks AMI against allowed list or configured from data source.          |
 | [management/workspace_name.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/management/workspace_name.rego) | Simple example of using `tfrun` data and validating a workspace name.    |
+| [management/workspace_environment.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/management/workspace_environment_type.rego) | Checks workspace environment type and enforces cost limits based on environment. |
 | [management/workspace_destroy.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/management/workspace_destroy.rego) | Checks workspace has an active state and denies its destroy, if active state is present.    |
 | [management/workspace_tags.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/management/workspace_tags.rego) | Checks workspace is tagged with provider name.                           |
 | [modules/pin_module_version.rego](https://github.com/Scalr/sample-tf-opa-policies/blob/master/modules/pin_module_version.rego) | Enforces use of specific module versions.                                |
