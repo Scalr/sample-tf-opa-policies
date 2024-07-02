@@ -3,7 +3,6 @@
 package terraform 
 
 import input.tfplan as tfplan
-import input.tfrun as tfrun
 
 required_sg := "sg-0434611e67ac24e27"
 

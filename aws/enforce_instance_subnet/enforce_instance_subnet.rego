@@ -4,7 +4,6 @@
 package terraform 
 
 import input.tfplan as tfplan
-import input.tfrun as tfrun
 
 # Add only private subnets to this list.
 # NOTE: OPA cannot validate that a subnet is private unless the terraform config is actaully creating the subnet.
