@@ -1,6 +1,6 @@
 version = "v1"
 
-policy "user" {
+policy "check_user" {
   enabled           = true
   enforcement_level = "hard-mandatory"
 }
