@@ -1,0 +1,24 @@
+{
+    "mock": {
+        "valid_input": {
+            "tfrun": {
+                "workspace": {
+                    "environment_type": "development"
+                },
+                "cost_estimate": {
+                    "proposed_monthly_cost": 50
+                }
+            }
+        },
+        "invalid_input": {
+            "tfrun": {
+                "workspace": {
+                    "environment_type": "development"
+                },
+                "cost_estimate": {
+                    "proposed_monthly_cost": 150
+                }
+            }
+        }
+    }
+}

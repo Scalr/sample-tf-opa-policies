@@ -4,7 +4,6 @@
 package terraform
 
 import input.tfplan as tfplan
-import input.tfrun as tfrun
 
 allowed_iam_profiles = [
   "my_iam_profile", 
