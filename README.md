@@ -8,6 +8,7 @@ A sample collection of OPA policies to test against Terraform run in Scalr.
 
 ## Resources
 
+* Everything you need to know about OPA: https://scalr.com/blog/everything-you-need-to-know-about-open-policy-agent-opa-and-terraform
 * Blog series for getting started with OPA for Terraform in Scalr: https://scalr.com/blog/opa-series-part-1-open-policy-agent-and-terraform/
 * Documentation for using OPA with Scalr: https://docs.scalr.com/en/latest/opa.html
 * OPA documentation: https://www.openpolicyagent.org/docs/latest/
