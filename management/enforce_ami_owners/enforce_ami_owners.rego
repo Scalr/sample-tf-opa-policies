@@ -4,40 +4,40 @@
 
 package terraform
 
-import input.tfplan as tfplan
+import rego.v1
 
+import input.tfplan as tfplan
 
 # The list of owners aws_ami data sources are limited to.
 # Valid values are: an AWS account ID, `self` (the current account),
 # or an AWS owner alias (e.g. `amazon`, `aws-marketplace`, `microsoft`)
-allowed_owners = [
-  "self",
-  "012345678901"
+allowed_owners := [
+	"self",
+	"012345678901",
 ]
 
-
-array_contains(arr, elem) {
-  arr[_] = elem
+array_contains(arr, elem) if {
+	arr[_] = elem
 }
 
-eval_expression(plan, expr) = constant_value {
-    constant_value := expr.constant_value
-} else = reference {
-    ref = expr.references[0]
-    startswith(ref, "var.")
-    var_name := replace(ref, "var.", "")
-    reference := plan.variables[var_name].value
+eval_expression(plan, expr) := constant_value if {
+	constant_value := expr.constant_value
+} else := reference if {
+	ref = expr.references[0]
+	startswith(ref, "var.")
+	var_name := replace(ref, "var.", "")
+	reference := plan.variables[var_name].value
 }
 
-deny[reason] {
-    walk(tfplan.configuration.root_module, [path, value])
-    "data" == value.mode
-    "aws_ami" == value.type
-    owners := eval_expression(tfplan, value.expressions.owners)
-    owner = owners[_]
-    not array_contains(allowed_owners, owner)
-    reason := sprintf(
-        "%s: owner %q is not allowed. Expected owners are: %v",
-        [value.address, owner, allowed_owners]
-    )
+deny contains reason if {
+	walk(tfplan.configuration.root_module, [path, value])
+	"data" == value.mode
+	"aws_ami" == value.type
+	owners := eval_expression(tfplan, value.expressions.owners)
+	owner = owners[_]
+	not array_contains(allowed_owners, owner)
+	reason := sprintf(
+		"%s: owner %q is not allowed. Expected owners are: %v",
+		[value.address, owner, allowed_owners],
+	)
 }

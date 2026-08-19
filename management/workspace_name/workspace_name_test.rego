@@ -1,11 +1,13 @@
 package terraform
 
-test_workspace_name_allowed {
-    result = deny with input as data.mock.valid_input
-    count(result) == 0
+import rego.v1
+
+test_workspace_name_allowed if {
+	result = deny with input as data.mock.valid_input
+	count(result) == 0
 }
 
-test_workspace_name_denied {
-    result = deny with input as data.mock.invalid_input
-    count(result) > 0
+test_workspace_name_denied if {
+	result = deny with input as data.mock.invalid_input
+	count(result) > 0
 }

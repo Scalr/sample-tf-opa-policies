@@ -1,8 +1,10 @@
 package terraform
 
+import rego.v1
+
 import input.tfrun as tfrun
 
-deny["Monthly cost for dev workspace exceeds $100"] {
-    tfrun.workspace.environment_type == "development"
-    tfrun.cost_estimate.proposed_monthly_cost > 100
+deny contains "Monthly cost for dev workspace exceeds $100" if {
+	tfrun.workspace.environment_type == "development"
+	tfrun.cost_estimate.proposed_monthly_cost > 100
 }
