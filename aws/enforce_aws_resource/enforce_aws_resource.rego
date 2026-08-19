@@ -8,29 +8,30 @@
 
 package terraform
 
+import rego.v1
+
 import input.tfplan as tfplan
 
 # Allowed Terraform resources
-allowed_resources = [
-  "aws_security_group",
-  "aws_instance",
-  "aws_s3_bucket"
+allowed_resources := [
+	"aws_security_group",
+	"aws_instance",
+	"aws_s3_bucket",
 ]
 
-
-array_contains(arr, elem) {
-  arr[_] = elem
+array_contains(arr, elem) if {
+	arr[_] = elem
 }
 
-deny[reason] {
-    resource := tfplan.resource_changes[_]
-    action := resource.change.actions[count(resource.change.actions) - 1]
-    array_contains(["create", "update"], action)  # allow destroy action
+deny contains reason if {
+	resource := tfplan.resource_changes[_]
+	action := resource.change.actions[count(resource.change.actions) - 1]
+	array_contains(["create", "update"], action) # allow destroy action
 
-    not array_contains(allowed_resources, resource.type)
+	not array_contains(allowed_resources, resource.type)
 
-    reason := sprintf(
-        "%s: resource type %q is not allowed",
-        [resource.address, resource.type]
-    )
+	reason := sprintf(
+		"%s: resource type %q is not allowed",
+		[resource.address, resource.type],
+	)
 }
